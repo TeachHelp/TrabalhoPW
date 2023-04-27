@@ -18,9 +18,9 @@ function alerta(){
 
 
 
-function divEscolha(){
+/*function divEscolha(){
     
-}
+}*/
 
 function autentication(){
     let senha = document.getElementById("txtSenha");
