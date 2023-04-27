@@ -16,11 +16,13 @@ function alerta(){
     alert("Função Indisponível no momento");
 }
 
+function divEscolha(){
+    let div = document.getElementById("escolha");
+    let tela = document.getElementById("divMaster");
+    div.style.display = 'block';
+    tela.style.filter = 'blur(5px)';
 
-
-/*function divEscolha(){
-    
-}*/
+}
 
 function autentication(){
     let senha = document.getElementById("txtSenha");
