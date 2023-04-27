@@ -1,0 +1,44 @@
+div{
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+button{
+    border-radius: 8px;
+    border-color: #5ba8a5;
+    width: 150px;
+    height: 30px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.divAluno {
+    
+    display:none;
+    width: 1500px;
+    height: 700px;
+    background-color: #fffd96;
+    border: solid 1px;
+    border-color: #9e9b11;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.divProf {
+    display:none;
+    width: 1500px;
+    height: 700px;
+    background-color: #eba68f;
+    border: solid 1px;
+    border-color: #f07e59;
+    text-align: center;
+    border-radius: 25px;
+
+}

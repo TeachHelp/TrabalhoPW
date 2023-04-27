@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/login.js" defer></script>
+    <header class="menu">
+        <button id="btnMenu" class="btnMenu" onclick="menu()">Menu</button>
+        <div class="menuDropdown" id="menuDropdown">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </div>
+    </header><br>
+    <center>
+        <div id="divMaster" class="divMaster">
+            <div id="divApres" class="divApres">
+                <img src="img/logo.png" id="logo" class="logo">
+                <p class="p1"> Bem-vindo(a) ao TeachHelp! Aqui, você encontra uma ampla seleção de professores de todas as áreas para ajudá-lo a 
+                    alcançar seus objetivos acadêmicos e profissionais.</p>
+
+                <p class="p2">Todos os nossos professores são verificados e avaliados pelos próprios alunos, 
+                    garantindo que você tenha acesso a uma educação de qualidade.</p> 
+                    
+                <p class="p3">Não perca mais tempo pesquisando por aí. Com a TeachHelp,
+                    você pode encontrar o professor perfeito com facilidade e praticidade. 
+                    Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
+            
+                </div>
+
+            <div id="divForm" class="divForm">
+                <div class="divLogin">
+                    <label id="login" class="login">Login</label>
+                </div><br>
+                <form class="form">
+
+                    <label for="lblEmail" id="lblEmail" class="lblEmail">Email:</label><br>
+                    <input type="email" id="txtEmail" class="txtEmail"><br>
+                    <spam class="lblEmailAut" id="lblEmailAut">Email deve ser preenchido!</spam><br>
+                    
+                    <label for="lblSenha" id="lblSenha" class="lblSenha">Senha:</label><br>
+                    <input type="password" id="txtSenha" class="txtSenha"><br>
+                    <spam class="lblSenhaAut" id="lblSenhaAut">Senha deve ser preenchida!</spam><br>
+                </form>
+                <button id="btnAut" class="btnAut" onclick="autentication()">Login</button>
+                <p class="fgtSenha" onclick="alerta()"><a href="#"> Esqueceu sua senha? </a></p>
+                <p class="pCad">Novo por aqui? <a onclick="divEscolha()">Cadastre-se!</a> </p>
+            </div>
+        </div>
+        <div id="escolha" class="escolha"> <br> Você deseja se cadastrar como? 
+            <button id="btnProf" class="btnProf" onclick="telaProf()">Professor</button>
+            <button id="btnAluno" class="btnAluno" onclick="telaAluno()">Aluno</button>
+        </div>
+    </center> 
+</body>
+</html>

@@ -1,0 +1,226 @@
+body{
+    background-image: url("Cover.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #00010f;
+}
+
+.menu {
+    background-color: #999999;
+    height: 50px;
+
+}
+
+.menuDropdown {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.menuDropdown a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.menuDropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.lblNomeAut,
+.lblTelAut,
+.lblEmailAut,
+.lblEndAut,
+.lblDtNascAut,
+.lblDescAut,
+.lblCurriculoAut,
+.lblSenhaAut {
+    position: relative;
+    left: 10%;
+    display: none;
+    color: #ff0000;
+}
+
+.lblHoraAut{
+    position: relative;
+    left: 18%;
+    display: none;
+    color: #ff0000;
+
+}
+
+header{
+	height: 10px;
+	/*Fica o menu do lado do logo - modo default rows*/
+	display: flex;
+	padding: 20px;
+	/*espaço entre o logo e o menu*/	
+	justify-content:space-between;
+	/*logo fica alinhado com o menu*/
+	align-items: center;
+	/*altura minima - não quero que fique menor que 50px
+	Mesmo sem ter conteúdo e nada eu consigo fixar o tamanho minimo*/
+	background: #e8e8e8;
+}
+
+footer{
+	margin-top:auto; 
+	color: rgb(0, 0, 0);
+	background: #e8e8e8;
+	text-align: center;
+}
+
+ul,li {
+	list-style: none;
+	font-size: 1.2rem;	
+}
+
+img{
+	width: 15%;
+}
+
+a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+
+.menu{
+	display: flex;
+	
+}
+
+.menu li{
+	margin-left:20px;
+}
+
+.menu li a{
+	padding: 5 px;
+}
+
+.btnMenu {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    border-style: none;
+    background-color: #3674ad;
+    color: #ffffff
+}
+
+.container{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.divApres{
+    background-color: #d0ff8b;
+    height: 700px;
+    width: 500px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.p1,
+.p2,
+.p3{
+    padding-top: 20px;
+    font-size: 15px;
+    width: 400px;
+}
+.divForm {
+    text-align: start;
+    background-color: rgb(157, 247, 255);
+    width: 500px;
+    height: 700px;
+    align-items: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.logo{
+    display: flex;
+    padding-top: 50px;
+    width: 300px;
+
+}
+.divLogin {
+    height: 30px;
+    width: 480px;
+    background-color: #cacaca;
+    text-align:center;
+    padding-left: 20px;
+    border-top-right-radius: 30px;
+}
+
+.login {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btnAut {
+    height: 40px;
+    width: 200px;
+    position: relative;
+    left: 30%;
+    top: 1%;
+    background-color: #2a98ff;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 30px;
+}
+
+.txtNome,
+.txtTel,
+.txtEmail,
+.txtEndereco,
+.txtSenha,
+.txtDtNasc,
+.txtDesc,
+.arqCurriculo{
+    position: relative;
+    left: 10%;
+    width: 400px;
+    height: 20px;
+    border: solid 0.5px;
+    border-color: #999999;
+}
+
+.lblNome,
+.lblTel,
+.lblEmail,
+.lblEndereco,
+.lblDesc,
+.lblDtNasc,
+.lblSenha,
+.lblCurriculo{
+    position: relative;
+    left: 10%;
+}
+
+.lblHorario{
+    position: relative;
+    left: 18%;
+}
+
+.txtHorarioIni,
+.txtHorarioFim {
+    position: relative;
+    left: 18%;
+    text-align: center;
+    width: 150px;
+    border: solid 0.5px;
+    border-color: #999999;
+}

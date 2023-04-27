@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/cadastroProf.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/cadastroProf.js" defer></script>
+    <header>
+		<a href="#"><img src="img/logo.png" alt="Teach Help"> </a>
+		
+		<div >
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li onclick="alerta()"><a href="#">Sobre</a></li>
+				<li><a href="perfilAluno.html">Perfil Aluno</a></li>
+				<li><a href="login.html">Logout</a></li>
+                <li><a href="perfilProf.html">Perfil Prof</a></li>
+			</ul>
+		</div>
+		
+	</header>
+    <br>
+
+    <center>
+        <div id="container" class="container">
+            <div id="divApres" class="divApres">
+                <img src="img/logo.png" id="logo" class="logo">
+                <p class="p1"> Bem-vindo(a) ao TeachHelp! Aqui, você encontra uma ampla seleção de professores de todas as áreas para ajudá-lo a 
+                    alcançar seus objetivos acadêmicos e profissionais.</p>
+
+                <p class="p2">Todos os nossos professores são verificados e avaliados pelos próprios alunos, 
+                    garantindo que você tenha acesso a uma educação de qualidade.</p> 
+                    
+                <p class="p3">Não perca mais tempo pesquisando por aí. Com a TeachHelp,
+                    você pode encontrar o professor perfeito com facilidade e praticidade. 
+                    Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
+            
+                </div>
+
+            <div id="divForm" class="divForm">
+                <div class="divLogin">
+                    <label id="login" class="login">Cadastro</label>
+                </div><br>
+                <form class="form">
+                    <label for="lblNome" id="lblNome" class="lblNome">Nome:</label><br>
+                    <input type="text" id="txtNome" class="txtNome"><br>
+                    <spam class="lblNomeAut" id="lblNomeAut">Nome deve ser preenchido!</spam>
+
+                    <label for="lblTel" id="lblTel" class="lblTel">Telefone:</label><br>
+                    <input type="number" id="txtTel" class="txtTel"><br>
+                    <spam class="lblTelAut" id="lblTelAut">Telefone deve ser preenchido!</spam>
+
+                    <label for="lblEmail" id="lblEmail" class="lblEmail">Email:</label><br>
+                    <input type="email" id="txtEmail" class="txtEmail"><br>
+                    <spam class="lblEmailAut" id="lblEmailAut">Email deve ser preenchido!</spam>
+                    
+                    <label for="lblSenha" id="lblSenha" class="lblSenha">Senha:</label><br>
+                    <input type="password" id="txtSenha" class="txtSenha"><br>
+                    <spam class="lblSenhaAut" id="lblSenhaAut">Senha deve ser preenchida!</spam>
+                    
+                    <label for="lblDtNasc" id="lblDtNasc" class="lblDtNasc">Data de Nascimento:</label><br>
+                    <input type="date" id="txtDtNasc" class="txtDtNasc"><br>
+                    <spam class="lblDtNascAut" id="lblDtNascAut">Data de Nascimento deve ser preenchida!</spam>
+
+
+                    <label for="lblEndereco" id="lblEndereco" class="lblEndereco">Endereço:</label><br>
+                    <input type="text" id="txtEndereco" class="txtEndereco"><br>
+                    <spam class="lblEndAut" id="lblEndAut">Endereço deve ser preenchido!</spam>
+        
+
+                    <label for="lblDesc" id="lblDesc" class="lblDesc">Descrição:</label><br>
+                    <input type="text" id="txtDesc" class="txtDesc"><br>
+                    <spam class="lblDescAut" id="lblDescAut">Descrição deve ser preenchida!</spam>
+
+                    <label for="lblCurriculo" id="lblCurriculo" class="lblCurriculo">Currículo:</label><br>
+                    <input type="file" id="arqCurriculo" class="arqCurriculo"><br>
+                    <spam class="lblCurriculoAut" id="lblCurriculoAut">Currículo deve ser carregado!</spam>
+
+                    <label for="lblHorario" id="lblHorario" class="lblHorario">Horários:</label><br>
+                    <input type="time" id="txtHorarioIni" class="txtHorarioIni"> <label class="lblHorario"> - </label> 
+                    <input type="time" id="txtHorarioFim" class="txtHorarioFim"><br>
+                    <spam class="lblHoraAut" id="lblHoraAut">Adicione pelo menos um horário de trabalho!</spam>
+                
+                    
+                </form>
+                <button id="btnAut" class="btnAut" onclick="autentication()">Realizar Cadastro</button>
+            </div> 
+        </div>
+    </center> 
+</body>
+</html>

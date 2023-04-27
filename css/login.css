@@ -1,0 +1,236 @@
+body{
+    background-image: url("Cover.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #00010f;
+}
+
+.fgtSenha{
+    position: relative;
+    left: 37%;
+}
+
+.pCad{
+    position: relative;
+    left: 32%;
+}
+
+.menu {
+    background-color: #999999;
+    height: 50px;
+
+}
+
+.menuDropdown {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.menuDropdown a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.menuDropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.lblNomeAut,
+.lblTelAut,
+.lblEmailAut,
+.lblDtNascAut,
+.lblEndAut,
+.lblDescAut,
+.lblCurriculoAut,
+.lblSenhaAut {
+    position: relative;
+    left: 10%;
+    display: none;
+    color: #ff0000;
+}
+
+.lblHoraAut{
+    position: relative;
+    left: 18%;
+    display: none;
+    color: #ff0000;
+
+}
+
+.btnMenu {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    border-style: none;
+    background-color: #3674ad;
+    color: #ffffff
+}
+
+.escolha{
+    display: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    background-color: #2a98ff;
+    width: 300px;
+    height: 200px;
+}
+
+.btnAluno,
+.btnProf{
+    position: relative;
+    top: 50px;
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #3674ad;
+    color: #ffffff
+}
+
+.divMaster{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: #999999;
+    width: 1000px;
+    height: 600px;
+    border-radius: 30px;
+}
+.divApres{
+    background-color: #d0ff8b;
+    height: 600px;
+    width: 500px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.p1,
+.p2,
+.p3{
+    padding-top: 20px;
+    font-size: 15px;
+    width: 400px;
+}
+.divForm {
+    /*
+    position: relative;
+    left: 25%;
+    bottom: 100%;*/
+    text-align: start;
+    background-color: rgb(157, 247, 255);
+    width: 500px;
+    height: 600px;
+    align-items: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+}
+
+.logo{
+    display: flex;
+    padding-top: 50px;
+    width: 300px;
+
+}
+.divLogin {
+    height: 30px;
+    width: 480px;
+    background-color: #cacaca;
+    text-align:center;
+    padding-left: 20px;
+    border-top-right-radius: 30px;
+}
+
+.login {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btnCad{
+    height: 40px;
+    width: 200px;
+    position: relative;
+    left: 0%;
+    top: 1%;
+    background-color: #2a98ff;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 30px;
+}
+
+.btnAut {
+    height: 40px;
+    width: 200px;
+    position: relative;
+    left: 30%;
+    top: 1%;
+    background-color: #2a98ff;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 30px;
+}
+
+.txtNome,
+.txtTel,
+.txtEmail,
+.txtDtNasc,
+.txtEndereco,
+.txtDesc,
+.txtSenha,
+.arqCurriculo{
+    position: relative;
+    left: 10%;
+    width: 400px;
+    height: 20px;
+    border: solid 0.5px;
+    border-color: #999999;
+}
+
+.lblNome,
+.lblTel,
+.lblEmail,
+.lblDtNasc,
+.lblEndereco,
+.lblDesc,
+.lblSenha,
+.lblCurriculo{
+    position: relative;
+    left: 10%;
+}
+
+.lblHorario{
+    position: relative;
+    left: 18%;
+}
+
+.txtHorarioIni,
+.txtHorarioFim {
+    position: relative;
+    left: 18%;
+    text-align: center;
+    width: 150px;
+    border: solid 0.5px;
+    border-color: #999999;
+}

@@ -1,0 +1,17 @@
+.accordion-cabecalho{
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: #4ae0b3;
+    border: groove;
+    border-top: 5px solid #288065;
+
+}
+
+.accordion-conteudo{
+    display: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    background-color: #cdf8eb;
+    border-top: 2px solid #a4c9be;
+    
+}

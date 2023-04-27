@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap');
+
+*{
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    background: #f3f3f3;
+    height:100vh;
+	display:flex;
+	flex-direction:column;
+	background-image: url("Cover.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #00010f;
+    background-repeat: no-repeat;
+}
+/*
+body{
+    background-image: url("Cover.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000000;
+}
+*/
+.wrapper{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 700px;
+    height: auto;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.8);
+    border-radius: 5px;
+}
+
+.wrapper .left{
+    width: 40%;
+    height: auto;
+    background: linear-gradient(to bottom, #004AAD, #00abbe);
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper .left img{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.wrapper .left h4{
+    margin-bottom: 10px;
+}
+
+.wrapper .left p{
+    font-size: 12px;
+}
+
+.wrapper .right{
+    width: 80%;
+    background: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 30px 25px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects{
+    margin-bottom: 25px;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3,
+.wrapper .right .available h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.wrapper .right .info_data{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+
+.wrapper .right .info_data .data{
+    width: 45%;
+    margin-left: 10px;
+}
+
+.wrapper .right .info_data .data h4,
+.wrapper .right .project_data .data h4{
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+
+.wrapper .right .info_data .data h4{
+    display: flex;
+    text-align: center;
+}
+
+#icon{
+    padding: 4px;
+    border-radius: 50%;
+    color: white;
+    background-image: linear-gradient(to bottom, #004AAD, #00abbe);
+}
+
+.text{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+}
+
+.wrapper .right .info_data .data p,
+.wrapper .right .project_data .data p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #787f87;
+}
+
+.wrapper .right .available .available_data .data{
+    margin-left: 5px;
+}
+
+.wrapper .right .available .available_data{
+    display: flex;
+    margin-top: 10px;
+}
+
+.wrapper .right .available .available_data .data {
+    border: 1px solid rgb(128, 128, 128);
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.aulaDia{
+    border: 1px solid transparent;
+    border-radius: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: linear-gradient(to bottom, #dfdfdf, #f0f0f0);
+}
+
+.aulaHora{
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+#addDayClass{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.downloadResume{
+    display: flex;
+    margin-top: 50px;
+    width: 165px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #003880, #007784);
+    color: white;
+}
+
+.downloadResume:hover{
+    background-image: linear-gradient(to bottom, #00224f, #00434b);
+}
+
+#uploadButton{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+}
+
+.uploadText{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3px;
+}
+
+.editInformation{
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #003880, #007784);
+    color: white;
+}
+
+.textButtonEdit{
+    margin-left: 3px;
+}
+
+.buttonsDownloadEdit{
+    display: flex;
+}
+
+.editInformation:hover{
+    background-image: linear-gradient(to bottom, #00224f, #00434b);
+}
+
+
+
+
+/*-----------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+/*RESET*/
+*{
+	margin:0;
+	padding:0;
+	/* o tamanho dos elementos é definido = largura + margin + border */
+	/* padrão de definição do tamanho do elemento: content-box  */
+	/* Se for definido 100px , margin: 20px ; border: 4px = caixa terá 128px */
+	/* O border box calcula o tamanho levando em consideração a margin e border  */
+	/* Se for definido 100px , margin: 20px ; border: 4px = caixa terá 72px  */
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Thoma, sans-serif;
+}
+
+/* Trick */
+body{ 
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	/*background-image: url('img/Cover.png');*/
+}
+
+header{
+	max-height: 100px;
+	/*Fica o menu do lado do logo - modo default rows*/
+	display: flex;
+	padding: 20px;
+	/*espaço entre o logo e o menu*/	
+	justify-content:space-between;
+	/*logo fica alinhado com o menu*/
+	align-items: center;
+	/*altura minima - não quero que fique menor que 50px
+	Mesmo sem ter conteúdo e nada eu consigo fixar o tamanho minimo*/
+	background: #e8e8e8;
+}
+
+footer{
+	margin-top:auto; 
+	color: rgb(0, 0, 0);
+	background: #e8e8e8;
+	text-align: center;
+}
+
+ul,li {
+	list-style: none;
+	font-size: 1.2rem;	
+}
+
+img{
+	width: 150px;
+}
+
+a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+
+.menu{
+	display: flex;
+	
+}
+
+.menu li{
+	margin-left:20px;
+}
+
+.menu li a{
+	padding: 5 px;
+}
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;/*tamanho máximo da seção*/
+	margin: 0 auto; /*centraliza na margem automaticamente*/
+}
+
+/*significa filho-direto do elemento. Seleciona todos os filhos-diretos do elemento.*/
+.flex > div{
+	/*flex-grow -A number specifying how much the item will grow relative to the rest of the flexible items
+	flex-shrink - A number specifying how much the item will shrink relative to the rest of the flexible items
+	flex-basis -  tamanho do item*/
+	flex: 1 1 200px;
+	margin: 10px;
+}
