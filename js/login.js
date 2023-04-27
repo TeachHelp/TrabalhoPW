@@ -1,3 +1,5 @@
+
+
 function menu(){
     document.getElementById("menuDropdown").classList.toggle("show");
 }
@@ -14,8 +16,10 @@ function alerta(){
     alert("Função Indisponível no momento");
 }
 
+
+
 function divEscolha(){
-    alert("Você deseja se cadastrar como?");
+    
 }
 
 function autentication(){
@@ -24,6 +28,7 @@ function autentication(){
 
     let senhaAviso = document.getElementById("lblSenhaAut");
     let emailAviso = document.getElementById("lblEmailAut");
+    let aux = false;
 
     /* Senha */
 
@@ -31,11 +36,13 @@ function autentication(){
         senha.style.border = "solid 2px";
         senha.style.borderBlockColor = "#ff0000";
         senhaAviso.style.display = "block";
+        aux = false;
     }
     else{
         senha.style.border = "solid 1px";
         senha.style.borderBlockColor = "#000000";
         senhaAviso.style.display = "none";
+        aux = true;
     }
 
     /* Email */
@@ -44,12 +51,16 @@ function autentication(){
         email.style.border = "solid 2px";
         email.style.borderBlockColor = "#ff0000";
         emailAviso.style.display = "block";
+        aux = false;
     }
     else{
         email.style.border = "solid 1px";
         email.style.borderBlockColor = "#000000";
         emailAviso.style.display = "none";
+        
     }
-
+    if(aux){
+        window.location.assign("menu.html");
+    }
     
 }
