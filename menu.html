@@ -6,50 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <script src="js/menu.js"></script>
-</head>
-<body>
-    
-
     <link rel="stylesheet" href="css/menu.css">
 
-    <img src="logo.png" id="logo_pequena">
-
-
+    
+</head>
+<body>
     <div class="menu" >
+        <img src="img/logo.png" id="logo_pequena">
+
+        <div id="barraPesquisa">
+            <img src=""
+            <input type="text" id="txtBusca" placeholder="Buscar áreas,professores..."/>
+            <button id="btnBuscar">Buscar</button>
+        </div>
 
 
-        <button id="btnMenu" onclick="mostraLista()">Menu</button>
-            <div id="opcoes">
-                <div id="Perfil">
-                    <a href="">Perfil</a>
-                </div>
-                <div id="Materias">
-                    <a href="">Matérias</a>
-                </div>
-                <div id="Config">
-                    <a href="">Configurações</a>
-                </div>
-                <div id="Sobre">
-                    <a href="">Sobre</a>
-                </div>
-            </div>
+        <ul id="myUL">
+        <div class="menuU">
+            <li><span id="menu" class="caret botao">MENU</span>               
+            <ul class="nested">
+                        <li><a href="">Perfil</a></li>
+                        <li><span class="caret">Matérias</span>                      
+                            <ul class="nested">
+                                <li><a href="">Português</a></li>
+                                <li><a href="">Matemática</a></li>
+                                <li><a href="">Música</a></li>
+                                <li><a href="">Esportes</a></li>
+                                <li><a href="">História</a></li>
+                                <li><a href="">Inglês</a></li>
+                                <li><a href="">Idiomas</a></li>
+                                <li><a href="">Informática</a></li>
+                            </ul>                                                    
+                        <li><a href="">Configurações</a></li>
+                        <li><a href="">Sobre</a></li>
+                    </li>  
+            </ul>
+        </div>
+        </li> 
+        </ul>
+
+
+
+        <script>
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+            
+            for (i = 0; i < toggler.length; i++) {
+              toggler[i].addEventListener("click", function() {                
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+              });
+            }
+          </script>
+
     </div>
-    <center><img src="Cover.png" id="logo"></center>
+    <center><img src="img/logoBranca.png" id="logo"></center>
     <div class="materiasLyout">
-        <div  class="materiasBotoes" id="Portugues" onclick="">Português</div >
+        <div  class="materiasBotoes" id="Portugues" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Português</font></h1></div >
 
-        <div  id="Matematica" onclick="">Matemática</div >  
+        <div  class="materiasBotoes" id="Matematica" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Matemática</font></h1></div >  
 
-        <div  id="Musica" onclick="">Música</div >
+        <div  class="materiasBotoes" id="Musica" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Música</font></h1></div >
 
-        <div  id="Esportes" onclick="">Esportes</div >
+        <div  class="materiasBotoes" id="Esportes" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Esportes</font></h1></div >
 
-        <div  id="Historia" onclick="">História</div >
+        <div  class="materiasBotoes" id="Historia" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">História</font></h1></div >
 
-        <div  id="Ingles" onclick="">Inglês</div >
+        <div  class="materiasBotoes" id="Ingles" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Inglês</font></h1></div >
 
-        <div  id="Idiomas" onclick="">Idiomas</div >
+        <div  class="materiasBotoes" id="Idiomas" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Idiomas</font></h1></div >
+
+        <div class="materiasBotoes" id="Informatica" onclick="" type="button"><h1 class="Escrita"><font face="Georgia">Informática</font></h1></div>
 
 
     </div>
