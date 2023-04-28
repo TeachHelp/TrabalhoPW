@@ -1,20 +1,34 @@
+/* funcao que permite a visualzacao da div com as opcoes de perfil e cadastre-se */
 
+function mostraLogin(){
+    document.getElementById("perfil_principal").classList.toggle("show");
+  }
 
-function menu(){
-    document.getElementById("menuDropdown").classList.toggle("show");
-}
+/* funcao que envia o usuario a tela de cadastro de professor */
 
 function telaProf(){
     window.location.assign("cadastroProf.html");
 }
 
+/* funcao que envia o usuario a tela de cadastro de aluno */
+
 function telaAluno(){
     window.location.assign("cadastroAluno.html");
 }
 
+/* funcao para alertar o usuario a se cadastrar*/
+
+function alertCadastro(){
+    alert("Você precisa se cadastrar primeiro!");
+}
+
+/* funcao usada para botoes que ainda nao possuem funcionalidade*/
+
 function alerta(){
     alert("Função Indisponível no momento");
 }
+
+/* funcao que permite a visualizacao das opcoes de cadastro */
 
 function divEscolha(){
     let div = document.getElementById("escolha");
@@ -23,6 +37,8 @@ function divEscolha(){
     tela.style.filter = 'blur(5px)';
 
 }
+
+/* funcao que autentica se os inputs foram preenchidos e envia o usuario para a pagina principal */
 
 function autentication(){
     let senha = document.getElementById("txtSenha");
@@ -59,8 +75,10 @@ function autentication(){
         email.style.border = "solid 1px";
         email.style.borderBlockColor = "#000000";
         emailAviso.style.display = "none";
-        
     }
+
+    /* se os inputs estiverem preenchidos a aux sera verdadeira e o usuario sera enviado para a tela principal*/    
+
     if(aux){
         window.location.assign("menu.html");
     }

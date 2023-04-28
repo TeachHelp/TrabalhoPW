@@ -10,24 +10,63 @@
 </head>
 <body>
     <script type="text/javascript" src="js/cadastroAluno.js" defer></script>
+    <!--Cabecalho do site-->
     <header>
-		<a href="#"><img src="img/logo.png" alt="Teach Help"> </a>
-		
-		<div >
-			<ul class="menu">
-				<li><a href="index.html">Home</a></li>
-				<li onclick="alerta()"><a href="#">Sobre</a></li>
-				<li><a href="perfilAluno.html">Perfil Aluno</a></li>
-				<li><a href="login.html">Logout</a></li>
-                <li><a href="perfilProf.html">Perfil Prof</a></li>
-			</ul>
-		</div>
-		
-	</header>
+        <!--Div que contém todos os itens do cabecalho-->
+        <div class="menu">
+            <!--Logo do site-->
+            <img src="img/Icon.png" id="logo_pequena">
+            <!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
+            <button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
+            <!--Div com as opções citadas-->
+            <div class="perfil" id="perfil_principal">
+                <a onclick="alertCadastro()">Perfil</a>
+            </div>
+            <!--Div criada para simular o design de uma barra de pesquisa-->
+            <div class="barraPesquisa">
+                <input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
+                <button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
+            </div>
+                
+                <!--Menu do site-->
+                <ul id="myUL">
+                <div>
+                    <!--Imagem do icone de menu-->
+                    <li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
+                        <br>
+                        <br>
+                        <br>
+                    <!--Div que contem a lista dos itens do menu-->
+                    <div class="div_lista">
+                    <ul class="nested">                  
+                                <li><a href="" onclick="alerta()" class="lista_materias">Configurações</a></li>
+                                <li><a href="" onclick="alerta()" class="lista_materias">Sobre</a></li>
+                            </li>  
+                    </ul>
+                    </div>
+                </div>
+                </li> 
+                </ul>
+            <!--Script interno necessario para visualizacao da lista de itens do menu-->
+            <script>
+                var toggler = document.getElementsByClassName("caret");
+                var i;
+                
+                for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function() {                
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+                }
+            </script>
+        </div>
+    </header>
     <br>
 
     <center>
+        <!--Div que contém a div de apresentação(com o texto sobre o site) e a div com o formulario de cadastro-->
         <div id="container" class="container">
+            <!--Div de apresentacao-->
             <div id="divApres" class="divApres">
                 <img src="img/logo.png" id="logo" class="logo">
                 <p class="p1"> Bem-vindo(a) ao TeachHelp! Aqui, você encontra uma ampla seleção de professores de todas as áreas para ajudá-lo a 
@@ -41,12 +80,13 @@
                     Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
             
                 </div>
-
+            <!--Div com o formulario de cadastro-->
             <div id="divForm" class="divForm">
-                <div class="divLogin">
-                    <label id="login" class="login">Cadastro</label>
+                <div class="divCadastro">
+                    <label id="cadastro" class="cadastro">Cadastro</label>
                 </div><br>
                 <form class="form">
+                    <!--Entrada de dados-->
                     <label for="lblNome" id="lblNome" class="lblNome">Nome:</label><br>
                     <input type="text" id="txtNome" class="txtNome"><br>
                     <spam class="lblNomeAut" id="lblNomeAut">Nome deve ser preenchido!</spam>
@@ -77,6 +117,7 @@
                     <input type="text" id="txtDesc" class="txtDesc"><br>       
                     
                 </form>
+                <!--Botão de login, opção de esquecimento de senha, e opção de cadastro-->
                 <button id="btnAut" class="btnAut" onclick="autentication()">Realizar Cadastro</button>
             </div> 
         </div>

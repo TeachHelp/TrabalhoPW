@@ -1,3 +1,6 @@
+/* CSS */
+
+/* corpo, com a imagem de fundo, e a cor mais escura */ 
 body{
     background-image: url("Cover.png");
     background-size: cover;
@@ -6,62 +9,54 @@ body{
 
 }
 
+/* Header */
+
 .menu{
-    background-color: #a1e4ff;
-    background-image: url(desktop/menu/CTeac-removebg-preview.png);
-    height: 70px;
+    background: linear-gradient(to right, #86d7dd, #1b487a);
+    height: 55px;
     border: groove;
-    border-color: #969696;
+    border-color: #d2e2d9;
 }
 
-#opcoes{
-    display: none;
+#logo_pequena{
+    height:60px;
+    width: 60px;
+    position:absolute;
+    left:3%;
+    top: 0.8%;
 }
 
-#opcoesLista{
-    display: none;
+/* -------------------- */
+
+/* logo no meio do site */
+
+#logo{
+    width: 300px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-/*
-#btnMenu{
-    height: 70px;
-    width: 100px;
-    font-size: 10px;
-    border-color: #d6d6d6;
-    background-color: #8b8b8b;
-    color: #ffff;
-    cursor:pointer;
-}
-*/
+/* Estilo das divs de materias*/
 
-.materiasBotoes{
-    height:150px;
-    width: 250px;
+/* botoes das materias*/
+
+.materiasBotoes_cima,
+.materiasBotoes_baixo{
+  
+    height:200px;
+    width: 280px;
     border-style: groove;
     border-color: #d6d6d6;
     cursor: pointer;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-
-}
-
-
-#logo_pequena{
-    height:50px;
-    width: 50px;
-    position:absolute;
-    left:4%;
-}
-#logo{
-    width: 500px;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 30px;
 }
 
 #Portugues{
     position: absolute;
     right: 80%;
-    background-color: #2238b3;
+    background-color: #a88028;
 }
 
 #Matematica{
@@ -93,14 +88,14 @@ body{
     position: absolute;
     top: 70%;
     right: 55%;
-    background-color: #d8b424;
+    background-color: #cea500;
 }
 
 #Idiomas{
     position: absolute;
     top: 70%;
     right: 30%;
-    background-color: #a0e07a;
+    background-color: #ff9721;
 }
 
 #Informatica{
@@ -112,16 +107,32 @@ body{
 
 .Escrita{
     position: absolute;
-    top:60%;
+    top:68%;
+    color:#eeeeee;
+    left:2%;
 }
 
-#divBusca{
-    background-color: #E0EEEE;
-    border: solid 2px #000000;
-    border-radius: 10px;
-    width: 350px;
-    height: 32px;
+/*imagens*/
+
+.imagens_c{
+    height:150px;
+    width:280px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
 }
+
+.imagens_b{
+    top:70%;
+    height:150px;
+    width:280px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* Estilo da barra de pesquisa */
 
 #txtBusca{
     position: relative;
@@ -129,113 +140,116 @@ body{
     background-color:transparent;
     padding-left:5px;
     font-size: 15px;
-    border:none;
-    border-radius: 9px;
-    height:32px;
+    border-style: none;
+    border-radius: 40px;
+    height:38px;
     width:490px;
 }
 
 #btnBuscar{
-    border:none;
+    border-style: none;
     float:left;
-    height:37px;
-    border-radius:0 7px 7px 0;
+    height: 40px;
+    border-radius:0 20px 20px 0;
     width: 55px;
     font-weight: bold;
     background:#5F9EA0;
     position:absolute;
-    top: -2px;
+    top: 0px;
     right:0%;
     cursor: pointer;
 }
 
 .barraPesquisa{
     position: absolute;
-    top:3%;
+    top: 2%;
     right: 7%;
-    border:#858585;
+    border:#4b4b4b;
     border: groove 3px;
-    border-radius: 10px;
-    background-color: #e4e4e4;
-    width: 500px;
-
-
+    border-radius: 40px;
+    border:solid 0.5px;
+    background-color: #ffffff
+    
 }
 
 #lupa{
     height: 20px;
-
 }
 
-
 /*estilo do menu*/
+
 ul, #myUL {
     list-style-type: none;
     color: #ffffff;
      
-  }
+}
 
 #menu{
     font-size: 35px;
     right:20%;
     top:4%;
 
-  }
+}
   
-  #myUL {
-    margin: 0;
+#myUL {
+    margin: -18px;
+    margin-left: -1px;
     padding: 0;
-  }
+}
   
-  .caret {
+.caret {
     cursor: pointer;   
     user-select: none;
     
-  }
+}
+
+/* Sem os seguintes 2 estilos, não é possivel a visualizacao da lista de itens do menu*/
   
-  .caret-down::before {    
-    transform: rotate(90deg);  
-  }
-  
-  .nested {
+.nested {
     display: none;
-    
-  }
+}
   
-  .active {
+.active {
     display: block;
-  }
+}
 
 
 #menu_icon{
     height:30px;
     position: absolute;
-    top: 3%;
+    top: 2.5%;
     left: 1%;
 }
 
+/* Estilo da lista de itens do menu*/
+
+.div_lista{
+    background: linear-gradient(to bottom, #1b487a, #5c9ba0);
+    height:auto;
+    width: 180px;
+}
 
 .lista_materias{
     color:#ffffff;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 
-/*construindo o botão de login*/
+/* Estilo do icon de perfil e das opcoes sugeridas por ele */
 
-
-/*
-.menu_div{
-    background-color: #adadad;
-    height:68px;
-    width:70px;
-    border: groove 2px;
-    border-color: #585858;
-    align-items: center;  
+.btnLogin{
+    position:absolute;
+    right: 1.5%;
+    top: 0.5%;
+    width: 60px;
+    height:60px;
+    align-items: center;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
 }
-*/
 
 #perfil_icon{
+    background-color: transparent;
     height:45px;
     position: relative;
     top: 8%;
@@ -252,10 +266,15 @@ ul, #myUL {
     right:2%;
     top:9%;
 }
+
 .perfil a{
-    float:none;
+    position: relative;
+    left: 30px;
+    top: -15px;
+    width: 80px;
+    height: auto;
     color:#181717;
-    background-color: #cccccc;
+    background: linear-gradient(to right, #165399, #98dfe4);
     padding: 12px 16px;
     display:block;
     text-align:center;
@@ -266,22 +285,7 @@ ul, #myUL {
     background-color: #ddd;
 }
 
-.show{display:block;}
-
-.btnLogin{
-    position:absolute;
-    right:2%;
-    width: 60px;
-    height:60px;
-    align-items: center;
-    background-color: #a1e4ff;
-    border:none;
-    cursor: pointer;
-}
-
-.div_lista{
-    background-color: #969696;
-    height:auto;
-    width: 180px;
-
+/*  estilo necessario para visualizar as opcoes de perfil */
+.show {
+    display: block;
 }
