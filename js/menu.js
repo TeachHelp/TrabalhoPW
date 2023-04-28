@@ -1,5 +1,13 @@
 const btnMenu = document.getElementById('btnMenu');
 const materiasLista = document.getElementById('materiasLista')
+perfil_principal = document.querySelector("#perfil_principal");
+perfil_login = document.querySelector("#perfil_login");
+perfil_cadastro = document.querySelector("#perfil_cadastro");
+
+perfil_principal.addEventListener("click",mostraLogin);
+
+
+/*
 
 function mostraLista(){
     var toggler = document.getElementsByClassName("caret");
@@ -35,4 +43,16 @@ function mostraListaMaterias(){
      
     // alert(divOpcoesLista.style.display);
 
+}
+
+function mostraLogin(){
+  if(perfil_login.style.display == 'none'){
+    perfil_login.style.display = 'block';
+}else{
+  perfil_login.style.display = 'none';
+}
+*/
+
+function mostraLogin(){
+  document.getElementById("perfil_principal").classList.toggle("show");
 }

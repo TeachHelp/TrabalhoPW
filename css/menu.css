@@ -8,7 +8,7 @@ body{
 
 .menu{
     background-color: #a1e4ff;
-    background-image: url(desktop/HarianPW/img/logo.png);
+    background-image: url(desktop/menu/CTeac-removebg-preview.png);
     height: 70px;
     border: groove;
     border-color: #969696;
@@ -22,6 +22,7 @@ body{
     display: none;
 }
 
+/*
 #btnMenu{
     height: 70px;
     width: 100px;
@@ -31,6 +32,7 @@ body{
     color: #ffff;
     cursor:pointer;
 }
+*/
 
 .materiasBotoes{
     height:150px;
@@ -48,16 +50,12 @@ body{
     height:50px;
     width: 50px;
     position:absolute;
-    right:50px;
+    left:4%;
 }
 #logo{
     width: 500px;
     margin-top: 3%;
     margin-bottom: 3%;
-}
-
-.materiasLayout{
-    background-color: #969696;
 }
 
 #Portugues{
@@ -126,52 +124,59 @@ body{
 }
 
 #txtBusca{
+    position: relative;
     float:left;
     background-color:transparent;
     padding-left:5px;
     font-size: 15px;
     border:none;
+    border-radius: 9px;
     height:32px;
-    width:300px;
+    width:490px;
 }
 
 #btnBuscar{
     border:none;
     float:left;
-    height:35px;
+    height:37px;
     border-radius:0 7px 7px 0;
-    width: 70px;
+    width: 55px;
     font-weight: bold;
     background:#5F9EA0;
+    position:absolute;
+    top: -2px;
+    right:0%;
+    cursor: pointer;
 }
 
-#barraPesquisa{
+.barraPesquisa{
     position: absolute;
-    right:20%;
-    top:4%;
+    top:3%;
+    right: 7%;
+    border:#858585;
+    border: groove 3px;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    width: 500px;
+
+
 }
+
+#lupa{
+    height: 20px;
+
+}
+
 
 /*estilo do menu*/
 ul, #myUL {
     list-style-type: none;
     color: #ffffff;
-    
-    
+     
   }
 
-.menuU{
-    background-color: #5e5e5e;
-    height:65px;
-    width:115px;
-    border: groove;
-    border-color: #292929;
-    
-}
-
-
-
 #menu{
-    font-size: 30px;
+    font-size: 35px;
     right:20%;
     top:4%;
 
@@ -185,6 +190,7 @@ ul, #myUL {
   .caret {
     cursor: pointer;   
     user-select: none;
+    
   }
   
   .caret-down::before {    
@@ -193,8 +199,89 @@ ul, #myUL {
   
   .nested {
     display: none;
+    
   }
   
   .active {
     display: block;
   }
+
+
+#menu_icon{
+    height:30px;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+}
+
+
+.lista_materias{
+    color:#ffffff;
+    text-decoration: none;
+    
+}
+
+/*construindo o botão de login*/
+
+
+/*
+.menu_div{
+    background-color: #adadad;
+    height:68px;
+    width:70px;
+    border: groove 2px;
+    border-color: #585858;
+    align-items: center;  
+}
+*/
+
+#perfil_icon{
+    height:45px;
+    position: relative;
+    top: 8%;
+    right: 2%;
+}
+
+
+.perfil{
+    cursor: pointer;
+    display:none;
+    position:absolute;
+    min-width: 50px;
+    z-index:1;
+    right:2%;
+    top:9%;
+}
+.perfil a{
+    float:none;
+    color:#181717;
+    background-color: #cccccc;
+    padding: 12px 16px;
+    display:block;
+    text-align:center;
+    text-decoration: none;
+}
+
+.perfil a:hover{
+    background-color: #ddd;
+}
+
+.show{display:block;}
+
+.btnLogin{
+    position:absolute;
+    right:2%;
+    width: 60px;
+    height:60px;
+    align-items: center;
+    background-color: #a1e4ff;
+    border:none;
+    cursor: pointer;
+}
+
+.div_lista{
+    background-color: #969696;
+    height:auto;
+    width: 180px;
+
+}

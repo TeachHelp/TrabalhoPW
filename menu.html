@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,43 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="css/menu.css">
-
+    <script src="./js/menu.js" defer></script>
     
 </head>
 <body>
     <div class="menu" >
-        <img src="img/logo.png" id="logo_pequena">
+        
+        <img src="img/Icon.png" id="logo_pequena">
 
-        <div id="barraPesquisa">
-            <img src=""
-            <input type="text" id="txtBusca" placeholder="Buscar áreas,professores..."/>
-            <button id="btnBuscar">Buscar</button>
+
+        <!--
+        <div class="perfil" id="perfil_principal"><img src="img/perfil_icon.png" id="perfil_icon"></div>
+        <div class="perfil_conteudo" id="perfil_login">Login</div>
+        <div class="perfil_conteudo" id="perfil_cadastro">Cadastre-se</div>
+        -->
+
+        <button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
+        <div class="perfil" id="perfil_principal">
+            <a href="#">Login</a>
+            <a href="#">Cadastre-se</a>
+
+        </div>
+
+        <div class="barraPesquisa">
+            <input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
+            <button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
         </div>
 
 
-        <ul id="myUL">
-        <div class="menuU">
-            <li><span id="menu" class="caret botao">MENU</span>               
-            <ul class="nested">
-                        <li><a href="">Perfil</a></li>
-                        <li><span class="caret">Matérias</span>                      
-                            <ul class="nested">
-                                <li><a href="">Português</a></li>
-                                <li><a href="">Matemática</a></li>
-                                <li><a href="">Música</a></li>
-                                <li><a href="">Esportes</a></li>
-                                <li><a href="">História</a></li>
-                                <li><a href="">Inglês</a></li>
-                                <li><a href="">Idiomas</a></li>
-                                <li><a href="">Informática</a></li>
-                            </ul>                                                    
-                        <li><a href="">Configurações</a></li>
-                        <li><a href="">Sobre</a></li>
-                    </li>  
+        
+            <ul id="myUL">
+            <div class="">
+                <li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
+                    <br>
+                    <br>
+                    <br>
+                <div class="div_lista">
+                <ul class="nested">
+                            <li><a href="" class="lista_materias">Perfil</a></li>
+                            <li><span class="caret">Matérias</span>                      
+                                <ul class="nested">
+                                    <li><a href="" class="lista_materias" >Português</a></li>
+                                    <li><a href="" class="lista_materias">Matemática</a></li>
+                                    <li><a href="" class="lista_materias">Música</a></li>
+                                    <li><a href="" class="lista_materias">Esportes</a></li>
+                                    <li><a href="" class="lista_materias">História</a></li>
+                                    <li><a href="" class="lista_materias">Inglês</a></li>
+                                    <li><a href="" class="lista_materias">Idiomas</a></li>
+                                    <li><a href="" class="lista_materias">Informática</a></li>
+                                </ul>                                                    
+                            <li><a href="" class="lista_materias">Configurações</a></li>
+                            <li><a href="" class="lista_materias">Sobre</a></li>
+                            <li><a href="" class="lista_materias">Sair</a></li>
+                        </li>  
+                </ul>
+                </div>
+            </div>
+            </li> 
             </ul>
-        </div>
-        </li> 
-        </ul>
+        
+
 
 
 
