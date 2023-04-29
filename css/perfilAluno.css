@@ -6,6 +6,7 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* corpo, com a imagem de fundo, e a cor mais escura */ 
 body{
     background: #f3f3f3;
     height:100vh;
@@ -18,6 +19,7 @@ body{
     background-repeat: no-repeat;
 }
 
+/* Dseigner do card para que fique com efeito destacado da página e com cores diferentes*/
 .wrapper{
     margin: auto;
     margin-top: 50px;
@@ -245,86 +247,296 @@ body{
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 /*RESET*/
-*{
-	margin:0;
-	padding:0;
-	/* o tamanho dos elementos é definido = largura + margin + border */
-	/* padrão de definição do tamanho do elemento: content-box  */
-	/* Se for definido 100px , margin: 20px ; border: 4px = caixa terá 128px */
-	/* O border box calcula o tamanho levando em consideração a margin e border  */
-	/* Se for definido 100px , margin: 20px ; border: 4px = caixa terá 72px  */
-	box-sizing: border-box;
-	font-family: Verdana, Geneva, Thoma, sans-serif;
+
+
+/* CSS */
+
+/* corpo, com a imagem de fundo, e a cor mais escura */ 
+body{
+    background-image: url("Cover.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #00010f;
+
 }
 
-/* Trick */
-body{ 
-	height:100vh;
-	display:flex;
-	flex-direction:column;
-	/*background-image: url('img/Cover.png');*/
-}
-
-header{
-	max-height: 100px;
-	/*Fica o menu do lado do logo - modo default rows*/
-	display: flex;
-	padding: 20px;
-	/*espaço entre o logo e o menu*/	
-	justify-content:space-between;
-	/*logo fica alinhado com o menu*/
-	align-items: center;
-	/*altura minima - não quero que fique menor que 50px
-	Mesmo sem ter conteúdo e nada eu consigo fixar o tamanho minimo*/
-	background: #e8e8e8;
-}
-
-footer{
-	margin-top:auto; 
-	color: rgb(0, 0, 0);
-	background: #e8e8e8;
-	text-align: center;
-}
-
-ul,li {
-	list-style: none;
-	font-size: 1.2rem;	
-}
-
-img{
-	width: 150px;
-}
-
-a{
-	text-decoration: none;
-	color: rgb(0, 0, 0);
-}
+/* Header */
 
 .menu{
-	display: flex;
-	
+    background: linear-gradient(to right, #86d7dd, #1b487a);
+    height: 55px;
+    border: groove;
+    border-color: #d2e2d9;
 }
 
-.menu li{
-	margin-left:20px;
+#logo_pequena{
+    height:60px;
+    width: 60px;
+    position:absolute;
+    left:3%;
+    top: 0.8%;
 }
 
-.menu li a{
-	padding: 5 px;
+/* -------------------- */
+
+/* logo no meio do site */
+
+#logo{
+    width: 300px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-.flex{
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 800px;/*tamanho máximo da seção*/
-	margin: 0 auto; /*centraliza na margem automaticamente*/
+/* Estilo das divs de materias*/
+
+/* botoes das materias*/
+
+.materiasBotoes_cima,
+.materiasBotoes_baixo{
+  
+    height:200px;
+    width: 280px;
+    border-style: groove;
+    border-color: #d6d6d6;
+    cursor: pointer;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 30px;
 }
 
-/*significa filho-direto do elemento. Seleciona todos os filhos-diretos do elemento.*/
-.flex > div{
-	/*flex-grow -A number specifying how much the item will grow relative to the rest of the flexible items
-	flex-shrink - A number specifying how much the item will shrink relative to the rest of the flexible items
-	flex-basis -  tamanho do item*/
-	flex: 1 1 200px;
-	margin: 10px;
+#Portugues{
+    position: absolute;
+    right: 80%;
+    background-color: #a88028;
+}
+
+#Matematica{
+    position: absolute;
+    right: 55%;
+    background-color: #2ec121;
+}
+
+#Musica{
+    position: absolute;
+    right: 30%;
+    background-color: #9d27af;
+}
+
+#Esportes{
+    position: absolute;
+    right: 5%;
+    background-color: #25d3b9;
+}
+
+#Historia{
+    position: absolute;
+    top: 70%;
+    right: 80%;
+    background-color: #ca2525;
+}
+
+#Ingles{
+    position: absolute;
+    top: 70%;
+    right: 55%;
+    background-color: #cea500;
+}
+
+#Idiomas{
+    position: absolute;
+    top: 70%;
+    right: 30%;
+    background-color: #ff9721;
+}
+
+#Informatica{
+    position: absolute;
+    top:70%;
+    right:5%;
+    background-color: #614bc6;
+}
+
+.Escrita{
+    position: absolute;
+    top:68%;
+    color:#eeeeee;
+    left:2%;
+}
+
+/*imagens*/
+
+.imagens_c{
+    height:150px;
+    width:280px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+
+.imagens_b{
+    top:70%;
+    height:150px;
+    width:280px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* Estilo da barra de pesquisa */
+
+#txtBusca{
+    position: relative;
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size: 15px;
+    border-style: none;
+    border-radius: 40px;
+    height:38px;
+    width:490px;
+}
+
+#btnBuscar{
+    border-style: none;
+    float:left;
+    height: 40px;
+    border-radius:0 20px 20px 0;
+    width: 55px;
+    font-weight: bold;
+    background:#5F9EA0;
+    position:absolute;
+    top: 0px;
+    right:0%;
+    cursor: pointer;
+}
+
+.barraPesquisa{
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    border:#4b4b4b;
+    border: groove 3px;
+    border-radius: 40px;
+    border:solid 0.5px;
+    background-color: #ffffff
+    
+}
+
+#lupa{
+    height: 20px;
+}
+
+/*estilo do menu*/
+
+ul, #myUL {
+    list-style-type: none;
+    color: #ffffff;
+     
+}
+
+#menu{
+    font-size: 35px;
+    right:20%;
+    top:4%;
+
+}
+  
+#myUL {
+    margin: -18px;
+    margin-left: -1px;
+    padding: 0;
+}
+  
+.caret {
+    cursor: pointer;   
+    user-select: none;
+    
+}
+
+/* Sem os seguintes 2 estilos, não é possivel a visualizacao da lista de itens do menu*/
+  
+.nested {
+    display: none;
+}
+  
+.active {
+    display: block;
+}
+
+
+#menu_icon{
+    height:30px;
+    position: absolute;
+    top: 2.5%;
+    left: 1%;
+}
+
+/* Estilo da lista de itens do menu*/
+
+.div_lista{
+    background: linear-gradient(to bottom, #1b487a, #5c9ba0);
+    height:auto;
+    width: 180px;
+}
+
+.lista_materias{
+    color:#ffffff;
+    text-decoration: none; 
+}
+
+/* Estilo do icon de perfil e das opcoes sugeridas por ele */
+
+.btnLogin{
+    position:absolute;
+    right: 1.5%;
+    top: 0.5%;
+    width: 60px;
+    height:60px;
+    align-items: center;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+
+#perfil_icon{
+    background-color: transparent;
+    height:45px;
+    position: relative;
+    top: 8%;
+    right: 2%;
+}
+
+
+.perfil{
+    cursor: pointer;
+    display:none;
+    position:absolute;
+    min-width: 50px;
+    z-index:1;
+    right:2%;
+    top:9%;
+}
+
+.perfil a{
+    position: relative;
+    left: 30px;
+    top: -15px;
+    width: 80px;
+    height: auto;
+    color:#181717;
+    background: linear-gradient(to right, #165399, #98dfe4);
+    padding: 12px 16px;
+    display:block;
+    text-align:center;
+    text-decoration: none;
+}
+
+.perfil a:hover{
+    background-color: #ddd;
+}
+
+/*  estilo necessario para visualizar as opcoes de perfil */
+.show {
+    display: block;
 }

@@ -6,16 +6,6 @@ body {
     background-color: #00010f;
 }
 
-.top-bar {
-	background-color: #00FFFF;
-	height: 50px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
 .back-button {
 	position: absolute;
 	top: 10px;
@@ -60,18 +50,6 @@ input[type=text] {
   width: 250px;
 }
 
-button[type=submit] {
-  border: none;
-  background-color: white;
-  outline: none;
-  cursor: pointer;
-  padding: 10px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 .logo-container {
   position: fixed;
@@ -128,4 +106,181 @@ button[type=submit] {
 
 .like-button.red {
     color: red;
+}
+
+
+/* Header */
+
+.menu{
+  background: linear-gradient(to right, #86d7dd, #1b487a);
+  height: 55px;
+  border: groove;
+  border-color: #d2e2d9;
+}
+
+#logo_pequena{
+  height:60px;
+  width: 60px;
+  position:absolute;
+  left:3%;
+  top: 0.8%;
+}
+
+/* Estilo da barra de pesquisa */
+
+#txtBusca{
+  position: relative;
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-size: 15px;
+  border-style: none;
+  border-radius: 40px;
+  height:38px;
+  width:490px;
+}
+
+#btnBuscar{
+  border-style: none;
+  float:left;
+  height: 40px;
+  border-radius:0 20px 20px 0;
+  width: 55px;
+  font-weight: bold;
+  background:#5F9EA0;
+  position:absolute;
+  top: -0.5px;
+  right:0%;
+  cursor: pointer;
+}
+
+.barraPesquisa{
+  position: absolute;
+  top: 2%;
+  right: 7%;
+  border:#4b4b4b;
+  border: groove 3px;
+  border-radius: 40px;
+  border:solid 0.5px;
+  background-color: #ffffff
+  
+}
+
+#lupa{
+  height: 20px;
+}
+
+/*estilo do menu*/
+
+ul, #myUL {
+  list-style-type: none;
+  color: #ffffff;   
+}
+
+#menu{
+  font-size: 35px;
+  right:20%;
+  top:4%;
+}
+
+#myUL {
+  margin: -18px;
+  margin-left: -1px;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;   
+  user-select: none;
+  
+}
+/* Sem os seguintes 2 estilos, não é possivel a visualizacao da lista de itens do menu*/
+.nested {
+  display: none;
+  
+}
+
+.active {
+  display: block;
+}
+
+#menu_icon{
+  height:30px;
+  position: absolute;
+  top: 2.5%;
+  left: 1%;
+}
+
+/* Estilo da lista de itens do menu*/
+
+.div_lista{
+  background: linear-gradient(to bottom, #1b487a, #5c9ba0);
+  height:auto;
+  width: 180px;
+}
+
+.lista_materias{
+  color:#ffffff;
+  text-decoration: none; 
+}
+
+/* Estilo do icon de perfil e das opcoes sugeridas por ele */
+
+.btnLogin{
+  position:absolute;
+  right: 1.5%;
+  top: 0.5%;
+  width: 60px;
+  height:60px;
+  align-items: center;
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+
+#perfil_icon{
+  background-color: transparent;
+  height:45px;
+  position: relative;
+  top: 8%;
+  right: 2%;
+}
+
+
+.perfil{
+  cursor: pointer;
+  display:none;
+  position:absolute;
+  min-width: 50px;
+  z-index:1;
+  right:2%;
+  top:9%;
+}
+
+.perfil a{
+  position: relative;
+  left: 30px;
+  top: -15px;
+  width: 80px;
+  height: auto;
+  color:#181717;
+  background: linear-gradient(to right, #165399, #98dfe4);
+  padding: 12px 16px;
+  display:block;
+  text-align:center;
+  text-decoration: none;
+}
+
+.perfil a:hover{
+  background-color: #ddd;
+}
+
+/*  estilo necessario para visualizar as opcoes de perfil */
+.show {
+  display: block;
+}
+
+a{
+  color: #181717;
+  text-decoration: none;
 }

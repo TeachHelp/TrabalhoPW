@@ -11,30 +11,80 @@
     <script src="" defer></script>
 </head>
 <body>
+    <!--Cabecalho do site-->
     <header>
-        <script type="text/javascript" src="js/perfilAluno.js" defer></script>
-		<a href="#"><img src="img/logo.png" alt="Teach Help"> </a>
-		
-		<div >
-			<ul class="menu">
-				<li><a href="index.html">Home</a></li>
-				<li onclick="alerta()"><a href="">Sobre</a></li>
-				<li ><a href="#">Perfil Aluno</a></li>
-				<li><a href="login.html">Logout</a></li>
-                <li><a href="perfilProf.html">Perfil Prof</a></li>
-			</ul>
-		</div>
-		
-	</header>
+        <!--Div que contém todos os itens do cabecalho-->
+        <div class="menu">
+            <!--Logo do site-->
+            <img src="img/Icon.png" id="logo_pequena">
+            <!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
+            <button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
+            <!--Div com as opções citadas-->
+            <div class="perfil" id="perfil_principal">
+                <a href="perfilAluno.html">Perfil</a>
+                <a href="login.html">Logout</a>
+            </div>
+            <!--Div criada para simular o design de uma barra de pesquisa-->
+            <div class="barraPesquisa">
+                <input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
+                <button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
+            </div>
+                
+                <!--Menu do site-->
+                <ul id="myUL">
+                <div>
+                    <!--Imagem do icone de menu-->
+                    <li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
+                        <br>
+                        <br>
+                        <br>
+                    <!--Div que contem a lista dos itens do menu-->
+                    <div class="div_lista">
+                    <ul class="nested">
+                        <li><a href="menu.html" class="lista_materias">Home</a></li>
+					    <li><span class="caret">Matérias</span>                      
+                            <ul class="nested">
+                                <li><a href="#" onclick="alerta()" class="lista_materias">Português</a></li>
+                                <li><a href="pgProf.html" class="lista_materias">Matemática</a></li>
+                                <li><a href="#" onclick="alerta()" class="lista_materias">Música</a></li>
+                                <li><a href="#" onclick="alerta()" class="lista_materias">Esportes</a></li>
+                                <li><a href="#" onclick="alerta()" class="lista_materias">História</a></li>
+                                <li><a href="#" onclick="alerta()" class="lista_materias">Inglês</a></li>
+                                <li><a href="#" onclick="alerta()" class="lista_materias">Idiomas</a></li>
+                                <li><a href="#" onclick="alerta()" class="lista_materias">Informática</a></li>
+                            </ul>
+                        </li>                       
+                        <li><a href="#" onclick="alerta()" class="lista_materias">Configurações</a></li>
+                        <li><a href="#" onclick="alerta()" class="lista_materias">Sobre</a></li>
+                        <li><a href="login.html" class="lista_materias">Sair</a></li>
+                    </ul>
+                </div>
+            </div>  
+            <!--Script interno necessario para visualizacao da lista de itens do menu-->
+            <script>
+                var toggler = document.getElementsByClassName("caret");
+                var i;
+                
+                for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function() {                
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+                }
+            </script>
+        </div>
+    </header>
     
+    <!--Criação de um card que ficará por cima da foto de fundo apresentando as informações do perfil da pessoa-->
     <div class="wrapper" id="wrapper">
+        <!--Criação do local onde ficarão a foto e um resumo sobre o aluno-->
         <div class="left" id="left">
-            <img src="img/Wilsiman.jpg" alt="Nathan" width="100">
+            <img src="img/Wilsiman.jpg" alt="Wilsiman" width="100">
             <h4>Wilsiman Santos Evangelista Silva</h4>
             <p>Tenho Interesse em Programação, Inteligência Artificial e Matemática</p>
         </div>
         <div class="right" id="right">
-
+            <!--Criação do local onde ficarão os dados dos alunos-->
             <div class="info" id="info">
                 <h3>Informações</h3>
                 <div class="info_data" id="info_data">
@@ -67,7 +117,7 @@
                     </div>
                 </div>
             </div>
-
+            <!--Criação do local onde serão adicionadas as matérias de interesse do aluno-->
             <div class="available">
                 <h3>Áreas escolhidas</h3>
                 <div class="available_data">
@@ -85,7 +135,7 @@
                     </span>
                 </div>
             </div>
-
+            <!--Criação de local onde ficarão os instrutores favoritados pelos alunos-->
             <div class="projects" id="project">
                 <h3>Professores favoritos</h3>
                 <div class="project_data" id="project_data">
@@ -102,16 +152,16 @@
                         <legend>Carlos Lins, 44 - Ciência da Computação</legend>
                     </div>
                     <div class="data">
-                        <img src="img/ImgFidelis.jpg" alt="Fidelis">
-                        <legend>Fidelis Zanetti, 43 - Matemática Aplicada</legend>
+                        <img src="img/felipeFrechiani.jpeg" alt="Felipe">
+                        <legend>Felipe Frechiani, 45 - Ciências da Computação</legend>
                     </div>
                     <div class="data">
-                        <img src="img/Fabiano.jpeg" alt="Fabiano">
-                        <legend>Fabiano Ruy, 42 - Ciência da Computação</legend>
+                        <img src="img/moisesOmena.jpg" alt="Moises">
+                        <legend>Moises Omena, 47 - Sistemas de Informação</legend>
                     </div>
                     <div class="data">
-                        <img src="img/CarlosLins.jpeg" alt="Carlos">
-                        <legend>Carlos Lins, 44 - Ciência da Computação</legend>
+                        <img src="img/jessica.png" alt="Jéssica">
+                        <legend>Jéssica Oliveira, 44 - Geografia</legend>
                     </div>
                 </div>
             </div>
@@ -125,7 +175,7 @@
 
         </div>
     </div>
-    
+    <!--Criação de rodapé-->
     <footer>Todos os direitos reservados</footer>
 </body>
 </html>

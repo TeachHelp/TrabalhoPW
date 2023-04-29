@@ -5,29 +5,81 @@
 	<link rel="stylesheet" type="text/css" href="css/pgProf.css">
 	<link rel="icon" type="image/x-icon" href="img/logo.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/pgProf.js" defer></script>
 </head>
 <body>
-<div class="logo-container">
-  <img src="" alt="Logo">
-</div>
-	<div class="top-bar">
-	<a href="#" class="back-button"><i class="fa fa-arrow-left"></i></a>
-		<div class="search-container">
-		  <form action="#">
-		    <div class="search-wrapper">
-		      <input type="text" placeholder="Buscar" name="search">
-		      <button type="submit"><i class="fa fa-search"></i></button>
-			</div>
-		  </form>
+<!--Cabecalho do site-->
+<header>
+	<!--Div que contém todos os itens do cabecalho-->
+	<div class="menu">
+		<!--Logo do site-->
+		<img src="img/Icon.png" id="logo_pequena">
+		<!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
+		<button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
+		<!--Div com as opções citadas-->
+		<div class="perfil" id="perfil_principal">
+			<a href="perfilAluno.html">Perfil</a>
+			<a href="login.html">Logout</a>
 		</div>
+		<!--Div criada para simular o design de uma barra de pesquisa-->
+		<div class="barraPesquisa">
+			<input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
+			<button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
+		</div>
+			
+			<!--Menu do site-->
+			<ul id="myUL">
+			<div>
+				<!--Imagem do icone de menu-->
+				<li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
+					<br>
+					<br>
+					<br>
+				<!--Div que contem a lista dos itens do menu-->
+				<div class="div_lista">
+				<ul class="nested">
+					<li><a href="menu.html" class="lista_materias">Home</a></li>
+					<li><span class="caret">Matérias</span>                      
+						<ul class="nested">
+							<li><a href="#" onclick="alerta()" class="lista_materias">Português</a></li>
+							<li><a href="pgProf.html" class="lista_materias">Matemática</a></li>
+							<li><a href="#" onclick="alerta()" class="lista_materias">Música</a></li>
+							<li><a href="#" onclick="alerta()" class="lista_materias">Esportes</a></li>
+							<li><a href="#" onclick="alerta()" class="lista_materias">História</a></li>
+							<li><a href="#" onclick="alerta()" class="lista_materias">Inglês</a></li>
+							<li><a href="#" onclick="alerta()" class="lista_materias">Idiomas</a></li>
+							<li><a href="#" onclick="alerta()" class="lista_materias">Informática</a></li>
+						</ul>
+					</li>                       
+					<li><a href="#" onclick="alerta()" class="lista_materias">Configurações</a></li>
+					<li><a href="#" onclick="alerta()" class="lista_materias">Sobre</a></li>
+					<li><a href="login.html" class="lista_materias">Sair</a></li>
+				</ul>
+			</div>
+		</div>  
+		<!--Script interno necessario para visualizacao da lista de itens do menu-->
+		<script>
+			var toggler = document.getElementsByClassName("caret");
+			var i;
+			
+			for (i = 0; i < toggler.length; i++) {
+			toggler[i].addEventListener("click", function() {                
+				this.parentElement.querySelector(".nested").classList.toggle("active");
+				this.classList.toggle("caret-down");
+			});
+			}
+		</script>
 	</div>
+</header>
 	<div class="card-container">
 		<div class="card">
+			<a href="perfilProf.html">
 			<img class="card-image" src="https://media.licdn.com/dms/image/C5603AQHGPFe_6YqHrQ/profile-displayphoto-shrink_800_800/0/1659888505915?e=1687996800&v=beta&t=QnrH0GSvsHudy9pb4mS-eYsCSVO9rRhKUJOkSSM484k">
 			<div class="card-desc">
 				<h4>Fidelis Zanetti de Castro <i class="fa fa-heart like-button"></i></h4>
 				<p>Professor doutor em Matemática Aplicada formado pela Unicamp</p>
 			</div>
+			</a>
 		</div>
 		<div class="card">
 			<img class="card-image" src="https://th.bing.com/th/id/R.0111c3d50bb2759dcfa4fb3eb67f1cb7?rik=OleFcYttOJ80Ig&pid=ImgRaw&r=0">
