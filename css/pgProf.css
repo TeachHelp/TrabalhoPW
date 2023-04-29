@@ -1,111 +1,73 @@
+/* Define o estilo do corpo da pagina */
 body {
-	background-image: url("Cover.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #00010f;
-}
-
-.back-button {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	border-radius: 50%;
-	height: 30px;
-	width: 40px;
-	background-color: #00FFFF;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.back-button i {
-	font-size: 18px;
-	box-shadow: 0 0 0 3px white;
-	color: white;
-	border-radius: 50%;
-	padding: 5px;
-}
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 5px auto 0;
-  max-width: 1200px;
-}
-
-.search-wrapper{
-	position: relative;
-	border: 2px solid black;
-	border-radius: 20px;
-}
-
-input[type=text] {
-  border: none;
-  border-radius: 20px;
-  padding: 10px 40px 10px 10px;
-  outline: none;
-  width: 250px;
+	background-image: url("Cover.png"); /* Define a imagem de fundo */
+    background-repeat: no-repeat; /* Não repete a imagem de fundo */
+    background-attachment: fixed; /* Mantém a imagem de fundo fixa */
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
+    background-color: #00010f; /* Define a cor de fundo da pagina */
 }
 
 
+/* Estilo para o container da logo */
 .logo-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 9999;
+  position: fixed; /* Define a posicao fixa do container da logo */
+  top: 0; /* Define a posicao superior do container da logo */
+  right: 0; /* Define a posicao direita do container da logo */
+  z-index: 9999; /* Define o índice z do container da logo */
 }
 
+/* Estilo para a imagem da logo */
 .logo-container img {
-  height: 50px;
+  height: 50px; /* Define a altura da imagem da logo */
 }
 
-
+/* Estilo para o container dos cards */
 .card-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 30px;
+	display: flex; /* Define o display como flex para permitir o alinhamento dos cards */
+	flex-wrap: wrap; /* Define o wrap como flex para permitir que os cards quebrem a linha quando não couberem mais na mesma linha */
+	justify-content: center; /* Define o alinhamento centralizado dos cards */
+	margin-top: 30px; /* Define a margem superior do container dos cards */
 }
 
+/* Estilo para cada card */
 .card {
-  width: 250px;
-  height: 400px;
-  margin: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 250px; /* Define a largura do card */
+  height: 400px; /* Define a altura do card */
+  margin: 20px; /* Define a margem externa do card */
+  margin-bottom: 20px; /* Define a margem inferior do card */
+  border-radius: 10px; /* Adiciona um arredondamento nos cantos do card */
+  overflow: hidden; /* Define o overflow como hidden para ocultar o conteúdo que estiver fora do card */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adiciona uma sombra no card */
 }
 
+/* Estilo para quando o mouse passar sobre o card */
 .card:hover {
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Adiciona uma sombra mais forte no card quando o mouse passa sobre ele */
 }
 
 .card img {
-  height: 250px;
-  object-fit: cover;
+  height: 250px; /* define a altura da imagem */
+  object-fit: cover; /* faz com que a imagem cubra todo o espaço disponível sem perder a proporção */
 }
 
 .card-desc {
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  background-color: #ffffff;
-	padding: 10px;
-	text-align: center;
-  height: 200px;
+  border-bottom-left-radius: 50px; /* define o raio da borda esquerda inferior do elemento */
+  border-bottom-right-radius: 50px; /* define o raio da borda direita inferior do elemento */
+  background-color: #ffffff; /* define a cor de fundo do elemento */
+	padding: 10px; /* define o espacamento interno do elemento */
+	text-align: center; /* define o alinhamento do texto do elemento */
+  height: 200px; /* define a altura do elemento */
 }
+
 .like-button {
-    float: right;
-    font-size: 24px;
-    color: black;
-    cursor: pointer;
+    float: right; /* alinha o elemento à direita */
+    font-size: 24px; /* define o tamanho da fonte do elemento */
+    color: black; /* define a cor do texto do elemento */
+    cursor: pointer; /* faz com que o cursor do mouse se transforme em uma mão quando passa por cima do elemento */
 }
 
 .like-button.red {
-    color: red;
+    color: red; /* define a cor do texto do elemento quando a classe 'red' é adicionada */
 }
 
 
