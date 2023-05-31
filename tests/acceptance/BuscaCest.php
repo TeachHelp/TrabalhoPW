@@ -15,7 +15,10 @@ class BuscaCest
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
 		$I->amOnPage('/');
+		$I->fillField('txtEmailName', 'harian@gmail.com');
+		$I->fillField('txtSenhaName', 'harian123');
 		$I->click('Login');
-	    	$I->amOnPage('/menu.html');
+		$I->seeCurrentURLEquals('/menu.html');
+
     }
 }
