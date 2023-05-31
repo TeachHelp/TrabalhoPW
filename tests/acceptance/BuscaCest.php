@@ -16,5 +16,6 @@ class BuscaCest
     {
 		$I->amOnPage('/');
 		$I->click('Login');
+	    	$I->amOnPage('/menu.html');
     }
 }
