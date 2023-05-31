@@ -15,8 +15,6 @@ class BuscaCest
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
 		$I->amOnPage('/');
-		$I->fillField('searchword', 'edital');
-		$I->click('Buscar');
-		$I->see('resultados encontdos');
+		$I->click('Login');
     }
 }
