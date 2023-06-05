@@ -7,13 +7,15 @@
     <title>Menu</title>
     <link rel="stylesheet" href="css/menu.css">
     <script src="./js/menu.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
     
 </head>
 <body>
     <!--Cabecalho do site-->
     <header>
         <!--Div que contém todos os itens do cabecalho-->
-        <div class="menu">
+        <div class="col-12 bg-corHeader border">
             <!--Logo do site-->
             <img src="img/Icon.png" id="logo_pequena">
             <!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
@@ -61,6 +63,7 @@
             </div>  
             <!--Script interno necessario para visualizacao da lista de itens do menu-->
             <script>
+              /*
                 var toggler = document.getElementsByClassName("caret");
                 var i;
                 
@@ -70,30 +73,31 @@
                     this.classList.toggle("caret-down");
                 });
                 }
+                */
             </script>
-        </div>
-    </header>
-    
-    <center><img src="img/logoBranca.png" id="logo"></center>
-    
-    <!--Div que contem as divs que mosram as demais materias-->
-    <div class="materiasLyout">
-        <div  class="materiasBotoes_cima" id="Portugues" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Português</font></h1> <img class="imagens_c" src="img/port.jpg"></div>
         
-        <div  class="materiasBotoes_cima" id="Matematica" onclick="telaProf()" type="button"><h1 class="Escrita"><font face="Georgia">Matemática</font></h1> <img class="imagens_c" src="img/mat.jpg"></div >  
+    </header>
+    <body>
+        <div class=" col-12 bg-corSite">
+            <center><img src="img/logoBranca.png" id="logo"></center>
+            
+            <!--Div que contem as divs que mosram as demais materias-->
+                <div  class="materiasBotoes_cima" id="Portugues" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Português</font></h1> <img class="imagens_c" src="img/port.jpg"></div>
+                
+                <div  class="materiasBotoes_cima" id="Matematica" onclick="telaProf()" type="button"><h1 class="Escrita"><font face="Georgia">Matemática</font></h1> <img class="imagens_c" src="img/mat.jpg"></div >  
 
-        <div  class="materiasBotoes_cima" id="Musica" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Música</font></h1> <img class="imagens_c" src="img/music.jpg"></div >
+                <div  class="materiasBotoes_cima" id="Musica" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Música</font></h1> <img class="imagens_c" src="img/music.jpg"></div >
 
-        <div  class="materiasBotoes_cima" id="Esportes" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Esportes</font></h1> <img class="imagens_c" src="img/esport.jpg"></div >
+                <div  class="materiasBotoes_cima" id="Esportes" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Esportes</font></h1> <img class="imagens_c" src="img/esport.jpg"></div >
 
-        <div  class="materiasBotoes_baixo" id="Historia" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">História</font></h1>  <img class="imagens_b" src="img/hist.jpg"></div >
+                <div  class="materiasBotoes_baixo" id="Historia" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">História</font></h1>  <img class="imagens_b" src="img/hist.jpg"></div >
 
-        <div  class="materiasBotoes_baixo" id="Ingles" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Inglês</font></h1><img class="imagens_b" src="img/ing.jpg"></div >
+                <div  class="materiasBotoes_baixo" id="Ingles" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Inglês</font></h1><img class="imagens_b" src="img/ing.jpg"></div >
 
-        <div  class="materiasBotoes_baixo" id="Idiomas" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Idiomas</font></h1><img class="imagens_b" src="img/idiom.jpg"></div >
+                <div  class="materiasBotoes_baixo" id="Idiomas" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Idiomas</font></h1><img class="imagens_b" src="img/idiom.jpg"></div >
 
-        <div class="materiasBotoes_baixo" id="Informatica" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Informática</font></h1><img class="imagens_b" src="img/info.jpeg"></div>
-    </div>
-    
+                <div class="materiasBotoes_baixo" id="Informatica" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Informática</font></h1><img class="imagens_b" src="img/info.jpeg"></div>
+        </div>
 </body>
+
 </html>
