@@ -21,8 +21,9 @@
   @media screen and (min-width: 769px) {
     .dropend:hover > .dropdown-menu {
       position: absolute;
-      top: 0;
-      left: 100%;
+      top:115%;
+      right:0%
+      
     }
     .dropend .dropdown-toggle {
       margin-left: 0.5em;
@@ -37,4 +38,15 @@ body{
 
 .bg-transparente{
   background-color: none;
+}
+
+#navMenu, #navHome{
+  color: #fff;
+}
+.btn-outline-light{
+  background-color: #fff;
+  color: black;
+}
+.form-control-ss{
+  width: 500px;
 }
