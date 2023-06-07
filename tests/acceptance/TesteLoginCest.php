@@ -16,7 +16,7 @@ class TesteLoginCest
     {
 		$I->amOnPage('/');
 		$I->fillField('TxtEmail', 'harian@gmail.com');
-		$I->fillField('TxtSenha', 'harian123');
+		$I->fillField('TxtName', 'harian123');
 		$I->click('Login');
 		$I->seeCurrentURLEquals('/menu.html');
 
