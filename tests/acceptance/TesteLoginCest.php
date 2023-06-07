@@ -15,8 +15,8 @@ class TesteLoginCest
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
 		$I->amOnPage('/');
-		$I->fillField('txtEmailName', 'harian@gmail.com');
-		$I->fillField('txtSenhaName', 'harian123');
+		$I->fillField('TxtEmail', 'harian@gmail.com');
+		$I->fillField('TxtSenha', 'harian123');
 		$I->click('Login');
 		$I->seeCurrentURLEquals('/menu.html');
 
