@@ -14,11 +14,8 @@ class BuscaCest
     // tests
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
-		
-          $I = new AcceptanceTester($scenario);
-          $I->amOnPage('/');
-          $I->click('Login');
-          $I->seeCurrentURLEquals('/menu.html');
-
+		$I->amOnPage('/');
+		$I->click('Login');
+		$I->seeCurrentURLEquals('/menu.html');
     }
 }
