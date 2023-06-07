@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class BuscaCest
+class TesteExceptionLoginCest
 {
     public function _before(AcceptanceTester $I)
     {
