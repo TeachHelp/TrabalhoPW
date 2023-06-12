@@ -17,8 +17,8 @@ function alerta(){
 }
 
 /* funcao que autentica se os inputs foram preenchidos e envia o usuario para a pagina principal */
-
-function autentication(){
+ 
+function autentication(){ 
     let nome = document.getElementById("txtNome");
     let senha = document.getElementById("txtSenha");
     let tel = document.getElementById("txtTel");

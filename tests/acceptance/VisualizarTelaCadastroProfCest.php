@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class BuscaCest
+class VisualizarTelaCadastroProfCest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -14,11 +14,9 @@ class BuscaCest
     // tests
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
-		$I->amOnPage('/');
-		$I->fillField('txtEmailName', 'harian@gmail.com');
-		$I->fillField('txtSenhaName', 'harian123');
-		$I->click('Login');
-		$I->seeCurrentURLEquals('/menu.html');
-
+              $I->amOnPage('/');
+              $I->click('Cadastre-se!');
+              $I->click('Aluno');
+              $I->seeCurrentURLEquals('/cadastroAluno.html');
     }
 }
