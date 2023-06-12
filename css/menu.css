@@ -1,6 +1,7 @@
 /* CSS */
 
-/* corpo, com a imagem de fundo, e a cor mais escura */ 
+/* corpo, com a imagem de fundo, e a cor mais escura 
+
 body{
     background-image: url("Cover.png");
     background-size: cover;
@@ -8,21 +9,42 @@ body{
     background-color: #00010f;
 
 }
+*/ 
+
+.bg-corSite{
+    background-image: url("Cover.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #00010f;
+}
+
+
+.img-fluid{
+    background-image: url("Cover.png");
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
 
 /* Header */
-
+/*
 .menu{
     background: linear-gradient(to right, #86d7dd, #1b487a);
     height: 55px;
     border: groove;
     border-color: #d2e2d9;
 }
+*/
+
+.bg-corHeader{
+    background: linear-gradient(to right, #86d7dd, #1b487a)
+}
 
 #logo_pequena{
     height:60px;
     width: 60px;
     position:absolute;
-    left:3%;
+    left:50px;
     top: 0.8%;
 }
 
@@ -107,7 +129,7 @@ body{
 
 .Escrita{
     position: absolute;
-    top:68%;
+    top:75%;
     color:#eeeeee;
     left:2%;
 }
@@ -115,8 +137,8 @@ body{
 /*imagens*/
 
 .imagens_c{
-    height:150px;
-    width:280px;
+    height:75%;
+    width:100%;
     cursor: pointer;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -125,8 +147,8 @@ body{
 
 .imagens_b{
     top:70%;
-    height:150px;
-    width:280px;
+    height:75%;
+    width:100%;
     cursor: pointer;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -149,7 +171,7 @@ body{
 #btnBuscar{
     border-style: none;
     float:left;
-    height: 40px;
+    height: 38px;
     border-radius:0 20px 20px 0;
     width: 55px;
     font-weight: bold;
