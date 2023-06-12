@@ -4,12 +4,12 @@ body{
   background-repeat: no-repeat;
 }
 
-.navbar-nav .nav-link {
-  color: #fff;
-}
-
 .lupa{
   width: 25px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
 }
 
 .bg-transparente{
@@ -23,6 +23,7 @@ body{
   background-color: #fff;
   color: black;
 }
+
 .form-control-ss{
   width: 500px;
 }
@@ -54,4 +55,9 @@ body{
   text-align: center;
   align-content: center;
   
+}
+
+#autNome, #autEmail, #autSenha, #autEndereco, #autDtNasc{
+  color: red;
+  display: none;
 }

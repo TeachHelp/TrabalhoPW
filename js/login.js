@@ -1,21 +1,3 @@
-/* funcao que permite a visualzacao da div com as opcoes de perfil e cadastre-se */
-
-function mostraLogin(){
-    document.getElementById("perfil_principal").classList.toggle("show");
-  }
-
-/* funcao que envia o usuario a tela de cadastro de professor */
-
-function telaProf(){
-    window.location.assign("cadastroProf.html");
-}
-
-/* funcao que envia o usuario a tela de cadastro de aluno */
-
-function telaAluno(){
-    window.location.assign("cadastroAluno.html");
-}
-
 /* funcao para alertar o usuario a se cadastrar*/
 
 function alertCadastro(){
@@ -28,59 +10,48 @@ function alerta(){
     alert("Função Indisponível no momento");
 }
 
-/* funcao que permite a visualizacao das opcoes de cadastro */
+/* funcao usada para enviar o usuario para a tela de cadastro */
 
-function divEscolha(){
-    let div = document.getElementById("escolha");
-    let tela = document.getElementById("divMaster");
-    div.style.display = 'block';
-    tela.style.filter = 'blur(5px)';
-
+function telaCadastro(){
+    window.location.assign("cadastro.html");
 }
 
 /* funcao que autentica se os inputs foram preenchidos e envia o usuario para a pagina principal */
 
 function autentication(){
-    let senha = document.getElementById("txtSenha");
-    let email = document.getElementById("txtEmail");
+    let senha = document.getElementById("senha");
+    let email = document.getElementById("email");
 
-    let senhaAviso = document.getElementById("lblSenhaAut");
-    let emailAviso = document.getElementById("lblEmailAut");
+    let autSenha = document.getElementById("autSenha");
+    let autEmail = document.getElementById("autEmail");
     let aux = false;
 
     /* Senha */
 
     if (senha.value.trim() == ""){
-        senha.style.border = "solid 2px";
-        senha.style.borderBlockColor = "#ff0000";
-        senhaAviso.style.display = "block";
+        autSenha.style.display = "block";
         aux = false;
     }
     else{
-        senha.style.border = "solid 1px";
-        senha.style.borderBlockColor = "#000000";
-        senhaAviso.style.display = "none";
+        autSenha.style.display = "none";
         aux = true;
     }
 
     /* Email */
 
     if (email.value.trim() == ""){
-        email.style.border = "solid 2px";
-        email.style.borderBlockColor = "#ff0000";
-        emailAviso.style.display = "block";
+        autEmail.style.display = "block";
         aux = false;
     }
     else{
-        email.style.border = "solid 1px";
-        email.style.borderBlockColor = "#000000";
-        emailAviso.style.display = "none";
+        autEmail.style.display = "none";
     }
 
     /* se os inputs estiverem preenchidos a aux sera verdadeira e o usuario sera enviado para a tela principal*/    
 
     if(aux){
-        window.location.assign("menu.html");
+        alert("Deu certo");
+        //window.location.assign("menu.html");
     }
     
 }
