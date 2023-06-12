@@ -24,41 +24,27 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navMenu">Menu</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#" id="navHome">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link active" aria-current="page" href="#" id="navHome">Perfil</a>
               </li>
-          
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                
-                <li class="nav-item dropend">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Matérias
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-              </ul>
-            </li>
-
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="navHome">Matérias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="navHome">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="navHome">Ajuda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="navHome">Configurações</a>
+              </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control-ss form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
+              <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit"><img src="img/lupa.png" class="lupa"></button>
             </form>
           </div>
         </div>
@@ -69,12 +55,21 @@
 
   <div class="container my-3">
     <div class="row justify-content-between">
-      <div class="container col-6 bg-txt p-1">
-        <img src="img/logoBranca.png" class="img-logo">
+      <div class="divApresentacao col-6 bg-txt p-1">
+        <img src="img/logoBranca.png" class="img-logo"> <br>
+
+        <p class="pTxt  fs-5-2"> Bem-vindo(a) ao TeachHelp! Aqui, você encontra uma ampla seleção de professores de todas as áreas para ajudá-lo a 
+            alcançar seus objetivos acadêmicos e profissionais. <br> <br>
+            Todos os nossos professores são verificados e avaliados pelos próprios alunos, 
+            garantindo que você tenha acesso a uma educação de qualidade. <br> <br>
+            Não perca mais tempo pesquisando por aí. Com a TeachHelp,
+            você pode encontrar o professor perfeito com facilidade e praticidade. 
+            Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
+        <br>
       </div>
       <form class="col-6 bg-form">
         <div class="form-group p-4">
-          <p class="fw-bold">Cadastro</p>
+          <p class="fw-bold fs-3">Cadastro</p>
           <label for="nome">Nome:</label>
           <input type="text" class="form-control-sm form-control" id="nome">
 
@@ -93,7 +88,7 @@
           <label for="endereco">Endereço:</label>
           <input type="text" class="form-control-sm form-control" id="endereco">
           <br>
-          <button type="button" class="btn btn-info">Cadastrar</button>
+          <button type="button" class="btn btn-info">Realizar Cadastro</button>
         </div>
       </form>
       
