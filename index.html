@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript" src="js/login.js" defer></script>
+
+    <!--Cabecalho do site-->
+    <header>
+        <!--Div que contém todos os itens do cabecalho-->
+        <div class="menu">
+            <!--Logo do site-->
+            <img src="img/Icon.png" id="logo_pequena">
+            <!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
+            <button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
+            <!--Div com as opções citadas-->
+            <div class="perfil" id="perfil_principal">
+                <a onclick="alertCadastro()">Perfil</a>
+                <a onclick="divEscolha()">Cadastre-se</a>
+            </div>
+            <!--Div criada para simular o design de uma barra de pesquisa-->
+            <div class="barraPesquisa">
+                <input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
+                <button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
+            </div>
+                
+                <!--Menu do site-->
+                <ul id="myUL">
+                <div>
+                    <!--Imagem do icone de menu-->
+                    <li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
+                        <br>
+                        <br>
+                        <br>
+                    <!--Div que contem a lista dos itens do menu-->
+                    <div class="div_lista">
+                    <ul class="nested">                  
+                                <li><a href="" onclick="alerta()" class="lista_materias">Configurações</a></li>
+                                <li><a href="" onclick="alerta()" class="lista_materias">Sobre</a></li>
+                            </li>  
+                    </ul>
+                    </div>
+                </div>
+                </li> 
+                </ul>
+            <!--Script interno necessario para visualizacao da lista de itens do menu-->
+            <script>
+                var toggler = document.getElementsByClassName("caret");
+                var i;
+                
+                for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function() {                
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+                }
+            </script>
+        </div>
+    </header>
+    <center>
+        <!--Div que contém a div de apresentação(com o texto sobre o site) e a div com o formulario-->
+        <div id="divMaster" class="divMaster">
+            <!--Div de apresentacao-->
+            <div id="divApres" class="divApres">
+                <!--Logo com texto de introducao ao site-->
+                <img src="img/logo.png" id="logo" class="logo">
+                <p class="p1"> Bem-vindo(a) ao TeachHelp! Aqui, você encontra uma ampla seleção de professores de todas as áreas para ajudá-lo a 
+                    alcançar seus objetivos acadêmicos e profissionais.</p>
+
+                <p class="p2">Todos os nossos professores são verificados e avaliados pelos próprios alunos, 
+                    garantindo que você tenha acesso a uma educação de qualidade.</p> 
+                    
+                <p class="p3">Não perca mais tempo pesquisando por aí. Com a TeachHelp,
+                    você pode encontrar o professor perfeito com facilidade e praticidade. 
+                    Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
+                </div>
+            <!--Div com o formulario de login-->
+            <div id="divForm" class="divForm">
+                <label id="login" class="login">Login</label>
+                <form class="form">
+
+                    <!--Entrada de dados-->
+                    <label for="lblEmail" id="lblEmail" class="lblEmail">Email:</label><br>
+                    <input type="email" id="txtEmail" class="txtEmail"><br>
+                    <spam class="lblEmailAut" id="lblEmailAut">Email deve ser preenchido!</spam><br>
+                    
+                    <label for="lblSenha" id="lblSenha" class="lblSenha">Senha:</label><br>
+                    <input type="password" id="txtSenha" class="txtSenha"><br>
+                    <spam class="lblSenhaAut" id="lblSenhaAut">Senha deve ser preenchida!</spam><br>
+                </form>
+                <!--Botão de login, opção de esquecimento de senha, e opção de cadastro-->
+                <button id="btnAut" class="btnAut" onclick="autentication()">Login</button>
+                <p class="fgtSenha" onclick="alerta()"><a href="#"> Esqueceu sua senha? </a></p>
+                <p class="pCad">Novo por aqui? <a onclick="divEscolha()" class="aCad">Cadastre-se!</a> </p>
+
+            </div>
+        </div>
+        <!--Div oculta que so aparece ao tocar em cadastre-se-->
+        <div id="escolha" class="escolha"> <br> Você deseja se cadastrar como? 
+            <button id="btnProf" class="btnProf" onclick="telaProf()">Professor</button>
+            <button id="btnAluno" class="btnAluno" onclick="telaAluno()">Aluno</button>
+        </div>
+    </center> 
+    
+</body>
+</html>
