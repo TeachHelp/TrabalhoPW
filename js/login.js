@@ -3,7 +3,7 @@
 function mostraLogin(){
     document.getElementById("perfil_principal").classList.toggle("show");
   }
-
+ 
 /* funcao que envia o usuario a tela de cadastro de professor */
 
 function telaProf(){
