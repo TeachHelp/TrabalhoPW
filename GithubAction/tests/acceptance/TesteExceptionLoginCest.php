@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class BuscaCest
+class TesteExceptionLoginCest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -15,10 +15,7 @@ class BuscaCest
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
 		$I->amOnPage('/');
-		$I->fillField('txtEmailName', 'harian@gmail.com');
-		$I->fillField('txtSenhaName', 'harian123');
 		$I->click('Login');
 		$I->seeCurrentURLEquals('/menu.html');
-
     }
 }
