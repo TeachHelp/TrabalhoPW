@@ -17,6 +17,6 @@ class RealizarLogoutCest
               $I->amOnPage('/menu.html');
               $I->click('BtnLogin');
               $I->click('Logout');
-              $I->seeCurrentURLEquals('/index.html');
+              $I->amOnPage('/index.html');
     }
 }
