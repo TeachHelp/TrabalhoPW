@@ -15,7 +15,7 @@ class BotaoPerfilCest
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
 $I->amOnPage('/menu.html');
-$I->click('BtnPerfil');
+$I->click('BtnLogin');
 $I->click('Perfil');
 $I->seeCurrentURLEquals('/perfilAluno.html');
     }
