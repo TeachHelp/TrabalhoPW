@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class VisualizarTelaCadastroAlunoFailCest
+class ExceptionCadastroAlunoCest
 {
     public function _before(AcceptanceTester $I)
     {
