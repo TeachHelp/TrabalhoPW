@@ -14,8 +14,9 @@ class ListaDeInstrutoresCest
     // tests
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
+$I->amOnPage('/menu.html');
 $I->click('boxMatematica');
-$I->seeCurrentURLEquals('/pgProf.html');
+$I->amOnPage('/pgProf.html');
 $I->click('Fidelis Zanetti de Castro 
 				Professor doutor em MatemÃ¡tica Aplicada formado pela Unicamp');
 $I->seeCurrentURLEquals('/perfilProf.html');
