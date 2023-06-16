@@ -19,6 +19,6 @@ class ExceptionCadastroAlunoCest
             $I->click('Aluno');
             $I->seeCurrentURLEquals('/cadastroAluno.html');
             $I->click('Realizar Cadastro');
-            $I->seeCurrentURLEquals('//cadastroAluno.html');
+            $I->seeCurrentURLEquals('/cadastroAluno.html');
     }
 }
