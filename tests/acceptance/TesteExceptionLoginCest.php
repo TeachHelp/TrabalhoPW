@@ -16,6 +16,7 @@ class TesteExceptionLoginCest
     {
 		$I->amOnPage('/');
 		$I->click('Login');
-		$I->seeCurrentURLEquals('/menu.html');
+		$I->see('Email deve ser preenchido!');
+		$I->see('Senha deve ser preenchida!');
     }
 }
