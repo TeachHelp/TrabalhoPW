@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class TesteExceptionLoginCest
+class BotaoPerfilCest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -14,8 +14,9 @@ class TesteExceptionLoginCest
     // tests
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
-		$I->amOnPage('/');
-		$I->click('Login');
-		$I->seeCurrentURLEquals('/menu.html');
+$I->amOnPage('/menu.html');
+$I->click('BtnLogin');
+$I->click('Perfil');
+$I->seeCurrentURLEquals('/perfilAluno.html');
     }
 }

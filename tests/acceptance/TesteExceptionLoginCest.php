@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class VisualizarTelaCadastroProfCest
+class TesteExceptionLoginCest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -14,9 +14,9 @@ class VisualizarTelaCadastroProfCest
     // tests
     public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
     {
-              $I->amOnPage('/');
-              $I->click('Cadastre-se!');
-              $I->click('Aluno');
-              $I->seeCurrentURLEquals('/cadastroAluno.html');
+		$I->amOnPage('/');
+		$I->click('Login');
+		$I->see('Email deve ser preenchido!');
+		$I->see('Senha deve ser preenchida!');
     }
 }

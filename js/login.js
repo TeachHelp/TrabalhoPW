@@ -1,3 +1,4 @@
+
 /* funcao para alertar o usuario a se cadastrar*/
 
 function alertCadastro(){
