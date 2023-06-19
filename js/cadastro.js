@@ -89,8 +89,7 @@ function autentication(){
     /* se os inputs estiverem preenchidos a aux sera verdadeira e o usuario sera enviado para a tela principal*/    
 
     if(aux){
-        alert("Deu certo");
-        //window.location.assign("menu.html");
+        window.location.assign("menuBootstrap.html");
     }
     
 }
