@@ -2,14 +2,6 @@
 
 /* corpo, com a imagem de fundo, e a cor mais escura*/ 
 
-body{
-    background-image: url("Cover.png");
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #00010f;
-
-}
-
 
 .bg-corSite{
     background-image: url("Cover.png");
@@ -60,7 +52,7 @@ body{
 
 /* Estilo das divs de materias*/
 
-/* botoes das materias*/
+/* botoes das materias
 
 .materiasBotoes_cima,
 .materiasBotoes_baixo{
@@ -74,59 +66,60 @@ body{
     align-items: center;
     margin-left: 30px;
 }
+*/
 
 #Portugues{
-    position: absolute;
-    right: 80%;
+    /*position: absolute;
+    right: 80%;*/
     background-color: #a88028;
 }
 
 #Matematica{
-    position: absolute;
-    right: 55%;
+    /*position: absolute;
+    right: 55%;*/
     background-color: #2ec121;
 }
 
 #Musica{
-    position: absolute;
-    right: 30%;
+    /*position: absolute;
+    right: 30%;*/
     background-color: #9d27af;
 }
 
 #Esportes{
-    position: absolute;
-    right: 5%;
+    /*position: absolute;
+    right: 5%;*/
     background-color: #25d3b9;
 }
 
 #Historia{
-    position: absolute;
+    /*position: absolute;
     top: 70%;
-    right: 80%;
+    right: 80%;*/
     background-color: #ca2525;
 }
 
 #Ingles{
-    position: absolute;
+    /*position: absolute;
     top: 70%;
-    right: 55%;
+    right: 55%;*/
     background-color: #cea500;
 }
 
 #Idiomas{
-    position: absolute;
+    /*position: absolute;
     top: 70%;
-    right: 30%;
+    right: 30%;*/
     background-color: #ff9721;
 }
 
 #Informatica{
-    position: absolute;
+    /*position: absolute;
     top:70%;
-    right:5%;
+    right:5%;*/
     background-color: #614bc6;
 }
-
+/*
 .Escrita{
     position: absolute;
     top:75%;
@@ -134,8 +127,8 @@ body{
     left:2%;
 }
 
-/*imagens*/
-
+imagens*/
+/*
 .imagens_c{
     height:75%;
     width:100%;
@@ -152,10 +145,10 @@ body{
     cursor: pointer;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-}
+}*/
 
 /* Estilo da barra de pesquisa */
-
+/*
 #txtBusca{
     position: relative;
     float:left;
@@ -197,9 +190,9 @@ body{
 #lupa{
     height: 20px;
 }
-
+*/
 /*estilo do menu*/
-
+/*
 ul, #myUL {
     list-style-type: none;
     color: #ffffff;
@@ -226,7 +219,7 @@ ul, #myUL {
 }
 
 /* Sem os seguintes 2 estilos, não é possivel a visualizacao da lista de itens do menu*/
-  
+/*  
 .nested {
     display: none;
 }
@@ -241,7 +234,7 @@ ul, #myUL {
     position: absolute;
     top: 2.5%;
     left: 1%;
-}
+}*/
 
 /* Estilo da lista de itens do menu*/
 
@@ -257,7 +250,7 @@ ul, #myUL {
 }
 
 /* Estilo do icon de perfil e das opcoes sugeridas por ele */
-
+/*
 .btnLogin{
     position:absolute;
     right: 1.5%;
@@ -312,10 +305,38 @@ ul, #myUL {
     display: block;
 }
 
-.lupa{
-    width: 25px;
-  }
-
 #navLogo{
     text-align: center;
 }
+
+
+body{
+    background-color: #000524;
+    background-image: url("Cover.png");
+    background-repeat: no-repeat;
+  }
+  
+  .lupa{
+    width: 25px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .bg-corHeader{
+    background: linear-gradient(to right, #86d7dd, #1b487a)
+  }
+  
+  #navMenu, #navHome{
+    color: #fff;
+  }
+  .btn-outline-light{
+    background-color: #fff;
+    color: black;
+  }
+  
+  .form-control-ss{
+    width: 500px;
+  }
+  
