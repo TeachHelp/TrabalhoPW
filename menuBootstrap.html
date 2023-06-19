@@ -2,78 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="css/menuBootstrap.css">
-    <script src="./js/menuBootstrap.js" defer></script>
+    <script src="js/menuBootstrap.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+    
 </head>
 <body>
     <header>
-        <!--Div que contém todos os itens do cabecalho-->
-        <div class="col-12 bg-corHeader border">
-            <!--Logo do site-->
-            <img src="img/Icon.png" id="logo_pequena">
-            <!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
-            <button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
-            <!--Div com as opções citadas-->
-            <div class="perfil" id="perfil_principal">
-                <a href="perfilAluno.html">Perfil</a>
-                <a href="login.html">Logout</a>
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg bg-corHeader">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="cadastro.html">
+                <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="cadastro.html" id="navHome">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Matérias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="navHome">Sobre</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Ajuda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
+                </form>
+              </div>
             </div>
-            <!--Div criada para simular o design de uma barra de pesquisa-->
-            <div class="barraPesquisa">
-                <input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
-                <button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
-            </div>
+          </nav>
+        </div>
+      </header>
+    <body>
+        <div class=" col-12">
+            <nav class="navbar navbar-light">
                 
-                <!--Menu do site-->
-                <ul id="myUL">
-                <div>
-                    <!--Imagem do icone de menu-->
-                    <li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
-                        <br>
-                        <br>
-                        <br>
-                    <!--Div que contem a lista dos itens do menu-->
-                    <div class="div_lista">
-                    <ul class="nested">
-                        <li><a href="" class="lista_materias">Home</a></li>
-					    <li><span class="caret">Matérias</span>                      
-                            <ul class="nested">
-                                <li><a href="#" onclick="alerta()" class="lista_materias">Português</a></li>
-                                <li><a href="pgProf.html" class="lista_materias">Matemática</a></li>
-                                <li><a href="#" onclick="alerta()" class="lista_materias">Música</a></li>
-                                <li><a href="#" onclick="alerta()" class="lista_materias">Esportes</a></li>
-                                <li><a href="#" onclick="alerta()" class="lista_materias">História</a></li>
-                                <li><a href="#" onclick="alerta()" class="lista_materias">Inglês</a></li>
-                                <li><a href="#" onclick="alerta()" class="lista_materias">Idiomas</a></li>
-                                <li><a href="#" onclick="alerta()" class="lista_materias">Informática</a></li>
-                            </ul>
-                        </li>                       
-                        <li><a href="#" onclick="alerta()" class="lista_materias">Configurações</a></li>
-                        <li><a href="#" onclick="alerta()" class="lista_materias">Sobre</a></li>
-                        <li><a href="login.html" class="lista_materias">Sair</a></li>
-                    </ul>
-                </div>
-            </div>  
-            <!--Script interno necessario para visualizacao da lista de itens do menu-->
-            <script>
-              /*
-                var toggler = document.getElementsByClassName("caret");
-                var i;
+                <a class="navbar-brand" href="#" id="navLogo">
+                  <img src="img/logoBranca.png" width="250" height="100" alt="">
+                </a>
+            </nav>
+            <center><img src="img/logoBranca.png" id="logo"></center>
+            
+            <!--Div que contem as divs que mosram as demais materias-->
+                <div  class="materiasBotoes_cima" id="Portugues" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Português</font></h1> <img class="imagens_c" src="img/port.jpg"></div>
                 
-                for (i = 0; i < toggler.length; i++) {
-                toggler[i].addEventListener("click", function() {                
-                    this.parentElement.querySelector(".nested").classList.toggle("active");
-                    this.classList.toggle("caret-down");
-                });
-                }
-                */
-            </script>
-        
-    </header>
-    
+                <div  class="materiasBotoes_cima" id="Matematica" onclick="telaProf()" type="button"><h1 class="Escrita"><font face="Georgia">Matemática</font></h1> <img class="imagens_c" src="img/mat.jpg"></div >  
+
+                <div  class="materiasBotoes_cima" id="Musica" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Música</font></h1> <img class="imagens_c" src="img/music.jpg"></div >
+
+                <div  class="materiasBotoes_cima" id="Esportes" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Esportes</font></h1> <img class="imagens_c" src="img/esport.jpg"></div >
+
+                <div  class="materiasBotoes_baixo" id="Historia" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">História</font></h1>  <img class="imagens_b" src="img/hist.jpg"></div >
+
+                <div  class="materiasBotoes_baixo" id="Ingles" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Inglês</font></h1><img class="imagens_b" src="img/ing.jpg"></div >
+
+                <div  class="materiasBotoes_baixo" id="Idiomas" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Idiomas</font></h1><img class="imagens_b" src="img/idiom.jpg"></div >
+
+                <div class="materiasBotoes_baixo" id="Informatica" onclick="alerta()" type="button"><h1 class="Escrita"><font face="Georgia">Informática</font></h1><img class="imagens_b" src="img/info.jpeg"></div>
+        </div>
 </body>
+
 </html>
