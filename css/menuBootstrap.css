@@ -339,4 +339,14 @@ body{
   .form-control-ss{
     width: 500px;
   }
-  
+   
+
+/*Anotação mamin*/
+.titulo{
+    color: #ffffff;
+}
+
+.card-custom{
+    background: #614bc6;
+    border: none;
+}
