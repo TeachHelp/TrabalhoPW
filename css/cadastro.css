@@ -62,7 +62,7 @@ body{
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 575px) {
   .bg-form{
     position: relative !important;
     background: linear-gradient(to top, #2175e2, #78e4f0);
@@ -77,5 +77,15 @@ body{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 0px;
   }
+
+  .form-control-ss{
+    width: 320px;
+  }
   
+}
+
+@media screen and (min-width: 576px) and (max-width:798px){
+  .form-control-ss{
+    width:700px
+  }
 }
