@@ -65,12 +65,13 @@ body{
     display: flex;
   }
 
-@media screen and (max-width: 575px) {
+  @media screen and (max-width: 600px) {
     .bg-form{
-      background: linear-gradient(#ffffff);
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 50px;
-      border-bottom-left-radius: 50px;
+      position: relative !important;
+      background: linear-gradient(to top, #2175e2, #78e4f0);
+      border-top-right-radius: 0px !important; 
+      border-bottom-right-radius: 50px !important;
+      border-bottom-left-radius: 50px !important;
     }
     
     .bg-txt{
@@ -80,4 +81,4 @@ body{
       border-bottom-left-radius: 0px;
     }
     
-}
+  }
