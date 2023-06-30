@@ -1,6 +1,6 @@
 /* CSS */
 
-/* corpo, com a imagem de fundo, e a cor mais escura*/ 
+/* criando cor do body, com a imagem de fundo, e a cor mais escura*/ 
 
 
 .bg-corSite{
@@ -10,231 +10,10 @@
     background-color: #00010f;
 }
 
-
-.img-fluid{
-    background-image: url("Cover.png");
-    background-size: cover;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Header */
-/*
-.menu{
-    background: linear-gradient(to right, #86d7dd, #1b487a);
-    height: 55px;
-    border: groove;
-    border-color: #d2e2d9;
-}
-*/
-
+/*criando cor do header*/
 .bg-corHeader{
     background: linear-gradient(to right, #86d7dd, #1b487a)
 }
-
-#logo_pequena{
-    height:60px;
-    width: 60px;
-    position:absolute;
-    left:50px;
-    top: 0.8%;
-}
-
-/* -------------------- */
-
-/* logo no meio do site */
-
-#logo{
-    width: 300px;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
-/* Estilo das divs de materias*/
-
-/* botoes das materias
-
-.materiasBotoes_cima,
-.materiasBotoes_baixo{
-  
-    height:200px;
-    width: 280px;
-    border-style: groove;
-    border-color: #d6d6d6;
-    cursor: pointer;
-    border-radius: 10px;
-    align-items: center;
-    margin-left: 30px;
-}
-*/
-
-#Portugues{
-    /*position: absolute;
-    right: 80%;*/
-    background-color: #a88028;
-}
-
-#Matematica{
-    /*position: absolute;
-    right: 55%;*/
-    background-color: #2ec121;
-}
-
-#Musica{
-    /*position: absolute;
-    right: 30%;*/
-    background-color: #9d27af;
-}
-
-#Esportes{
-    /*position: absolute;
-    right: 5%;*/
-    background-color: #25d3b9;
-}
-
-#Historia{
-    /*position: absolute;
-    top: 70%;
-    right: 80%;*/
-    background-color: #ca2525;
-}
-
-#Ingles{
-    /*position: absolute;
-    top: 70%;
-    right: 55%;*/
-    background-color: #cea500;
-}
-
-#Idiomas{
-    /*position: absolute;
-    top: 70%;
-    right: 30%;*/
-    background-color: #ff9721;
-}
-
-#Informatica{
-    /*position: absolute;
-    top:70%;
-    right:5%;*/
-    background-color: #614bc6;
-}
-/*
-.Escrita{
-    position: absolute;
-    top:75%;
-    color:#eeeeee;
-    left:2%;
-}
-
-imagens*/
-/*
-.imagens_c{
-    height:75%;
-    width:100%;
-    cursor: pointer;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    
-}
-
-.imagens_b{
-    top:70%;
-    height:75%;
-    width:100%;
-    cursor: pointer;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}*/
-
-/* Estilo da barra de pesquisa */
-/*
-#txtBusca{
-    position: relative;
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-size: 15px;
-    border-style: none;
-    border-radius: 40px;
-    height:38px;
-    width:490px;
-}
-
-#btnBuscar{
-    border-style: none;
-    float:left;
-    height: 38px;
-    border-radius:0 20px 20px 0;
-    width: 55px;
-    font-weight: bold;
-    background:#5F9EA0;
-    position:absolute;
-    top: 0px;
-    right:0%;
-    cursor: pointer;
-}
-
-.barraPesquisa{
-    position: absolute;
-    top: 2%;
-    right: 7%;
-    border:#4b4b4b;
-    border: groove 3px;
-    border-radius: 40px;
-    border:solid 0.5px;
-    background-color: #ffffff
-    
-}
-
-#lupa{
-    height: 20px;
-}
-*/
-/*estilo do menu*/
-/*
-ul, #myUL {
-    list-style-type: none;
-    color: #ffffff;
-     
-}
-
-#menu{
-    font-size: 35px;
-    right:20%;
-    top:4%;
-
-}
-  
-#myUL {
-    margin: -18px;
-    margin-left: -1px;
-    padding: 0;
-}
-  
-.caret {
-    cursor: pointer;   
-    user-select: none;
-    
-}
-
-/* Sem os seguintes 2 estilos, não é possivel a visualizacao da lista de itens do menu*/
-/*  
-.nested {
-    display: none;
-}
-  
-.active {
-    display: block;
-}
-
-
-#menu_icon{
-    height:30px;
-    position: absolute;
-    top: 2.5%;
-    left: 1%;
-}*/
 
 /* Estilo da lista de itens do menu*/
 
@@ -249,57 +28,6 @@ ul, #myUL {
     text-decoration: none; 
 }
 
-/* Estilo do icon de perfil e das opcoes sugeridas por ele */
-/*
-.btnLogin{
-    position:absolute;
-    right: 1.5%;
-    top: 0.5%;
-    width: 60px;
-    height:60px;
-    align-items: center;
-    background-color: transparent;
-    border:none;
-    cursor: pointer;
-}
-
-#perfil_icon{
-    background-color: transparent;
-    height:45px;
-    position: relative;
-    top: 8%;
-    right: 2%;
-}
-
-
-.perfil{
-    cursor: pointer;
-    display:none;
-    position:absolute;
-    min-width: 50px;
-    z-index:1;
-    right:2%;
-    top:9%;
-}
-
-.perfil a{
-    position: relative;
-    left: 30px;
-    top: -15px;
-    width: 80px;
-    height: auto;
-    color:#181717;
-    background: linear-gradient(to right, #165399, #98dfe4);
-    padding: 12px 16px;
-    display:block;
-    text-align:center;
-    text-decoration: none;
-}
-
-.perfil a:hover{
-    background-color: #ddd;
-}
-
 /*  estilo necessario para visualizar as opcoes de perfil */
 .show {
     display: block;
@@ -309,6 +37,7 @@ ul, #myUL {
     text-align: center;
 }
 
+/*personalizando o body*/
 
 body{
     background-color: #000524;
@@ -316,18 +45,18 @@ body{
     background-repeat: no-repeat;
   }
   
+/*tamanho da lupa*/
   .lupa{
     width: 25px;
   }
   
+  /*estilo das navbar*/
   .navbar-nav .nav-link {
     color: #fff;
   }
   
-  .bg-corHeader{
-    background: linear-gradient(to right, #86d7dd, #1b487a)
-  }
-  
+  /*personalizando as opções do botão de menu*/
+
   #navMenu, #navHome{
     color: #fff;
   }
@@ -341,10 +70,13 @@ body{
   }
    
 
-/*Anotação mamin*/
+/*personalizando os cards*/
+
 .titulo{
     color: #ffffff;
 }
+
+/*inserindo as cores de cada card, e inserido a opção sem borda para os cards*/
 
 #card-custom-portugues{
     background: #a88028;
@@ -385,12 +117,18 @@ body{
     background: #8f85be;
     border: none;
 }
+
+/*Inserindo o tamanho da imagem em cada card*/
+
 .img{
     width: 13.5rem;
     height: 10rem;
 }
 
-
+/*Alterando as configurações dos cards para o tamanho de tela até 600px*/
+/*primeiro configuramos todos os cards para possuirem uma distância inicial da borda esquerda*/
+/*depois configuramos cada um dos cards com posição relativa e 5% de margin top para se distanciarem do card de cima*/
+/*O card de história possui uma menor margem no topo devido a linha de espaçamento presente no código HTML*/
 @media screen and (max-width: 600px) {
     .card{
         position:absolute !important;
@@ -437,6 +175,9 @@ body{
 
 }
 
+/*Alterando configurações dos cards quando a tela possuir entre 600 a 1199px*/
+/*Adicionamos margens laterais e em cima dos cards para distanciamento, além de colocá-los em position absolute*/
+/*os cards de história e inglês possuem uma menor margem superior devido a linha de espaçamento existente no código HTML*/
 @media screen and (min-width: 600px) and (max-width: 1199px) {
 
     .card{
@@ -494,8 +235,4 @@ body{
         margin-bottom: 5% !important;
     }
 
-}
-
-@media screen and (min-width: 1200px) {
-    
 }
