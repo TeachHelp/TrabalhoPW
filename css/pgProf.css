@@ -7,6 +7,58 @@ body {
   background-color: #00010f; /* Define a cor de fundo da página */
 }
 
+/*criando cor do header*/
+.bg-corHeader{
+  background: linear-gradient(to right, #86d7dd, #1b487a)
+}
+
+/* Estilo da lista de itens do menu*/
+
+.div_lista{
+  background: linear-gradient(to bottom, #1b487a, #5c9ba0);
+  height:auto;
+  width: 180px;
+}
+
+.lista_materias{
+  color:#ffffff;
+  text-decoration: none; 
+}
+
+/*  estilo necessario para visualizar as opcoes de perfil */
+.show {
+  display: block;
+}
+
+#navLogo{
+  text-align: center;
+}
+
+/*tamanho da lupa*/
+.lupa{
+  width: 25px;
+}
+
+/*estilo das navbar*/
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+/*personalizando as opções do botão de menu*/
+
+#navMenu, #navHome{
+  color: #fff;
+}
+.btn-outline-light{
+  background-color: #fff;
+  color: black;
+}
+
+.form-control-ss{
+  width: 500px;
+}
+ 
+
 /* Estilo para o container da logo */
 .logo-container {
   position: fixed; /* Define a posição fixa do container da logo */
@@ -22,23 +74,7 @@ body {
 
 /* Estilos para desktop */
 @media (min-width: 768px) {
-  .menu {
-    display: flex; /* Define o elemento com um layout flexível */
-    justify-content: space-between; /* Alinha os itens do menu ao espaço disponível */
-    align-items: center; /* Centraliza verticalmente os itens do menu */
-    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels ao menu */
-  }
-
-  .perfil_principal {
-    position: relative; /* Define a posição do elemento como relativa */
-  }
-
-  .barraPesquisa {
-    display: flex; /* Define o elemento com um layout flexível */
-    align-items: center; /* Centraliza verticalmente os itens da barra de pesquisa */
-    margin-right: 10px; /* Adiciona uma margem à direita de 10 pixels à barra de pesquisa */
-  }
-
+ 
   .card-container {
     display: flex; /* Define o elemento com um layout flexível */
     justify-content: space-between; /* Alinha os itens do container de cartões ao espaço disponível */
@@ -51,19 +87,6 @@ body {
 
 /* Estilos para celular */
 @media (max-width: 767px) {
-  .perfil_principal { 
-    display: none; /* Esconde o elemento com a classe "perfil_principal" */
-  }
-
-  .menu {
-    justify-content: space-around; /* Distribui uniformemente os itens do menu ao redor do espaço disponível */
-    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels ao menu */
-  }
-
-  .barraPesquisa {
-    margin-right: 0; /* Remove a margem à direita da barra de pesquisa */
-    margin-bottom: 10px; /* Adiciona uma margem inferior de 10 pixels à barra de pesquisa */
-  }
 
   .card-container {
     flex-direction: column; /* Altera a direção de exibição dos itens do container de cartões para coluna */
@@ -73,7 +96,13 @@ body {
   .card {
     width: 80%; /* Define a largura dos cartões como 80% do contêiner pai */
     margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels aos cartões */
+  
   }
+
+  .form-control-ss{
+    width: 320px;
+  }
+
 }
 
 /* Estilo para o container dos cards */
@@ -125,170 +154,3 @@ body {
   color: red; /* define a cor do texto do elemento quando a classe 'red' é adicionada */
 }
 
-/* Estilo para o cabeçalho */
-.menu {
-  background: linear-gradient(to right, #86d7dd, #1b487a);
-  height: 55px;
-  border: groove;
-  border-color: #d2e2d9;
-}
-
-#logo_pequena {
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  left: 3%;
-  top: 0.8%;
-}
-
-/* Estilo da barra de pesquisa */
-#txtBusca {
-  position: relative;
-  float: left;
-  background-color: transparent;
-  padding-left: 5px;
-  font-size: 15px;
-  border-style: none;
-  border-radius: 40px;
-  height: 38px;
-  width: 490px;
-}
-
-#btnBuscar {
-  border-style: none;
-  float: left;
-  height: 40px;
-  border-radius: 0 20px 20px 0;
-  width: 55px;
-  font-weight: bold;
-  background: #5F9EA0;
-  position: absolute;
-  top: -0.5px;
-  right: 0%;
-  cursor: pointer;
-}
-
-.barraPesquisa {
-  position: absolute;
-  top: 2%;
-  right: 7%;
-  border: #4b4b4b;
-  border: groove 3px;
-  border-radius: 40px;
-  border: solid 0.5px;
-  background-color: #ffffff;
-}
-
-#lupa {
-  height: 20px;
-}
-
-/* Estilo do menu */
-ul, #myUL {
-  list-style-type: none;
-  color: #ffffff;
-}
-
-#menu {
-  font-size: 35px;
-  right: 20%;
-  top: 4%;
-}
-
-#myUL {
-  margin: -18px;
-  margin-left: -1px;
-  padding: 0;
-}
-
-.caret {
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Sem os seguintes 2 estilos, não é possível a visualização da lista de itens do menu */
-.nested {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
-#menu_icon {
-  height: 30px;
-  position: absolute;
-  top: 2.5%;
-  left: 1%;
-}
-
-/* Estilo da lista de itens do menu */
-.div_lista {
-  background: linear-gradient(to bottom, #1b487a, #5c9ba0);
-  height: auto;
-  width: 180px;
-}
-
-.lista_materias {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* Estilo do ícone de perfil e das opções sugeridas por ele */
-.btnLogin {
-  position: absolute;
-  right: 1.5%;
-  top: 0.5%;
-  width: 60px;
-  height: 60px;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-#perfil_icon {
-  background-color: transparent;
-  height: 45px;
-  position: relative;
-  top: 8%;
-  right: 2%;
-}
-
-.perfil {
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  min-width: 50px;
-  z-index: 1;
-  right: 2%;
-  top: 9%;
-}
-
-.perfil a {
-  position: relative;
-  left: 30px;
-  top: -15px;
-  width: 80px;
-  height: auto;
-  color: #181717;
-  background: linear-gradient(to right, #165399, #98dfe4);
-  padding: 12px 16px;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
-.perfil a:hover {
-  background-color: #ddd;
-}
-
-/*  estilo necessário para visualizar as opções de perfil */
-.show {
-  display: block;
-}
-
-a {
-  color: #181717;
-  text-decoration: none;
-}
