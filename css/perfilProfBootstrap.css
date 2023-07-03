@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+/*Inserção de fonte no projeto*/
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+	background-image: url("Cover.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #00010f;
+    background-repeat: no-repeat;
+}
+
+/*Inserção de background degradê nos icons*/
+#icon{
+    background-image: linear-gradient(to bottom, #004AAD, #00abbe)!important;
+}
+
+/*Inserção de background degradê nos botões*/
+.editInformation,
+.downloadResume{
+    background-image: linear-gradient(to bottom, #004AAD, #00abbe)!important;
+}
+
+/*Inserção de hover background degradê nos botões*/
+.editInformation:hover{
+    background-image: linear-gradient(to bottom, #003880, #007784)!important;
+}
+
+.downloadResume:hover{
+    background-image: linear-gradient(to bottom, #003880, #007784)!important;
+}
+
+/*Inserção de background degradê na div left*/
+.left{
+    background: linear-gradient(to bottom, #004AAD, #00abbe)!important;
+}
+
+/*Deixando página responsiva*/
+/*Smartphone*/
+@media screen and (max-width: 575px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 575px) and (max-width:768px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

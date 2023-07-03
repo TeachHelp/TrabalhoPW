@@ -13,46 +13,49 @@
 </head>
 <body>
   <script src="js/menuBootstrap.js" defer></script>
+  <!--Cabecalho do site-->
   <header>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg bg-corHeader">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="menuBootstrap.html">
-            <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cadastro.html" id="navHome">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Perfil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Matérias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="sobre.html" id="navHome">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Ajuda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+    <!--Barra de navegação-->
+     <nav class="navbar navbar-expand-lg bg-corHeader">
+       <div class="container-fluid">
+         <!--Logo do site-->
+         <a class="navbar-brand" href="cadastro.html">
+           <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
+         </a>
+         <!--Itens da Navbar-->
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="cadastro.html" id="navHome">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Perfil</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Matérias</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome">Sobre</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Ajuda</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
+             </li>
+           </ul>
+           <form class="d-flex" role="search">
+             <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+             <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
+           </form>
+         </div>
+       </div>
+     </nav>
+   
+ </header>
     <body>
                 <div class="text-center my-3">
                   <img src="img/logoBranca.png" class="rounded" width="250" height="100"alt="">
@@ -60,19 +63,7 @@
                 <div class="h-200"></div>
         <div class="container">
           <div class="row justify-content-between">
-            <!--
-              <div class="col-3" id="Portugues" onclick="alerta()" type="button">
-                <div class="row" ><img class="imagens" src="img/port.jpg" width="100%" height=""></div>
-                <div class="row col-10"><h1 class="Escrita"><font face="Georgia">Português</font></h1></div>
-              </div>
-              <div class="col-3" id="Matematica" onclick="telaProf()" type="button">
-                <div class="row"><img class="imagens" src="img/mat.jpg"></div>
-                <div class="row"><h1 class="Escrita"><font face="Georgia">Matemática</font></h1></div>
-              </div>
-              <div class="col-3" id="Musica" onclick="alerta()" type="button">
-                <div class="row"><img class="imagens" src="img/music.jpg"></div>
-                <div class="row"><h1 class="Escrita"><font face="Georgia">Música</font></h1></div>
-              </div>-->
+            
               <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
                 <img src="img/port.jpg" class=" img card-img-top" alt="portugues foto">
                 <div class="card-title titulo fs-5">

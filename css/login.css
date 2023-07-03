@@ -1,9 +1,10 @@
+
 body{
     background-color: #000524;
     background-image: url("Cover.png");
     background-repeat: no-repeat;
   }
-  
+  /* header */
   .lupa{
     width: 25px;
   }
@@ -32,7 +33,7 @@ body{
     margin-top: 20px;
     width: 50%;
   }
-  
+  /* header */
   .bg-form{
     background: linear-gradient(to top, #2175e2, #78e4f0);
     border-top-right-radius: 50px;
