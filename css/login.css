@@ -1,39 +1,62 @@
 
+/*criando cor do header*/
+.bg-corHeader{
+  background: linear-gradient(to right, #86d7dd, #1b487a)
+}
+
+/* Estilo da lista de itens do menu*/
+
+.div_lista{
+  background: linear-gradient(to bottom, #1b487a, #5c9ba0);
+  height:auto;
+  width: 180px;
+}
+
+.lista_materias{
+  color:#ffffff;
+  text-decoration: none; 
+}
+
+/*  estilo necessario para visualizar as opcoes de perfil */
+.show {
+  display: block;
+}
+
+#navLogo{
+  text-align: center;
+}
+
+/*tamanho da lupa*/
+.lupa{
+  width: 25px;
+}
+
+/*estilo das navbar*/
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+/*personalizando as opções do botão de menu*/
+
+#navMenu, #navHome{
+  color: #fff;
+}
+.btn-outline-light{
+  background-color: #fff;
+  color: black;
+}
+
+.form-control-ss{
+  width: 500px;
+}
+ 
+
 body{
     background-color: #000524;
     background-image: url("Cover.png");
     background-repeat: no-repeat;
   }
-  /* header */
-  .lupa{
-    width: 25px;
-  }
   
-  .navbar-nav .nav-link {
-    color: #fff;
-  }
-  
-  .bg-corHeader{
-    background: linear-gradient(to right, #86d7dd, #1b487a)
-  }
-  
-  #navMenu, #navHome{
-    color: #fff;
-  }
-  .btn-outline-light{
-    background-color: #fff;
-    color: black;
-  }
-  
-  .form-control-ss{
-    width: 500px;
-  }
-  
-  .img-logo{
-    margin-top: 20px;
-    width: 50%;
-  }
-  /* header */
   .bg-form{
     background: linear-gradient(to top, #2175e2, #78e4f0);
     border-top-right-radius: 50px;

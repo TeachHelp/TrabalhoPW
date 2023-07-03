@@ -2,81 +2,57 @@
 <html>
 <head>
 	<title>Área de Matemática</title>
-	<!-- Configuração da visualização da página para dispositivos móveis -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Importa o arquivo CSS externo "pgProf.css" para estilizar a página -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
 	<link rel="stylesheet" type="text/css" href="css/pgProf.css">
-	<!-- Define o ícone da página, especificando o caminho para o arquivo de imagem do ícone -->
 	<link rel="icon" type="image/x-icon" href="img/logo.png">
-	<!-- Importa o arquivo CSS externo "font-awesome.min.css" da biblioteca Font Awesome para utilizar os ícones na página -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Importa o arquivo JavaScript externo "pgProf.js" e define que sua execução deve ser adiada até o carregamento completo do documento HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
 	<script src="js/pgProf.js" defer></script>
 </head>
 <body>
 <!--Cabecalho do site-->
 <header>
-	<!--Div que contém todos os itens do cabecalho-->
-	<div class="menu">
-		<!--Logo do site-->
-		<img src="img/Icon.png" id="logo_pequena">
-		<!--Botão que habilita a escolha de visualizar perfil ou se cadastrar-->
-		<button type="submit" class="btnLogin" id="btnLogin" onclick="mostraLogin()"><img src="img/perfil_icon.png" id="perfil_icon"></button>
-		<!--Div com as opções citadas-->
-		<div class="perfil" id="perfil_principal">
-			<a href="perfilAluno.html">Perfil</a>
-			<a href="login.html">Logout</a>
-		</div>
-		<!--Div criada para simular o design de uma barra de pesquisa-->
-		<div class="barraPesquisa">
-			<input type="text" id="txtBusca" placeholder="Buscar áreas, professores..."/>
-			<button id="btnBuscar"><img id= "lupa"src="img/lupa.png"></button>
-		</div>
-			
-			<!--Menu do site-->
-			<ul id="myUL">
-			<div>
-				<!--Imagem do icone de menu-->
-				<li><span id="menu" class="caret botao"><img src="img/menu_icon.png" id="menu_icon"></span> 
-					<br>
-					<br>
-					<br>
-				<!--Div que contem a lista dos itens do menu-->
-				<div class="div_lista">
-				<ul class="nested">
-					<li><a href="menu.html" class="lista_materias">Home</a></li>
-					<li><span class="caret">Matérias</span>                      
-						<ul class="nested">
-							<li><a href="#" onclick="alerta()" class="lista_materias">Português</a></li>
-							<li><a href="pgProf.html" class="lista_materias">Matemática</a></li>
-							<li><a href="#" onclick="alerta()" class="lista_materias">Música</a></li>
-							<li><a href="#" onclick="alerta()" class="lista_materias">Esportes</a></li>
-							<li><a href="#" onclick="alerta()" class="lista_materias">História</a></li>
-							<li><a href="#" onclick="alerta()" class="lista_materias">Inglês</a></li>
-							<li><a href="#" onclick="alerta()" class="lista_materias">Idiomas</a></li>
-							<li><a href="#" onclick="alerta()" class="lista_materias">Informática</a></li>
-						</ul>
-					</li>                       
-					<li><a href="#" onclick="alerta()" class="lista_materias">Configurações</a></li>
-					<li><a href="#" onclick="alerta()" class="lista_materias">Sobre</a></li>
-					<li><a href="login.html" class="lista_materias">Sair</a></li>
-				</ul>
-			</div>
-		</div>  
-		<!--Script interno necessario para visualizacao da lista de itens do menu-->
-		<script>
-			var toggler = document.getElementsByClassName("caret");
-			var i;
-			
-			for (i = 0; i < toggler.length; i++) {
-			toggler[i].addEventListener("click", function() {                
-				this.parentElement.querySelector(".nested").classList.toggle("active");
-				this.classList.toggle("caret-down");
-			});
-			}
-		</script>
-	</div>
-</header>
+    <!--Barra de navegação-->
+     <nav class="navbar navbar-expand-lg bg-corHeader">
+       <div class="container-fluid">
+         <!--Logo do site-->
+         <a class="navbar-brand" href="cadastro.html">
+           <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
+         </a>
+         <!--Itens da Navbar-->
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="login.html" id="navHome">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="perfilAlunoBootstrap.html" id="navHome">Perfil</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="menuBootstrap.html" id="navHome">Matérias</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Sobre</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Ajuda</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
+             </li>
+           </ul>
+           <form class="d-flex" role="search">
+             <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+             <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
+           </form>
+         </div>
+       </div>
+     </nav>
+   
+ </header>
 <!-- Div criada para armazenar as divs de cada professor -->
 	<div class="card-container">
 		<!-- Div card com as informações do professor individual -->
@@ -118,14 +94,14 @@
 		<div class="card">
 			<img class="card-image" src="https://yt3.ggpht.com/a/AATXAJxJXqPXiL5CZsIdk_gzJOleUQchXS6O6v-fEg=s900-c-k-c0xffffffff-no-rj-mo">
 			<div class="card-desc">
-				<h4>Paulo Pereira<i class="fa fa-heart like-button"></i></h4>
+				<h4>Paulo Pereira<i class="fab fa-heart like-button"></i></h4>
 				<p>Mestre em Matemática pelo Instituto Nacional de Matemática Pura e Aplicada - IMPA</p>
 			</div>
 		</div>
 		<div class="card">
 		    <img class="card-image" src="https://th.bing.com/th/id/R.784afe122e3254714b9e640800fdd66e?rik=JLPRlTc7FBHQMQ&pid=ImgRaw&r=0">
 			<div class="card-desc">
-				<h4>Daniel Ferretto <i class="fa fa-heart like-button"></i></h4>
+				<h4>Daniel Ferretto <i class="bi bi-heart like-button"></i></h4>
 				<p>Professor formado em Matemática pela UFSC</p>
 			</div>
 		</div>

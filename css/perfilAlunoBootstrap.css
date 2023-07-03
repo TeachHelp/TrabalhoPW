@@ -6,6 +6,37 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* header */
+.lupa{
+    width: 25px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .bg-corHeader{
+    background: linear-gradient(to right, #86d7dd, #1b487a)
+  }
+  
+  #navMenu, #navHome{
+    color: #fff;
+  }
+  .btn-outline-light{
+    background-color: #fff;
+    color: black;
+  }
+  
+  .form-control-ss{
+    width: 500px;
+  }
+  
+  .img-logo{
+    margin-top: 20px;
+    width: 50%;
+  }
+  /* header */
+
 body{
 	background-image: url("Cover.png");
     background-size: cover;
