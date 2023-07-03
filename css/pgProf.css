@@ -1,63 +1,47 @@
 /* Estilo para o corpo da página */
 body {
+  background-color: #00010f !important; /* Define a cor de fundo da página */
   background-image: url("Cover.png"); /* Define a imagem de fundo */
   background-repeat: no-repeat; /* Não repete a imagem de fundo */
   background-attachment: fixed; /* Mantém a imagem de fundo fixa */
   background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
-  background-color: #00010f; /* Define a cor de fundo da página */
 }
 
-/*criando cor do header*/
-.bg-corHeader{
-  background: linear-gradient(to right, #86d7dd, #1b487a)
-}
-
-/* Estilo da lista de itens do menu*/
-
-.div_lista{
-  background: linear-gradient(to bottom, #1b487a, #5c9ba0);
-  height:auto;
-  width: 180px;
-}
-
-.lista_materias{
-  color:#ffffff;
-  text-decoration: none; 
-}
-
-/*  estilo necessario para visualizar as opcoes de perfil */
-.show {
-  display: block;
-}
-
-#navLogo{
-  text-align: center;
-}
-
-/*tamanho da lupa*/
+/* header */
 .lupa{
   width: 25px;
 }
 
-/*estilo das navbar*/
 .navbar-nav .nav-link {
   color: #fff;
 }
 
-/*personalizando as opções do botão de menu*/
+.navbar-toggler{
+  color: black !important;
+}
+
+.bg-corHeader{
+  background: linear-gradient(to right, #86d7dd, #1b487a)
+}
 
 #navMenu, #navHome{
   color: #fff;
 }
 .btn-outline-light{
   background-color: #fff;
-  color: black;
+  color: black !important;
 }
 
 .form-control-ss{
   width: 500px;
 }
- 
+
+.img-logo{
+  margin-top: 20px;
+  width: 50%;
+}
+/* header */
+
 
 /* Estilo para o container da logo */
 .logo-container {
@@ -74,7 +58,17 @@ body {
 
 /* Estilos para desktop */
 @media (min-width: 768px) {
- 
+
+  .menu {
+    display: flex; /* Define o elemento com um layout flexível */
+    justify-content: space-between; /* Alinha os itens do menu ao espaço disponível */
+    align-items: center; /* Centraliza verticalmente os itens do menu */
+    padding: 10px; /* Adiciona um preenchimento interno de 10 pixels ao menu */
+  }
+
+  .perfil_principal {
+    position: relative; /* Define a posição do elemento como relativa */
+  }
   .card-container {
     display: flex; /* Define o elemento com um layout flexível */
     justify-content: space-between; /* Alinha os itens do container de cartões ao espaço disponível */
@@ -87,7 +81,6 @@ body {
 
 /* Estilos para celular */
 @media (max-width: 767px) {
-
   .card-container {
     flex-direction: column; /* Altera a direção de exibição dos itens do container de cartões para coluna */
     align-items: center; /* Centraliza horizontalmente os itens do container de cartões */
@@ -96,13 +89,7 @@ body {
   .card {
     width: 80%; /* Define a largura dos cartões como 80% do contêiner pai */
     margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels aos cartões */
-  
   }
-
-  .form-control-ss{
-    width: 320px;
-  }
-
 }
 
 /* Estilo para o container dos cards */
@@ -154,3 +141,7 @@ body {
   color: red; /* define a cor do texto do elemento quando a classe 'red' é adicionada */
 }
 
+div a  {
+  color: black ;
+  text-decoration: none;
+}
