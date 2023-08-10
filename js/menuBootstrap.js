@@ -7,5 +7,5 @@ function alerta(){
   }
   
   function telaProf(){
-    window.location.assign("pgProf.html");
+    window.location.assign("pgProf.php");
   }
