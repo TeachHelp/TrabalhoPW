@@ -16,6 +16,10 @@
 </head>
 <body>
 
+<?php 
+
+?>
+
 <header>
 	<script type="text/javascript" src="js/login.js" defer></script>
 	<!--Barra de navegação-->
