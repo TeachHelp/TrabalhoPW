@@ -15,7 +15,7 @@
   <script type="text/javascript" src="js/login.js" defer></script>
   <!--Cabecalho do site-->
   <header>
-     <!--Barra de navegação-->
+     <!--Barra de navegação -->
       <nav class="navbar navbar-expand-lg bg-corHeader">
         <div class="container-fluid">
           <!--Logo do site-->
