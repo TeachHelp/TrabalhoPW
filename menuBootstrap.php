@@ -19,7 +19,7 @@
      <nav class="navbar navbar-expand-lg bg-corHeader">
        <div class="container-fluid">
          <!--Logo do site-->
-         <a class="navbar-brand" href="cadastro.php">
+         <a class="navbar-brand" href="menuBootstrap.php">
            <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
          </a>
          <!--Itens da Navbar-->
@@ -29,7 +29,7 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="index.php" id="navHome">Home</a>
+               <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Home</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="perfilAlunoBootstrap.php" id="navHome">Perfil</a>
@@ -39,9 +39,6 @@
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Sobre</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Ajuda</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>

@@ -32,16 +32,7 @@
                <a class="nav-link active" aria-current="page" href="cadastro.php" id="navHome">Home</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Perfil</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alertCadastro()">Matérias</a>
-             </li>
-             <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="#" id="navHome">Sobre</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Ajuda</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
