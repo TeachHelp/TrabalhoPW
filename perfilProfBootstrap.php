@@ -38,7 +38,7 @@
                         <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Matérias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Sobre</a>
+                        <a class="nav-link active" aria-current="page" href="sobre.php" id="navHome">Sobre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
