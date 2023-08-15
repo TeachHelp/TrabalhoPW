@@ -76,8 +76,32 @@
                   <h3 class="">Davi Cardoso Salles </h3>
                 </div>
               </div>
+          
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+                <img src="img/evelyn.png" class=" img card-img-top" alt="portugues foto">
+                <div class="card-title titulo fs-5">
+                  <h3 class="">Evelyn Pereira Otavio </h3>
+                </div>
+              </div>
+          
+          
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+                <img src="img/harian.png" class=" img card-img-top" alt="portugues foto">
+                <div class="card-title titulo fs-5">
+                  <h3 class="">Harian Adami Chagas Radaelli </h3>
+                </div>
+              </div>
           </div>
-    </div>
+          
+          
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+                <img src="img/wil.png" class=" img card-img-top" alt="portugues foto">
+                <div class="card-title titulo fs-5">
+                  <h3 class="">Wilsiman Santos Evangelista Silva </h3>
+                </div>
+              </div>
+          
+  </div>
 </body>
 
 </html> 
