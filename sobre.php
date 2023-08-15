@@ -53,39 +53,31 @@
     <div class="d-flex justify-content-center flex-column flex-sm-row ">
       <!--Div com a logo e com um texto de apresentação-->
       <div class="divApresentacao col-sm-6 col-12 bg-txt p-1">
-        <img src="img/logoBranca.png" class="img-logo"> <br>
+        <p> Sobre a Equipe TeachHelp  </p> <br>
 
-        <p class="pTxt"> Bem-vindo(a) ao TeachHelp! Aqui, você encontra uma ampla seleção de professores de todas as áreas para ajudá-lo a 
-            alcançar seus objetivos acadêmicos e profissionais. <br> <br>
-            Todos os nossos professores são verificados e avaliados pelos próprios alunos, 
-            garantindo que você tenha acesso a uma educação de qualidade. <br> <br>
-            Não perca mais tempo pesquisando por aí. Com a TeachHelp,
-            você pode encontrar o professor perfeito com facilidade e praticidade. 
-            Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
+        <p class="pTxt"> Somos um grupo apaixonado de estudantes do último período do Instituto Federal do Espírito Santo,
+          unidos por um objetivo comum: Tornar o aprendizado e a busca por aprendizado mais completa e prática. 
+          Conheça os rostos por trás dessa equipe dedicada: Davi Cardoso Salles, cuja mente criativa e determinação 
+          incansável são as forças motrizes por trás de nossa busca por soluções impactantes; Evelyn Otavio Pereira, 
+          uma visionária comprometida em transformar experiências pessoais em mudanças positivas, inspirando todos nós a 
+          pensar além dos limites convencionais; Harian Adami Chagas Radaelli, cujo compromisso com a excelência e perspicácia 
+          estratégica nos guia na jornada para superar obstáculos complexos; 
+          e Wilsiman Santos Evangelista Silva, uma catalisadora de inovação e energias incansáveis, 
+          sempre desafiando a equipe a atingir novos patamares</p>
         <br>
-      </div>
-      <!--Div com um formulário para login-->
-        <form class="col-sm-6 col-12 bg-form">
-          <div class="form-group p-4">
-            <p class="fw-bold fs-3">Login</p>
-
-            <label for="email">Email:</label>
-            <input type="email" class="form-control-sm form-control" id="email">
-            <span id="autEmail">Email deve ser informado!</span>
-
-            <label for="senha">Senha:</label>
-            <input type="password" class="form-control-sm form-control" id="senha">
-            <span id="autSenha">Senha deve ser preenchida!</span>
-
-            <br>
-            <button type="button" class="btn btn-info" onclick="autentication()">Entrar</button>
-            <button type="button" class="btn btn-info" onclick="telaCadastro()">Não possuo cadastro</button>
-          </div>
-        </form>
-      
-      </div>
     </div>
   </div>
+  <div class="container">
+          <div class="row justify-content-between">
+          
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+                <img src="img/davi.png" class=" img card-img-top" alt="portugues foto">
+                <div class="card-title titulo fs-5">
+                  <h3 class="">Davi Cardoso Salles </h3>
+                </div>
+              </div>
+          </div>
+    </div>
 </body>
 
 </html> 
