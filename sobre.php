@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeachHelp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
-    <link href="css/login.css" rel="stylesheet">
+    <link href="css/sobre.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/logo.png">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
     
@@ -70,14 +70,14 @@
   <div class="container">
           <div class="row justify-content-between">
           
-              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onClick="window.open('https://www.instagram.com/davi_cs18/');" type="button">
                 <img src="img/davi.png" class=" img card-img-top" alt="portugues foto">
                 <div class="card-title titulo fs-5">
                   <h3 class="">Davi Cardoso Salles </h3>
                 </div>
               </div>
           
-              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onClick="window.open('https://www.instagram.com/evelyn.otavio/');" type="button">
                 <img src="img/evelyn.png" class=" img card-img-top" alt="portugues foto">
                 <div class="card-title titulo fs-5">
                   <h3 class="">Evelyn Pereira Otavio </h3>
@@ -85,7 +85,7 @@
               </div>
           
           
-              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onClick="window.open('https://www.instagram.com/harian_cr/');" type="button">
                 <img src="img/harian.png" class=" img card-img-top" alt="portugues foto">
                 <div class="card-title titulo fs-5">
                   <h3 class="">Harian Adami Chagas Radaelli </h3>
@@ -94,7 +94,7 @@
           </div>
           
           
-              <div class="card" id="card-custom-portugues" style="width: 15rem;" onclick="alerta()" type="button">
+              <div class="card" id="card-custom-portugues" style="width: 15rem;" onClick="window.open('https://www.instagram.com/wilsiman_evangelista/');" type="button">
                 <img src="img/wil.png" class=" img card-img-top" alt="portugues foto">
                 <div class="card-title titulo fs-5">
                   <h3 class="">Wilsiman Santos Evangelista Silva </h3>
