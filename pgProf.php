@@ -105,9 +105,9 @@
 			</div>
 		</div>
 		<div class="card">
-		    <img class="card-image" src="https://th.bing.com/th/id/R.784afe122e3254714b9e640800fdd66e?rik=JLPRlTc7FBHQMQ&pid=ImgRaw&r=0">
+		    <img class="card-image" src="https://s2.glbimg.com/vtq78sWXWjRqahoGBDLv3Vx6a_g=/620x345/e.glbimg.com/og/ed/f/original/2018/11/14/ferretto2.png">
 			<div class="card-desc">
-				<h4>Daniel Ferretto <i class="fa fa-heart like-button"></i></h4>
+				<h4>Daniel Ferretto<i class="fa fa-heart like-button"></i></h4>
 				<p>Professor formado em Matemática pela UFSC</p>
 			</div>
 		</div>
