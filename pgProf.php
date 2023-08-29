@@ -75,7 +75,7 @@
 		<!-- Fechando card --> 
 		</div>
 		<div class="card">
-			<img class="card-image" src="https://th.bing.com/th/id/R.0111c3d50bb2759dcfa4fb3eb67f1cb7?rik=OleFcYttOJ80Ig&pid=ImgRaw&r=0">
+			<img class="card-image" src="https://www.ofuxico.com.br/img/galeria/2019/10/rafaelprocopio_420173.jpg">
 			<div class="card-desc">
 				<h4>Rafael Rodrigues Procópio <i class="fa fa-heart like-button"></i></h4>
 				<p>Professor de Matemática formado pela UGF e com especialização no ensino da Matemática pela UFRJ</p>
