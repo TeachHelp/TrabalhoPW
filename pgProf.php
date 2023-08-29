@@ -98,7 +98,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-image" src="https://yt3.ggpht.com/a/AATXAJxJXqPXiL5CZsIdk_gzJOleUQchXS6O6v-fEg=s900-c-k-c0xffffffff-no-rj-mo">
+			<img class="card-image" src="https://yt3.ggpht.com/TRwG_DfRgoaY2zgt53ws_LJ3s2WvI0jlsOOG4vhKGpNe5Vwi8Gf9Hi45TQOjhIHooGFk2cB0BLCv6YE=s640-c-fcrop64=1,00000000ffffffff-nd-v1">
 			<div class="card-desc">
 				<h4>Paulo Pereira<i class="fa fa-heart like-button"></i></h4>
 				<p>Mestre em Matemática pelo Instituto Nacional de Matemática Pura e Aplicada - IMPA</p>
