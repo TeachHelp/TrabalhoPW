@@ -77,7 +77,7 @@
 		<div class="card">
 			<img class="card-image" src="https://www.ofuxico.com.br/img/galeria/2019/10/rafaelprocopio_420173.jpg">
 			<div class="card-desc">
-				<h4>Rafael Rodrigues Procópio <i class="fa fa-heart like-button"></i></h4>
+				<h4>Rafael Procópio<i class="fa fa-heart like-button"></i></h4>
 				<p>Professor de Matemática formado pela UGF e com especialização no ensino da Matemática pela UFRJ</p>
 			</div>
 		</div>
