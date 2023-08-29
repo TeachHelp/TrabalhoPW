@@ -67,21 +67,25 @@
         <br>
 
         <div class="container">
-          <div class="row justify-content-between">
+          <div class="row align-items-start">
+                <div class="col">
+                  <img src="img/davi.png" id="imgInsta" onClick="window.open('https://www.instagram.com/davi_cs18/');">
+                  <p class="">Davi Cardoso Salles </p>
+                </div>
 
-                <img src="img/davi.png" class="imgInsta" onClick="window.open('https://www.instagram.com/davi_cs18/');">
-                <p class="">Davi Cardoso Salles </p>
+                <div class="col">
+                  <img src="img/evelyn.png" class="imgInsta" onClick="window.open('https://www.instagram.com/evelyn.otavio/');">
+                  <p class="">Evelyn Pereira Otavio </p>
+                </div>
 
-                <img src="img/evelyn.png" class="imgInsta" onClick="window.open('https://www.instagram.com/evelyn.otavio/');">
-                <p class="">Evelyn Pereira Otavio </p>
-
-
-                <img src="img/harian.png" class="imgInsta" onClick="window.open('https://www.instagram.com/harian_cr/');">
-                <p class="">Harian Adami Chagas Radaelli </p>
-
-
-                <img src="img/wil.png" class="imgInsta" onClick="window.open('https://www.instagram.com/wilsiman_evangelista/');">
-                <p class="">Wilsiman Santos Evangelista Silva </p>
+                <div class="col">  
+                  <img src="img/harian.png" class="imgInsta" onClick="window.open('https://www.instagram.com/harian_cr/');">
+                  <p class="">Harian Adami Chagas Radaelli </p>
+                </div>  
+                <div class="col">
+                  <img src="img/wil.png" class="imgInsta" onClick="window.open('https://www.instagram.com/wilsiman_evangelista/');">
+                  <p class="">Wilsiman Santos Evangelista Silva </p>
+                </div>  
           </div>
         </div>
   </div>
