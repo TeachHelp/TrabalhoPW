@@ -58,7 +58,7 @@
         <p class="pTxt"> Somos um grupo apaixonado de estudantes do último período do Instituto Federal do Espírito Santo,
           unidos por um objetivo comum: Tornar o aprendizado e a busca por aprendizado mais completa e prática. 
           Conheça os rostos por trás dessa equipe dedicada: Davi Cardoso Salles, cuja mente criativa e determinação 
-          incansável são as forças motrizes por trás de nossa busca por soluções impactantes; Evelyn Otavio Pereira, 
+          incansável são as forças motrizes por trás de nossa busca por soluções impactantes; Evelyn Pereira Otávio, 
           uma visionária comprometida em transformar experiências pessoais em mudanças positivas, inspirando todos nós a 
           pensar além dos limites convencionais; Harian Adami Chagas Radaelli, cujo compromisso com a excelência e perspicácia 
           estratégica nos guia na jornada para superar obstáculos complexos; 
@@ -75,7 +75,7 @@
 
                 <div class="col">
                   <img src="img/evelyn.png" class="imgInsta" onClick="window.open('https://www.instagram.com/evelyn.otavio/');">
-                  <p class="">Evelyn Pereira Otavio </p>
+                  <p class="">Evelyn Pereira Otávio </p>
                 </div>
 
                 <div class="col">  
