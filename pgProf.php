@@ -91,7 +91,7 @@
 	</div>
 	<div class="card-container">
 		<div class="card">
-			<img class="card-image" src="https://thumbs.dreamstime.com/b/professor-27173123.jpg">
+			<img class="card-image" src="https://s2.static.brasilescola.uol.com.br/be/2023/07/professora-ensinando-matematica-com-representacao-da-ideia-do-ensino-da-matematica-e-seu-uso-pratico-no-mundo.jpg">
 			<div class="card-desc">
 				<h4>Camila Fraga Egydio <i class="fa fa-heart like-button"></i></h4>
 				<p>Professora formada em Matemática pela UFRJ</p>
