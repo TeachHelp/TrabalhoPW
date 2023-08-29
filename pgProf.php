@@ -82,9 +82,9 @@
 			</div>
 		</div>
 		<div class="card">
-		    <img class="card-image" src="https://th.bing.com/th/id/OIP.rG9d-SsyLfUtH4DJTuQhsQHaHa?pid=ImgDet&rs=1">
+		    <img class="card-image" src="https://img.r7.com/images/sandro-curio-tiktok-01072021221814525?dimensions=299x417">
 			<div class="card-desc">
-				<h4>Sandro Curió <i class="fa fa-heart like-button"></i></h4>
+				<h4>Sandro Curió<i class="fa fa-heart like-button"></i></h4>
 				<p>Professor de Matemática formado pela UFF</p>
 			</div>
 		</div>
