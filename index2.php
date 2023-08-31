@@ -65,27 +65,53 @@
         <br>
       </div>
       <!--Div com um formulário para login-->
-        <form class="col-sm-6 col-12 bg-form">
+        <form action="index2.php" method="POST" class="col-sm-6 col-12 bg-form">
           <div class="form-group p-4">
             <p class="fw-bold fs-3">Login</p>
 
             <label for="email">Email:</label>
             <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
-            <span id="autEmail">Email deve ser informado!</span>
 
             <label for="senha">Senha:</label>
             <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
-            <span id="autSenha">Senha deve ser preenchida!</span>
 
             <br>
-            <button type="button" name="btnLogar" class="btn btn-info" onclick="autentication()">Entrar</button>
-            <button type="button" name="btnCad" class="btn btn-info" onclick="telaCadastro()">Não possuo cadastro</button>
+            <button type="button" name="btnLogin" class="btn btn-info" >Entrar</button>
+            <!-- <button type="button" name="btnCad" class="btn btn-info" >Não possuo cadastro</button> -->
+
+            <?php
+                if (isset($_POST['btnLogin'])):
+                    $email = $_POST['inputEmail'];
+                    $senha = $_POST['inputSenha'];
+                            
+                    //validações
+                    $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
+                    if(! filter_var($senha, FILTER_VALIDATE_REGEXP,$res)) {		  
+                        $erros[]= "Senha incorreta!";
+                    }
+                        
+                    if(filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL)===false): 
+                        $erros[] = "Email inválido";
+                    endif;
+                    
+                    //exibindo mensagens
+                    //empty - retorna verdadeiro e falso/verificar se a variável está vazia
+                    if (!empty($erros)):
+                        foreach($erros as $erro):
+                            echo "<li> $erro </li>";
+                        endforeach;
+                    else:
+                        header('Location: ./menuBootstrap.php');
+                    endif;	
+                endif;
+            ?>
+            
           </div>
         </form>
-      
       </div>
     </div>
   </div>
+
 </body>
 
 </html> 
