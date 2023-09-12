@@ -134,6 +134,11 @@ body{
     border: none;
 }
 
+#card-custom-geografia{
+    background: #4b6e46;
+    border: none;
+}
+
 /*Inserindo o tamanho da imagem em cada card*/
 
 #espacamento{
@@ -198,8 +203,8 @@ footer{
 #instagram{
     background: linear-gradient(#7f37c9, #ff2992, #ff9807);
 }
-#instagram{
-    background-color: #4267b3;
+#facebook{
+    background-color: #9cb0d8;
 }
 
 #whatsapp{
