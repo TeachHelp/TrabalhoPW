@@ -69,7 +69,7 @@
           <div class="form-group p-4">
             <p class="fw-bold fs-3">Login</p>
 
-            <label for="email">Email:</label>
+            <label for="email">Emailll:</label>
             <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
 
             <label for="senha">Senha:</label>
@@ -87,10 +87,10 @@
                     //validações
                     $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
                     if(! filter_var($senha, FILTER_VALIDATE_REGEXP,$res)) {		  
-                        $erros[]= "Senha incorreta!";
+                        $erros[] = "Senha incorreta!";
                     }
                         
-                    if(filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL)===false): 
+                    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false): 
                         $erros[] = "Email inválido";
                     endif;
                     
