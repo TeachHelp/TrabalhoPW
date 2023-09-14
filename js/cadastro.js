@@ -13,7 +13,7 @@ function alerta(){
 /* funcao usada para enviar o usuario para a tela de login */
 
 function telaLogin(){
-    window.location.assign("index.php");
+    window.location.assign("index2.php");
 }
 
 /* funcao que autentica se os inputs foram preenchidos e envia o usuario para a pagina principal */

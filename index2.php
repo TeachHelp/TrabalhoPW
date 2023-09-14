@@ -69,15 +69,15 @@
           <div class="form-group p-4">
             <p class="fw-bold fs-3">Login</p>
 
-            <label for="email">Emailll:</label>
+            <label for="email">Email:</label>
             <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
 
             <label for="senha">Senha:</label>
             <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
 
             <br>
-            <button type="button" name="btnLogin" class="btn btn-info" >Entrar</button>
-            <!-- <button type="button" name="btnCad" class="btn btn-info" >Não possuo cadastro</button> -->
+            <button type="submit" name="btnLogin" class="btn btn-info" >Entrar</button>
+            <button type="button" name="btnCad" onclick="telaCadastro()" class="btn btn-info" >Não possuo cadastro</button> 
 
             <?php
                 if (isset($_POST['btnLogin'])):
@@ -85,23 +85,23 @@
                     $senha = $_POST['inputSenha'];
                             
                     //validações
+                    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false): 
+                      $erros[] = "Email inválido";
+                    endif;
+
                     $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
                     if(! filter_var($senha, FILTER_VALIDATE_REGEXP,$res)) {		  
                         $erros[] = "Senha incorreta!";
                     }
-                        
-                    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false): 
-                        $erros[] = "Email inválido";
-                    endif;
-                    
+                               
                     //exibindo mensagens
                     //empty - retorna verdadeiro e falso/verificar se a variável está vazia
-                    if (!empty($erros)):
-                        foreach($erros as $erro):
-                            echo "<li> $erro </li>";
-                        endforeach;
+                    if (empty($erros)):
+                        header('Location:./menuBootstrap.php');
                     else:
-                        header('Location: ./menuBootstrap.php');
+                        foreach($erros as $erro):
+                          echo "<li> $erro </li>";
+                      endforeach;
                     endif;	
                 endif;
             ?>
