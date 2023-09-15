@@ -28,10 +28,10 @@
 
 /*criando cor do header*/
 .bg-corHeader{
-    background: linear-gradient(to right, #86d7dd, #1b487a)
+    background: linear-gradient(to right, #1b487a, #86d7dd)
 }
 
-/* Estilo da lista de itens do menu*/
+/* Estilo da lista de itens do menu
 
 .div_lista{
     background: linear-gradient(to bottom, #1b487a, #5c9ba0);
@@ -43,7 +43,7 @@
     color:#ffffff;
     text-decoration: none; 
 }
-
+*/
 /*  estilo necessario para visualizar as opcoes de perfil */
 .show {
     display: block;
@@ -135,7 +135,22 @@ body{
 }
 
 #card-custom-geografia{
-    background: #4b6e46;
+    background: #6a6b24;
+    border: none;
+}
+
+#card-custom-quimica{
+    background: #e755c8;
+    border: none;
+}
+
+#card-custom-biologia{
+    background: #498830;
+    border: none;
+}
+
+#card-custom-fisica{
+    background: #eb8262;
     border: none;
 }
 
@@ -320,6 +335,26 @@ footer{
         margin-top: 5% !important;
         margin-bottom: 5% !important;
     }
+    #card-custom-geografia{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+    }
+    #card-custom-quimica{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+    }
+    #card-custom-biologia{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+    }
+    #card-custom-fisica{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+    }
     .msc{
         display: none;
     }
@@ -384,6 +419,38 @@ footer{
         height: 2%!important;
     }
     #card-custom-informatica{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-right: 10% !important;
+        height: 2%!important;
+        margin-bottom: 5% !important;
+    }
+
+    #card-custom-geografia{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-right: 10% !important;
+        height: 2%!important;
+        margin-bottom: 5% !important;
+    }
+
+    #card-custom-quimica{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-right: 10% !important;
+        height: 2%!important;
+        margin-bottom: 5% !important;
+    }
+
+    #card-custom-biologia{
+        position:relative !important;
+        margin-top: 5% !important;
+        margin-right: 10% !important;
+        height: 2%!important;
+        margin-bottom: 5% !important;
+    }
+
+    #card-custom-fisica{
         position:relative !important;
         margin-top: 5% !important;
         margin-right: 10% !important;
