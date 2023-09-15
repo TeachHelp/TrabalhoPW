@@ -127,14 +127,14 @@
 
 
       
-      <div class="row">.</div>
+      <div class="row-1">.</div>
       <!--segunda linha, com os elementos igualmente distribuídos das pontas ao meio-->
       <div class="row justify-content-between">
-      <!--div de história, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
-      <div class="card" id="card-custom-historia" style="width: 15rem;" onclick="alerta()" type="button">
-        <img src="img/hist.jpg" class="img card-img-top" alt="Historia foto">
+      <!--div de geografia, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
+      <div class="card" id="card-custom-geografia" style="width: 15rem;" onclick="alerta()" type="button">
+        <img src="img/geografia.jpg" class="img card-img-top" alt="Geografia foto">
         <div class="card-title titulo fs-5">
-          <h3 class="">História</h3>
+          <h3 class="">Geografia</h3>
         </div>
       <!--div de inglês, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
       </div>
@@ -213,17 +213,18 @@
 
       </ul>
       <div id="footer_subscribe">
-        <h3>Teste</h3>
+        <h3>Teach Help</h3>
         <p>
-          Olá teste teste teste teste teste 
+          Auxiliando estudantes<br>Empregando capacitados
         </p>
+        <!-- 
         <div id="input_group">
           <input type="email" id="email">
           <button>
             <i class="fa-regular fa-envelope"></i>
           </button>
 
-        </div>
+        </div> -->
 
       </div>
       <div id="footer_copyright">
