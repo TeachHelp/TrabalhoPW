@@ -64,12 +64,42 @@
             Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
         <br>
       </div>
+
+      <?php
+	
+        if (isset($_POST['btnLogin'])){
+          $erros = array(); 
+          $email = $_POST['inputEmail'];
+          $senha = $_POST['inputSenha'];
+            
+
+          //$res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
+          $res = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
+          if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
+            $erros[] = "Senha incorreta!";
+          }
+
+          if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
+            $erros[] = "Email inválido";
+          }
+            
+          if (!empty($erros)){
+            header('Location: ./index.php');
+            /*foreach($erros as $erro):
+                echo "<li> $erro </li>";
+            endforeach;*/
+          } else {
+            header('Location: ./menuBootstrap.php');
+          }
+        }
+ ?>
+
       <!--Div com um formulário para login-->
         <form action="index2.php" method="POST" class="col-sm-6 col-12 bg-form">
           <div class="form-group p-4">
             <p class="fw-bold fs-3">Login</p>
 
-            <label for="email">Emailll:</label>
+            <label for="email">Email:</label>
             <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
 
             <label for="senha">Senha:</label>
@@ -78,33 +108,6 @@
             <br>
             <button type="button" name="btnLogin" class="btn btn-info" >Entrar</button>
             <!-- <button type="button" name="btnCad" class="btn btn-info" >Não possuo cadastro</button> -->
-
-            <?php
-                if (isset($_POST['btnLogin'])):
-                    $email = $_POST['inputEmail'];
-                    $senha = $_POST['inputSenha'];
-                            
-                    //validações
-                    $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
-                    if(! filter_var($senha, FILTER_VALIDATE_REGEXP,$res)) {		  
-                        $erros[] = "Senha incorreta!";
-                    }
-                        
-                    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false): 
-                        $erros[] = "Email inválido";
-                    endif;
-                    
-                    //exibindo mensagens
-                    //empty - retorna verdadeiro e falso/verificar se a variável está vazia
-                    if (!empty($erros)):
-                        foreach($erros as $erro):
-                            echo "<li> $erro </li>";
-                        endforeach;
-                    else:
-                        header('Location: ./menuBootstrap.php');
-                    endif;	
-                endif;
-            ?>
             
           </div>
         </form>

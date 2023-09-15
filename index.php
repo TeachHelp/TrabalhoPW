@@ -17,7 +17,7 @@
   <header>
      <!--Barra de navegação -->
       <nav class="navbar navbar-expand-lg bg-corHeader">
-        <div class="container-fluid">
+        <div class="container-fluid"> 
           <!--Logo do site-->
           <a class="navbar-brand" href="cadastro.php">
             <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
