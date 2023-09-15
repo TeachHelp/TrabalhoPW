@@ -1,3 +1,41 @@
+<?php
+	$erros = array(); 
+
+  if (isset($_POST['btnCad'])){
+    $nome = $_POST['inputName'];
+    $email = $_POST['inputEmail'];
+    $senha = $_POST['inputSenha'];
+    $data = $_POST['inputData'];
+    $endereco = $_POST['inputEnd'];
+      
+    $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
+    if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
+      $erros[] = "Nome inválido!";
+    }
+
+    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
+      $erros[] = "Email inválido";
+    }
+
+    $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
+    if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
+      $erros[] = "Senha incorreta!";
+    }
+
+    if(filter_var($data, FILTER_VALIDATE_INT)===false){ 
+      $erros[] = "Data inválida";
+    }
+
+    if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
+      $erros[] = "Endereço inválido!";
+    }
+      
+    if (empty($erros)){
+      header('Location: ./index.php');
+    } 
+  }
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,31 +104,36 @@
       </div>
 
       <!--Div com um formulário para cadastro-->
-      <form class="col-sm-6 col-12 bg-form">
+      <form action="cadastro.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro</p>
           <label for="nome">Nome:</label>
-          <input type="text" class="form-control-sm form-control" id="nome">
-          <span id="autNome">Nome deve ser preenchido!</span>
+          <input type="text" name="inputName" class="form-control-sm form-control" id="nome">
 
           <label for="email">Email:</label>
-          <input type="email" class="form-control-sm form-control" id="email">
-          <span id="autEmail">Email deve ser informado!</span>
+          <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
 
           <label for="senha">Senha:</label>
-          <input type="password" class="form-control-sm form-control" id="senha">
-          <span id="autSenha">Senha deve ser preenchida!</span>
+          <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
 
           <label for="dataNasc">Data de Nascimento:</label>
-          <input type="date" class="form-control-sm form-control" id="dataNasc">
-          <span id="autDtNasc">Data de nascimento deve ser informada!</span>
+          <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc">
 
           <label for="endereco">Endereço:</label>
-          <input type="text" class="form-control-sm form-control" id="endereco">
-          <span id="autEndereco">Endereço deve ser informado!</span>
+          <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco">
+
           <br>
-          <button type="button" class="btn btn-info" onclick="autentication()">Realizar Cadastro</button>
+          <button type="submit" name="btnCad" class="btn btn-info">Realizar Cadastro</button>
           <button type="button" class="btn btn-info" onclick="telaLogin()">Já possuo cadastro</button>
+
+          <?php
+            if (!empty($erros)){    
+              foreach($erros as $erro):
+                echo "<li> $erro </li>";
+              endforeach;
+            } 
+          ?>
+
         </div>
       </form>
       

@@ -1,3 +1,26 @@
+<?php
+	$erros = array(); 
+
+  if (isset($_POST['btnLogin'])){
+    $email = $_POST['inputEmail'];
+    $senha = $_POST['inputSenha'];
+      
+    
+    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
+      $erros[] = "Email inválido";
+    }
+
+    $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
+    if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
+      $erros[] = "Senha incorreta!";
+    }
+      
+    if (empty($erros)){
+      header('Location: ./menuBootstrap.php');
+    } 
+  }
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,34 +101,14 @@
 
             <br>
             <button type="submit" name="btnLogin" class="btn btn-info" >Entrar</button>
-            <button type="button" name="btnCad" class="btn btn-info" >Não possuo cadastro</button>
+            <button type="button" name="btnCad" onclick="telaCadastro()" class="btn btn-info" >Não possuo cadastro</button>
             
             <?php
-	
-              if (isset($_POST['btnLogin'])){
-                $erros = array(); 
-                $email = $_POST['inputEmail'];
-                $senha = $_POST['inputSenha'];
-                  
-                
-                if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
-                  $erros[] = "Email inválido";
-                }
-
-                $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
-                if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
-                  $erros[] = "Senha incorreta!";
-                }
-                  
-                if (empty($erros)){
-                  header('Location: ./menuBootstrap.php');
-                } else {
-                  
-                  foreach($erros as $erro):
-                    echo "<li> $erro </li>";
-                  endforeach;
-                }
-              }
+            if (!empty($erros)){    
+              foreach($erros as $erro):
+                echo "<li> $erro </li>";
+              endforeach;
+            } 
             ?>
           </div> 
         </form>  
