@@ -57,11 +57,6 @@ body{
   
 }
 
-#autNome, #autEmail, #autSenha, #autEndereco, #autDtNasc{
-  color: red;
-  display: none;
-}
-
 @media screen and (max-width: 575px) {
   .bg-form{
     position: relative !important;
