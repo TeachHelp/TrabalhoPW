@@ -17,7 +17,7 @@
   <header>
      <!--Barra de navegação -->
       <nav class="navbar navbar-expand-lg bg-corHeader">
-        <div class="container-fluid"> 
+        <div class="container-fluid">
           <!--Logo do site-->
           <a class="navbar-brand" href="cadastro.php">
             <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
@@ -64,8 +64,9 @@
             Comece hoje mesmo a melhorar seu aprendizado e desfrute de todos os benefícios que a educação pode oferecer!</p>
         <br>
       </div>
+
       <!--Div com um formulário para login-->
-        <form action="index2.php" method="POST" class="col-sm-6 col-12 bg-form">
+        <form action="index.php" method="POST" class="col-sm-6 col-12 bg-form">
           <div class="form-group p-4">
             <p class="fw-bold fs-3">Login</p>
 
@@ -77,40 +78,42 @@
 
             <br>
             <button type="submit" name="btnLogin" class="btn btn-info" >Entrar</button>
-            <button type="button" name="btnCad" onclick="telaCadastro()" class="btn btn-info" >Não possuo cadastro</button> 
-
-            <?php
-                if (isset($_POST['btnLogin'])):
-                    $email = $_POST['inputEmail'];
-                    $senha = $_POST['inputSenha'];
-                            
-                    //validações
-                    if(filter_var($email, FILTER_VALIDATE_EMAIL)===false): 
-                      $erros[] = "Email inválido";
-                    endif;
-
-                    $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
-                    if(! filter_var($senha, FILTER_VALIDATE_REGEXP,$res)) {		  
-                        $erros[] = "Senha incorreta!";
-                    }
-                               
-                    //exibindo mensagens
-                    //empty - retorna verdadeiro e falso/verificar se a variável está vazia
-                    if (empty($erros)):
-                        header('Location:./menuBootstrap.php');
-                    else:
-                        foreach($erros as $erro):
-                          echo "<li> $erro </li>";
-                      endforeach;
-                    endif;	
-                endif;
-            ?>
+            <button type="button" name="btnCad" class="btn btn-info" >Não possuo cadastro</button>
             
-          </div>
-        </form>
+            <?php
+	
+              if (isset($_POST['btnLogin'])){
+                $erros = array(); 
+                $email = $_POST['inputEmail'];
+                $senha = $_POST['inputSenha'];
+                  
+                
+                if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
+                  $erros[] = "Email inválido";
+                }
+
+                $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
+                if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
+                  $erros[] = "Senha incorreta!";
+                }
+                  
+                if (empty($erros)){
+                  header('Location: ./menuBootstrap.php');
+                } else {
+                  
+                  foreach($erros as $erro):
+                    echo "<li> $erro </li>";
+                  endforeach;
+                }
+              }
+            ?>
+          </div> 
+        </form>  
       </div>
     </div>
   </div>
+
+  
 
 </body>
 
