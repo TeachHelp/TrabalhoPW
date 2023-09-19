@@ -159,7 +159,7 @@
         </div>
       </div>
       <div class="row-1">.</div>
-  </div>
+    </div>
 </div>
   <div id="espacamento"></div>
   <main></main>
@@ -227,9 +227,6 @@
           </button>
 
         </div> -->
-        <div id="voltar">
-          <a href="#" class="footer-link">Voltar ao início</a>
-        </div>
 
       </div>
       <div id="footer_copyright">

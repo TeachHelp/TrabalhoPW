@@ -363,6 +363,9 @@ footer{
         grid-template-columns: repeat(2, 1fr);
         padding: 3rem 2rem;
     }
+    .voltar{
+        color: #ffffff;
+    }
 
 }
 
