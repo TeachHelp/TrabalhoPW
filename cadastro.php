@@ -21,11 +21,12 @@
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
       $erros[] = "Senha incorreta!";
     }
-
-    if(filter_var($data, FILTER_VALIDATE_INT)===false){ 
+    /*
+    $res_date = array("options"=>array("regexp"=>"/^(?=.*[}{,.^?~=+\-_\/*\-+.\|])(?=.*[0-9])$/"));
+    if(! filter_var($data, FILTER_VALIDATE_INT, $res_date)){ 
       $erros[] = "Data inválida";
     }
-
+    */
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }

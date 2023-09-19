@@ -69,7 +69,7 @@
         <div class="container">
           <div class="row align-items-start">
                 <div class="col">
-                  <img src="img/davi.png" id="imgInsta" onClick="window.open('https://www.instagram.com/davi_cs18/');">
+                  <img src="img/davi.png" class="imgInsta" onClick="window.open('https://www.instagram.com/davi_cs18/');">
                   <p class="">Davi Cardoso Salles </p>
                 </div>
 
