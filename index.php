@@ -5,9 +5,12 @@
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
       
-    
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+	  
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido";
+    } else {
+      $email = preg_replace('/[^a-zA-Z0-9@.\-_]/', '', $email);
     }
 
     $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
