@@ -7,6 +7,10 @@
     $senha = $_POST['inputSenha'];
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
+
+    $nome = filter_input(INPUT_POST, 'inputName', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
+    $endereco = filter_input(INPUT_POST, 'inputEnd', FILTER_SANITIZE_STRING);
       
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
