@@ -45,7 +45,7 @@
       header('Location: ./index.php');
     } 
   }
-  ?>
+?>
 
 <?php include_once 'headerLogin.php';?>
 <link href="css/cadastro.css" rel="stylesheet">
