@@ -1,5 +1,6 @@
 <?php include_once 'header.php';?>
 <link rel="stylesheet" href="css/menuBootstrap.css">
+<script src="js/menuBootstrap.js" defer></script>
         <!--criando div centralizada com a logo-->
         <div id="espacamento"></div>
         <div class="text-center my-3">
@@ -18,7 +19,7 @@
         </div>
       </div>
       <!--div de matemática, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
-      <div class="card" id="card-custom-matematica" style="width: 15rem;" onclick="telaProf()" type="button">
+      <div class="card" id="card-custom-matematica" style="width: 15rem;" onclick="telaSubmateria()" type="button">
         <img src="img/mat.jpg" class="img card-img-top" alt="Matematica foto">
         <div class="card-title titulo fs-5">
           <h3 class="">Matemática</h3>
