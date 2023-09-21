@@ -16,6 +16,7 @@
 
     $nome = filter_input(INPUT_POST, 'inputName', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
+    $senha = filter_input(INPUT_POST, 'inputSenha', FILTER_SANITIZE_STRING);
     $endereco = filter_input(INPUT_POST, 'inputEnd', FILTER_SANITIZE_STRING);
       
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
