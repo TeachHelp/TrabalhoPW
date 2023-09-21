@@ -26,8 +26,8 @@ $erros = array();
 
 <?php include_once 'headerLogin.php';?>
 <link href="css/login.css" rel="stylesheet">
+<script type="text/javascript" src="js/login.js" defer></script>
 
-  <script type="text/javascript" src="js/login.js" defer></script>
   <!--Cabecalho do site-->
   <header>
      <!--Barra de navegação -->
