@@ -1,4 +1,7 @@
 <?php include_once 'header.php';?>
+<link href="css/pgProf.css" rel="stylesheet">
+<script type="text/javascript" src="js/pgProf.js" defer></script>
+
 <!-- Div criada para armazenar as divs de cada professor -->
 	<div class="card-container">
 		<!-- Div card com as informações do professor individual -->

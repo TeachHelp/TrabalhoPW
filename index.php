@@ -1,5 +1,5 @@
 <?php
-	$erros = array(); 
+$erros = array(); 
 
   if (isset($_POST['btnLogin'])){
     $email = $_POST['inputEmail'];
@@ -25,6 +25,7 @@
   ?>
 
 <?php include_once 'headerLogin.php';?>
+<link href="css/login.css" rel="stylesheet">
 
   <script type="text/javascript" src="js/login.js" defer></script>
   <!--Cabecalho do site-->
