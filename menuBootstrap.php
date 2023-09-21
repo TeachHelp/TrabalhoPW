@@ -1,8 +1,11 @@
 <?php include_once 'header.php';?>
+<link rel="stylesheet" href="css/menuBootstrap.css">
         <!--criando div centralizada com a logo-->
+        <div id="espacamento"></div>
         <div class="text-center my-3">
           <img src="img/logoBranca.png" class="rounded" width="250" height="100"alt="">
         </div>
+        <div id="espacamento"></div>
 <!--criando um container que possuirá as divs das matérias-->
 <div class="container justify-content">
   <!--primeira linha, com os elementos espalhados igualmente dos cantos ao centro do container-->

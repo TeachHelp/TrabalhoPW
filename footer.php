@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/footer.css">
 <div id="espacamento"></div>
 <main></main>
 <footer>
@@ -65,7 +66,7 @@
 
         </div> -->
         <div id="voltar">
-          <a href="#" class="footer-link">Voltar ao início</a>
+          <a href="#" class="footer-link">Voltar ao início da página</a>
         </div>
 
       </div>
