@@ -1,4 +1,6 @@
 <?php include_once 'header.php';?>
+
+
         <!--criando div centralizada com a logo-->
         <div class="text-center my-3">
           <img src="img/logoBranca.png" class="rounded" width="250" height="100"alt="">

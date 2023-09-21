@@ -1,5 +1,7 @@
 <?php include_once 'header.php';?>
 
+<link href="css/sobre.css" rel="stylesheet">
+
   <!--Conteudo da pagina-->
   <div class="container my-3">
     <div class="d-flex justify-content-center flex-column flex-sm-row ">

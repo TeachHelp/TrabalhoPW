@@ -1,4 +1,7 @@
 <?php include_once 'header.php';?>
+<link href="css/perfilAlunoBootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="js/perfilAluno.js" defer></script>
+
     <!--Criação da classe container com display flex para que as próximas divs fiquem lado a lado e justify-content-center para que as divs fiquem centralizadas-->
     <div class="container mt-5 d-flex justify-content-center">
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
