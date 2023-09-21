@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Teach Help</title>
-        <link rel="icon" type="image/x-icon" href="img/logo.png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/perfilAlunoBootstrap.css">
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    </head>
-<body>
-    <!--Cabecalho do site-->
-    <header>
-    <!--Barra de navegação-->
-     <nav class="navbar navbar-expand-lg bg-corHeader">
-        <div class="container-fluid">
-        <!--Logo do site-->
-        <a class="navbar-brand" href="menuBootstrap.php">
-            <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
-        </a>
-        <!--Itens da Navbar-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="perfilAlunoBootstrap.php" id="navHome">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Matérias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="sobre.php" id="navHome">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
-            </form>
-        </div>
-        </div>
-    </nav>
-   </header>
+<?php include_once 'header.php';?>
     <!--Criação da classe container com display flex para que as próximas divs fiquem lado a lado e justify-content-center para que as divs fiquem centralizadas-->
     <div class="container mt-5 d-flex justify-content-center">
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
@@ -180,5 +127,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+<?php include_once 'footer.php';?>
