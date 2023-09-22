@@ -12,6 +12,11 @@
 
 /* criando cor do body, com a imagem de fundo, e a cor mais escura*/ 
 
+body{
+    background-color: #000524;
+    background-image: url("Cover.png");
+    background-repeat: no-repeat;
+  }
 
 .bg-corSite{
     background-image: url("Cover.png");
@@ -19,66 +24,6 @@
     background-attachment: fixed;
     background-color: #00010f;
 }
-
-/*criando cor do header*/
-.bg-corHeader{
-    background: linear-gradient(to right, #1b487a, #86d7dd)
-}
-
-/* Estilo da lista de itens do menu
-
-.div_lista{
-    background: linear-gradient(to bottom, #1b487a, #5c9ba0);
-    height:auto;
-    width: 180px;
-}
-
-.lista_materias{
-    color:#ffffff;
-    text-decoration: none; 
-}
-*/
-/*  estilo necessario para visualizar as opcoes de perfil */
-.show {
-    display: block;
-}
-
-#navLogo{
-    text-align: center;
-}
-
-/*personalizando o body*/
-
-body{
-    background-color: #000524;
-    background-image: url("Cover.png");
-    background-repeat: no-repeat;
-  }
-  
-/*tamanho da lupa*/
-  .lupa{
-    width: 25px;
-  }
-  
-  /*estilo das navbar*/
-  .navbar-nav .nav-link {
-    color: #fff;
-  }
-  
-  /*personalizando as opções do botão de menu*/
-
-  #navMenu, #navHome{
-    color: #fff;
-  }
-  .btn-outline-light{
-    background-color: #fff;
-    color: black;
-  }
-  
-  .form-control-ss{
-    width: 500px;
-  }
-   
 
 /*personalizando os cards*/
 

@@ -24,7 +24,7 @@
       </div>
       <ul class="footer-list">
         <li>
-          <h3>Blog</h3
+          <h3>Blog</h3>
         </li>
         <li>
           <a href="#" class="footer-link">Item1</a>
@@ -39,7 +39,7 @@
       </ul>
       <ul class="footer-list">
         <li>
-          <h3>Products</h3
+          <h3>Products</h3>
         </li>
         <li>
           <a href="#" class="footer-link">Item4</a>

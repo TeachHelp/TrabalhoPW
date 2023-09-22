@@ -24,44 +24,11 @@ $erros = array();
   }
   ?>
 
-<?php include_once 'headerLogin.php';?>
+<?php include_once 'headerLogin.php';?> 
+
 <link href="css/login.css" rel="stylesheet">
 <script type="text/javascript" src="js/login.js" defer></script>
 
-  <!--Cabecalho do site-->
-  <header>
-     <!--Barra de navegação -->
-      <nav class="navbar navbar-expand-lg bg-corHeader">
-        <div class="container-fluid">
-          <!--Logo do site-->
-          <a class="navbar-brand" href="cadastro.php">
-            <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
-          </a>
-          <!--Itens da Navbar-->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cadastro.php" id="navHome">Home</a>
-              </li>
-              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="sobre.php" id="navHome">Sobre</a>
-             </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    
-  </header>
 
   <!--Conteudo da pagina-->
   <div class="container my-3">
