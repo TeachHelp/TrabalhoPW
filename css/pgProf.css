@@ -7,41 +7,6 @@ body {
   background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
 }
 
-/* header */
-.lupa{
-  width: 25px;
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
-}
-
-.navbar-toggler{
-  color: black !important;
-}
-
-.bg-corHeader{
-  background: linear-gradient(to right, #86d7dd, #1b487a)
-}
-
-#navMenu, #navHome{
-  color: #fff;
-}
-.btn-outline-light{
-  background-color: #fff;
-  color: black !important;
-}
-
-.form-control-ss{
-  width: 500px;
-}
-
-.img-logo{
-  margin-top: 20px;
-  width: 50%;
-}
-/* header */
-
 
 /* Estilo para o container da logo */
 .logo-container {
