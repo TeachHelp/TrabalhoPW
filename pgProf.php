@@ -8,7 +8,7 @@
 		<div class="card">
 			<a href="perfilProfBootstrap.php">
 			<!-- Imagem do professor -->
-			<img class="card-image" src="https://media.licdn.com/dms/image/C5603AQHGPFe_6YqHrQ/profile-displayphoto-shrink_800_800/0/1659888505915?e=1694044800&v=beta&t=W05OFHnSPqmZACl-Mkx3Ocf00uNJ_YlIa3TNtx_3N7c">
+			<img src="img/ImgFidelis.jpg" alt="Fidelis" class="card-image">
 			<!-- Div que fica com o nome e fomação do professor -->
 			<div class="card-desc">
 				<h4>Fidelis Zanetti<i class="fa fa-heart like-button"></i></h4>
