@@ -8,10 +8,10 @@
 <div class="container justify-content">
 
     <div class="submateria d-flex flex-column bd-highlight mb-3">
-      <div class="p-2 bd-highlight" onclick="telaProf()">Flex item 1</div>
+      <div class="submatText p-2 bd-highlight" onclick="telaProf()">Flex item 1</div>
     </div>
     <div class="submateria d-flex flex-column bd-highlight mb-3">
-      <div class="p-2 bd-highlight">Flex item 1</div>
+      <div class="p-2 bd-highlight"><a class="submatText">Flex item 1</a></div>
     </div>  
     <div class="submateria d-flex flex-column bd-highlight mb-3">
       <div class="p-2 bd-highlight">Flex item 1</div>
