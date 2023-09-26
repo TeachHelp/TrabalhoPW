@@ -50,7 +50,7 @@
 
 <?php include_once 'headerLogin.php'; ?>
 
-<link href="css/cadastro.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
 <script type="text/javascript" src="js/cadastro.js" defer></script>
 
 
