@@ -1,5 +1,6 @@
 <?php
-$erros = array(); 
+  session_start();
+  $erros = array(); 
 
   if (isset($_POST['btnLogin'])){
     $email = $_POST['inputEmail'];
@@ -17,14 +18,19 @@ $erros = array();
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
       $erros[] = "Senha incorreta!";
     }
-      
+    
+    
     if (empty($erros)){
       header('Location: ./menuBootstrap.php');
     } 
   }
-  ?>
 
-<?php include_once 'headerLogin.php';?> 
+  session_unset();
+
+  include_once 'headerLogin.php';
+?>
+
+
 
 <link href="css/login.css" rel="stylesheet">
 <script type="text/javascript" src="js/login.js" defer></script>

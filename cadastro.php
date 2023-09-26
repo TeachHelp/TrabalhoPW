@@ -19,10 +19,10 @@
     $senha = filter_input(INPUT_POST, 'inputSenha', FILTER_SANITIZE_STRING);
     $endereco = filter_input(INPUT_POST, 'inputEnd', FILTER_SANITIZE_STRING);
       
-    $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
+    $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));/*
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Nome inválido!";
-    }
+    }*/
 
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido";
@@ -43,9 +43,10 @@
     }
       
     if (empty($erros)){
-      header('Location: ./index.php');
+      header('Location: ./menuBootstrap.php');
     } 
   }
+  
 ?>
 
 <?php include_once 'headerLogin.php'; ?>

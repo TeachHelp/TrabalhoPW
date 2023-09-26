@@ -50,7 +50,15 @@ session_start();
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li>
-                <a class="nav-link active" aria-current="page" id="navHome"> <?php echo "Olá, " . $_SESSION['usuario']; ?></a>
+                <a class="nav-link active" aria-current="page" id="navHome"> 
+                  <?php 
+                    if(empty($_SESSION['usuario'])){
+                      echo "Olá Usuario";
+                    }
+                    else{
+                      echo "Olá " . $_SESSION['usuario'];
+                    }
+                ?></a>
               </li>
             </ul> 
            <form class="d-flex" role="search">
@@ -62,3 +70,4 @@ session_start();
      </nav>
    
  </header>
+
