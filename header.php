@@ -48,9 +48,9 @@ session_start();
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
              </li>
             </ul>
-            <ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
               <li>
-                <a class="nav-link active" aria-current="page" id="navHome"> <?php echo $_SESSION['usuario']; ?></a>
+                <a class="nav-link active" aria-current="page" id="navHome"> <?php echo "Olá, " . $_SESSION['usuario']; ?></a>
               </li>
             </ul> 
            <form class="d-flex" role="search">

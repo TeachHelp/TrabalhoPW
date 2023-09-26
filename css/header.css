@@ -3,43 +3,15 @@
     background: linear-gradient(to right, #1b487a, #86d7dd)
   }
   
-  /* Estilo da lista de itens do menu*/
-  
-  .div_lista{
-    background: linear-gradient(to bottom, #1b487a, #5c9ba0);
-    height:auto;
-    width: 180px;
-  }
-  
-  .lista_materias{
-    color:#ffffff;
-    text-decoration: none; 
-  }
-  
-  /*  estilo necessario para visualizar as opcoes de perfil */
-  .show {
-    display: block;
-  }
-  
-  #navLogo{
-    text-align: center;
-  }
-  
   /*tamanho da lupa*/
   .lupa{
     width: 25px;
   }
   
-  /*estilo das navbar*/
-  .navbar-nav .nav-link {
-    color: #fff;
-  }
-  
-  /*personalizando as opções do botão de menu*/
-  
   #navMenu, #navHome{
     color: #fff;
   }
+  
   .btn-outline-light{
     background-color: #fff;
     color: black;
