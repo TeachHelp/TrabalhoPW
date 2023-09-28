@@ -1,6 +1,6 @@
 <?php include_once 'header.php';?>
 
-<link href="css/sobre.css" rel="stylesheet">
+  <link href="css/sobre.css" rel="stylesheet">
 
   <!--Conteudo da pagina-->
   <div class="container my-3">
@@ -39,11 +39,10 @@
                 <div class="col">
                   <img src="img/wil.png" class="imgInsta" onClick="window.open('https://www.instagram.com/wilsiman_evangelista/');">
                   <p class="">Wilsiman Santos Evangelista Silva </p>
-                </div>  
-          </div>
+                </div> 
+          </div>       
         </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 <?php include_once 'footer.php';?>

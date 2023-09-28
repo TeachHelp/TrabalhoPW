@@ -15,7 +15,7 @@
           <h3>Institucional</h3>
         </li>
         <li>
-          <a href="#" class="footer-link">Sobre o TeachHelp</a>
+          <a href="sobre.php" class="footer-link">Sobre o TeachHelp</a>
         </li>
         <li>
           <a href="sobreEquipe.php" class="footer-link">Sobre a Equipe TeachHelp</a>
