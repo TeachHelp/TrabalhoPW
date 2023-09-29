@@ -22,10 +22,10 @@
 
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
       
-    $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));/*
+    $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
-      $erros[] = "Nome inválido!";s
-    }*/
+      $erros[] = "Nome inválido!";
+    }
 
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido";
