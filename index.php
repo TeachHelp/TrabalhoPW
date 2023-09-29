@@ -5,7 +5,8 @@
   if (isset($_POST['btnLogin'])){
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
-      
+
+    // Sanitização do Email
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 	  
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
