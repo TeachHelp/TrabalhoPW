@@ -53,7 +53,7 @@ session_start();
                 <a class="nav-link active" aria-current="page" id="navHome"> 
                   <?php 
                     if(empty($_SESSION['usuario'])){
-                      echo "Olá Usuario";
+                      header('Location: ./menuBootstrap.php');
                     }
                     else{
                       echo "Olá " . $_SESSION['usuario'];
