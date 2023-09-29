@@ -5,23 +5,26 @@
   $erros = array(); 
 
   if (isset($_POST['btnCad'])){
-    $nome = $_POST['inputName'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
 
-    $_SESSION['id'] = "1";
-    $_SESSION['usuario'] = $nome;
+    $nome = $_POST['inputName'];
+    
+    // Sanitização do nome
+    $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
 
-    $nome = filter_input(INPUT_POST, 'inputName', FILTER_SANITIZE_STRING);
+    $_SESSION['id'] = "1";
+    $_SESSION['usuario'] = $nomeSanitizado;
+
+    $inputName = $_POST['inputName']; 
+
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
-    $senha = filter_input(INPUT_POST, 'inputSenha', FILTER_SANITIZE_STRING);
-    $endereco = filter_input(INPUT_POST, 'inputEnd', FILTER_SANITIZE_STRING);
       
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));/*
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
-      $erros[] = "Nome inválido!";
+      $erros[] = "Nome inválido!";s
     }*/
 
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
