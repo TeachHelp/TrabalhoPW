@@ -105,9 +105,20 @@ body{
 /*submaterias*/
 
 .submateria{
-    background: #25d3b9;
+    background: #8b8b8b;
+    cursor: pointer;
 }
 
+@font-face {
+    font-family: fontCourier;
+    src: url(sansation_light.woff);
+}
+
+
+.submatText{
+    font-family: fontCourier;
+    font-size: 20px;
+}
 
 /*Alterando as configurações dos cards para o tamanho de tela até 600px*/
 /*primeiro configuramos todos os cards para possuirem uma distância inicial da borda esquerda*/
