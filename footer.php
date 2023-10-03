@@ -27,7 +27,7 @@
           <h3>Ajuda</h3>
         </li>
         <li>
-          <a href="#" class="footer-link">Como me torno um instrutor?</a>
+          <a href="#" class="footer-link" onclick="alerta()">Como me torno um instrutor?</a>
         </li>
         <li>
           <a href="mailto:piteachhelp@gmail.com" class="footer-link">Entre em contato através do Email</a>
@@ -40,9 +40,6 @@
         <div id="footer_social_media">
           <a href="https://www.instagram.com/teachhelp2023" class="footer_link" id="instagram">
             <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" class="footer_link" id="facebook">
-            <i class="fa-brands fa-facebook-f"></i>
           </a>
           <a href="https://wa.me//5527998296191?text=Olá%20gostaria%20de%20saber%20mais%20sobre%20o%20TeachHelp!"  class="footer_link" id="whatsapp">
             <i class="fa-brands fa-whatsapp"></i>

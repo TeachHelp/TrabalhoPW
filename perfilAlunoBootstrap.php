@@ -1,6 +1,13 @@
-<?php include_once 'header.php';?>
+<?php 
+
+
+//inserindo o header
+include_once 'header.php'; ?>
+
+<!-- Importações necessarias exclusivas da pagina-->
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link href="css/perfilAlunoBootstrap.css" rel="stylesheet">
-<script type="text/javascript" src="js/perfilAluno.js" defer></script>
 
     <!--Criação da classe container com display flex para que as próximas divs fiquem lado a lado e justify-content-center para que as divs fiquem centralizadas-->
     <div class="container mt-5 d-flex justify-content-center">
@@ -30,15 +37,6 @@
                             <span class="text">Email</span>
                         </h4>
                         <p>fidelis.castro@gmail.com</p>
-                    </div>
-                    <div class="data col-sm m-1">
-                        <h4>
-                            <span class="material-symbols-outlined rounded-circle bg-primary p-1 text-white" id="icon">
-                                phone
-                            </span>
-                            <span class="text">Celular</span>
-                        </h4>
-                        <p>(27)99798-0102</p>
                     </div>
                     <div class="data col-sm m-1">
                         <h4>

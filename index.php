@@ -2,7 +2,7 @@
   session_start();
   $erros = array(); 
 
-  if (isset($_POST['btnLogin'])){
+  if (isset($_POST['btnEntrar'])){
     $nome = $_POST['inputNome'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
@@ -82,7 +82,7 @@
             <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
 
             <br>
-            <button type="submit" name="btnLogin" class="btn btn-info" >Entrar</button>
+            <button type="submit" name="btnEntrar" class="btn btn-info" >Entrar</button>
             <button type="button" name="btnCad" onclick="telaCadastro()" class="btn btn-info" >Não possuo cadastro</button>
             
             <?php

@@ -4,7 +4,7 @@
 
   $erros = array(); 
 
-  if (isset($_POST['btnCad'])){
+  if (isset($_POST['btnEntrar'])){
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     $data = $_POST['inputData'];
@@ -35,12 +35,7 @@
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
       $erros[] = "Senha incorreta!";
     }
-    /*
-    $res_date = array("options"=>array("regexp"=>"/^(?=.*[}{,.^?~=+\-_\/*\-+.\|])(?=.*[0-9])$/"));
-    if(! filter_var($data, FILTER_VALIDATE_INT, $res_date)){ 
-      $erros[] = "Data inválida";
-    }
-    */
+    
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
@@ -95,7 +90,7 @@
           <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco">
 
           <br>
-          <button type="submit" name="btnCad" class="btn btn-info">Realizar Cadastro</button>
+          <button type="submit" name="btnEntrar" class="btn btn-info">Realizar Cadastro</button>
           <button type="button" class="btn btn-info" onclick="telaLogin()">Já possuo cadastro</button>
 
           <?php
