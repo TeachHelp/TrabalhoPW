@@ -1,13 +1,20 @@
+<!--inserindo o header-->
+
 <?php include_once 'header.php';?>
+<!--referenciando o css-->
 <link rel="stylesheet" href="css/menuBootstrap.css">
+<!--referenciando o js-->
 <script src="js/submaterias.js" defer></script>
         <!--criando div centralizada com a logo-->
         <div class="text-center my-3">
           <img src="img/logoBranca.png" class="rounded" width="250" height="100"alt="">
         </div>
+<!--criando um container que irá conter as div de cada submatéria-->
 <div class="container justify-content">
 
+    <!--criando a div das submatérias estilizada em bootstrap, com características de coluna e tamaho fixo-->
     <div class="submateria d-flex flex-column bd-highlight mb-3">
+      <!--adicionando uma div que irá conter o texto da submatéria assim como seu link para a página telaProf-->
       <div class="submatText p-2 bd-highlight" onclick="telaProf()">Matemática geral</div>
     </div>
     <div class="submateria d-flex flex-column bd-highlight mb-3">
@@ -81,4 +88,5 @@
     </div>  
 </div>
 
+<!--incluindo o footer da página-->
 <?php include_once 'footer.php';?>

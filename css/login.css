@@ -1,7 +1,4 @@
 
-
- 
-
 body{
     background-color: #000524;
     background-image: url("Cover.png");
@@ -40,6 +37,7 @@ body{
     display: flex;
   }
 
+  /* tornando responsivo */
   @media screen and (max-width: 575px){
     .bg-form{
       position: relative !important;

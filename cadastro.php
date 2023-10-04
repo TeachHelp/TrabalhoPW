@@ -22,20 +22,24 @@
 
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
       
+    //validação de nome
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Nome inválido!";
     }
 
+    //validação de email
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido";
     }
 
+    //validação de senha
     $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
       $erros[] = "Senha incorreta!";
     }
     
+    //validação de endereco
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
@@ -44,11 +48,10 @@
       header('Location: ./menuBootstrap.php');
     } 
   }
-  
-?>
+//inserindo o header  
+include_once 'headerLogin.php'; ?>
 
-<?php include_once 'headerLogin.php'; ?>
-
+<!-- referenciando o css e js -->
 <link href="css/login.css" rel="stylesheet">
 <script type="text/javascript" src="js/cadastro.js" defer></script>
 
@@ -94,6 +97,7 @@
           <button type="button" class="btn btn-info" onclick="telaLogin()">Já possuo cadastro</button>
 
           <?php
+          //exibindo os erros do formulario caso existam
             if (!empty($erros)){    
               foreach($erros as $erro):
                 echo "<li> $erro </li>";

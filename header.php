@@ -48,6 +48,7 @@ session_start();
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
              </li>
             </ul>
+            <!-- Area onde vai ficar o nome do usuario da sessao-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li>
                 <a class="nav-link active" aria-current="page" id="navHome"> 

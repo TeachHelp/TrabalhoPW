@@ -1,7 +1,12 @@
+<!--referenciando o CSS do footer-->
 <link rel="stylesheet" href="css/footer.css">
+<!--referenciando o JS-->
+<script type="text/javascript" src="js/login.js" defer></script>
+<!--gerando uma div para espaçamento-->
 <div id="espacamento"></div>
 <main></main>
 <footer>
+  <!--inserindo elementos do footer (links e textos)-->
     <div id="footer_content">
     <div id="footer_subscribe">
         <h3>Teach Help</h3>
@@ -35,6 +40,7 @@
 
       </ul>
       
+      <!--criando divs com links para as redes sociais-->
       <div id="footer_contacts">
         <h3>Nossas redes sociais</h3>
         <div id="footer_social_media">

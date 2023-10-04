@@ -14,6 +14,7 @@
     $_SESSION['id'] = "1";
     $_SESSION['usuario'] = $nomeSanitizado;
 
+    //validação de nome
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Nome inválido!";
@@ -22,12 +23,14 @@
     // Sanitização do Email
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 	  
+    //validação de email
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido!";
     } else {
       $email = preg_replace('/[^a-zA-Z0-9@.\-_]/', '', $email);
-    }
+    } 
 
+    //validação de senha
     $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
       $erros[] = "Senha incorreta!";
@@ -40,12 +43,12 @@
   }
 
   
-
+  // inserindo o header da pagina
   include_once 'headerLogin.php';
 ?>
 
 
-
+<!-- referenciando o css e js -->
 <link href="css/login.css" rel="stylesheet">
 <script type="text/javascript" src="js/login.js" defer></script>
 
@@ -86,6 +89,7 @@
             <button type="button" name="btnCad" onclick="telaCadastro()" class="btn btn-info" >Não possuo cadastro</button>
             
             <?php
+            //exibindo os erros do formulario caso existam
             if (!empty($erros)){    
               foreach($erros as $erro):
                 echo "<li> $erro </li>";
