@@ -16,7 +16,7 @@ include_once 'header.php'; ?>
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
             <img src="img/ImgFidelis.jpg" alt="Fidelis" class="img-fluid col-9 rounded mx-auto d-block mt-4 mb-4">
             <!--Texto h4 com padding horinzontal igual a 4-->
-            <h4 class="px-4">Fidelis Zanetti de Castro</h4>
+            <h4 class="px-4"><?php echo $dados['nome'];?></h4>
             <!--Paragrafo com padding horizontal igual a 4-->
             <p class="px-4">Tenho interesse em Matemática, Machine Learning e Música</p>
         </div>
@@ -36,7 +36,7 @@ include_once 'header.php'; ?>
                             </span>
                             <span class="text">Email</span>
                         </h4>
-                        <p>fidelis.castro@gmail.com</p>
+                        <p><?php echo $dados['email']?></p>
                     </div>
                     <div class="data col-sm m-1">
                         <h4>

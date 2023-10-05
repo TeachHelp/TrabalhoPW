@@ -13,6 +13,7 @@
 
     $_SESSION['id'] = "1";
     $_SESSION['usuario'] = $nomeSanitizado;
+    $_SESSION['email'] = $email;
 
     //validação de nome
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));

@@ -17,6 +17,11 @@
 
     $_SESSION['id'] = "1";
     $_SESSION['usuario'] = $nomeSanitizado;
+    $_SESSION['email'] = $email;
+    $_SESSION['data'] = $data;
+    $_SESSION['endereco'] = $endereco;
+ 
+
 
     $inputName = $_POST['inputName']; 
 
