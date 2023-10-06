@@ -45,7 +45,7 @@ include_once 'header.php'; ?>
                             </span>
                             <span class="text">Endereço</span>
                         </h4>
-                        <p>Av. dos Sabiás, 330 - Morada de Laranjeiras, Serra - ES</p>
+                        <p><?php echo $dados['endereco']?></p>
                     </div>
                 </div>
             </div>

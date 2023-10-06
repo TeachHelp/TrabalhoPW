@@ -9,7 +9,7 @@
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
             <img src="img/ImgFidelis.jpg" alt="Fidelis" class="img-fluid col-9 rounded mx-auto d-block mt-4 mb-4">
             <!--Criação de espaço h4 para inserção de nome-->
-            <h4 class="px-4">Fidelis Zanetti de Castro</h4>
+            <h4 class="px-4"><?php echo $dados['nome']?></h4>
             <!--Criação de paragrafo para inserção de infromações sobre o instrutor-->
             <p class="px-4">Professor doutor em Matemática Aplicada formado pela Unicamp</p>
         </div>
@@ -29,7 +29,7 @@
                             </span>
                             <span class="text">Email</span>
                         </h4>
-                        <p>fidelis.castro@gmail.com</p>
+                        <p><?php echo $dados['email']?></p>
                     </div>
                     <div class="data col-sm m-1">
                         <h4>
@@ -38,7 +38,7 @@
                             </span>
                             <span class="text">Endereço</span>
                         </h4>
-                        <p>Av. dos Sabiás, 330 - Morada de Laranjeiras, Serra - ES</p>
+                        <p><?php echo $dados['endereco']?></p>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <!--Criação de título h4 Formação-->
                         <h4>Formação</h4>
                         <!--Criação de parágrafo com informações sobre o instrutor-->
-                        <p>Fidelis é professor e pesquisador no Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes). Possui graduação em Matemática pela Universidade Federal do Espírito Santo (2004), mestrado em Matemática também pela Universidade Federal do Espírito Santo (2013) e doutorado em Matemática Aplicada pela Universidade Estadual de Campinas (2018). Seus interesses de pesquisa estão voltados para design de redes neurais artificiais constituídas sobre os sistemas de números reais, complexos e hipercomplexos, visão computacional e processamento da linguagem natural.</p>
+                        <p><?php echo $dados['descricao']?></p>
                     </div>
                 </div>
             </div>
