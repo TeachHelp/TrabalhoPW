@@ -1,8 +1,8 @@
 <?php
 //Conexão com banco de dados
-$servername = "localhost"; //endereço do servidor
-$username="root";
-$password="serra";
+$servername = "db4free.net"; //endereço do servidor
+$username="teachhelp";
+$password="d4pnw-d3@*ZRNkF";
 $db_name="teachhelp";
 
 //pdo - somente orientado objeto

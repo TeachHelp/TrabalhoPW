@@ -1,12 +1,12 @@
 <?php 
 
 session_start();
-/*include_once 'conexao.php'; 
+include_once 'conexao.php'; 
 $email=$_SESSION['email'];
 $sql="SELECT * FROM aluno WHERE email='$email'";
 $resultado= mysqli_query($connect,$sql);
 $dados =mysqli_fetch_array($resultado);
-*/
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

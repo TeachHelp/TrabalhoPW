@@ -119,7 +119,7 @@ include_once 'header.php'; ?>
             <div class="buttonsDownloadEdit m-3 mb-4 d-flex" id="buttonsDownloadEdit">        
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none me-2 col-4 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">edit</span>
-                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit">Editar</p>
+                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="editarPerfil.php">Editar</a></p>
                 </div>
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none col-7 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">groups_2</span>
