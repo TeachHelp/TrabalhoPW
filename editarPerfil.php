@@ -15,14 +15,7 @@
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
 
-    $_SESSION['id'] = "1";
-    $_SESSION['usuario'] = $nomeSanitizado;
-    $_SESSION['email'] = $email;
-    $_SESSION['data'] = $data;
-    $_SESSION['endereco'] = $endereco;
- 
-
-
+    
     $inputName = $_POST['inputName']; 
 
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
@@ -54,38 +47,21 @@
     } 
   }
 //inserindo o header  
-include_once 'headerLogin.php'; ?>
-
-
-<?php
-//Iniciar  Sessão
-session_start();
+include_once 'header.php'; 
 
 //Conexão
-require_once 'conexao.php';
+include_once 'conexao.php';
 
-if(isset($_POST['btnEdit'])):
-	$nome=mysqli_escape_string($connect,$_POST['inputName']);
-  $descricao=mysqli_escape_string($connect,$_POST['inputDesc'];)
-	$email=mysqli_escape_string($connect,$_POST['inputEmail']);
-	$endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
-  $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
-	$id=mysqli_escape_string($connect,$_POST['id']);
+//Select com o id que veio da URL
+if(isset($_GET['id'])):
+	$id =mysqli_escape_string($connect, $_GET['id']);
 	
-	$sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', 'endereco=$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
-	echo $sql;
-	if(mysqli_query($connect,$sql)):
-		$_SESSION['mensagem'] = "Atualizado com sucesso!";
-		header('Location: ../28crud_index.php');
-	else:
-		$_SESSION['mensagem'] = "Erro ao atualizar!";
-		header('Location: ../28crud_index.php');
-	endif;
-endif;	
-
-
-
-?>
+	$sql="SELECT * FROM alunos WHERE id =  '$id'";
+	$resultado = mysqli_query($connect, $sql);
+	$dados = mysqli_fetch_array($resultado);
+endif;
+ 
+ ?>
 
 
 <!-- referenciando o css e js -->
@@ -97,30 +73,32 @@ endif;
   <div class="container my-3"> 
     <div class="d-flex justify-content-center flex-column flex-sm-row ">
       <!--Div com um formulário para cadastro-->
-      <form action="cadastro.php" method="POST" class="col-sm-6 col-12 bg-form">
+      <form action="editar.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro</p>
+          <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+
           <label for="nome">Nome:</label>
-          <input type="text" name="inputName" class="form-control-sm form-control" id="nome">
+          <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>">
 
           <label for="nome">Descrição (opcional):</label>
-          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao">
+          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" value="<?php echo $dados['descricao']; ?>">
 
           <label for="email">Email:</label>
-          <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
+          <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
 
           <label for="senha">Senha:</label>
           <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
 
           <label for="dataNasc">Data de Nascimento:</label>
-          <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc">
+          <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>">
 
           <label for="endereco">Endereço:</label>
-          <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco">
+          <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
 
           <br>
-          <button type="submit" name="btnEfit" class="btn btn-info">Realizar Cadastro</button>
-          <button type="button" class="btn btn-info" onclick="telaLogin()">Já possuo cadastro</button>
+          <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
+
 
           <?php
           //exibindo os erros do formulario caso existam
