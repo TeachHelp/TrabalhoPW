@@ -14,11 +14,18 @@ include_once 'header.php'; ?>
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
         <div class="left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
-            <img src="img/ImgFidelis.jpg" alt="Fidelis" class="img-fluid col-9 rounded mx-auto d-block mt-4 mb-4">
+            <?php echo '<img src= " '.$dados['foto'].' "/>';?> 
             <!--Texto h4 com padding horinzontal igual a 4-->
             <h4 class="px-4"><?php echo $dados['nome'];?></h4>
             <!--Paragrafo com padding horizontal igual a 4-->
-            <p class="px-4">Tenho interesse em Matemática, Machine Learning e Música</p>
+            <p class="px-4"> 
+                <?php 
+                    if (empty($dados['descricao'])){}
+                    else {
+                        echo $dados['descricao'];
+                    }
+                ?>
+            </p>
         </div>
         <!--Criação da classe right ocupando colunas variadas da div container de acordo com o dispositivo utilizado e com background branco-->
         <div class="right col-11 col-sm-11 col-md-11 col-lg-7 bg-white shadow-lg">
@@ -119,7 +126,7 @@ include_once 'header.php'; ?>
             <div class="buttonsDownloadEdit m-3 mb-4 d-flex" id="buttonsDownloadEdit">        
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none me-2 col-4 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">edit</span>
-                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="editarPerfil.php">Editar</a></p>
+                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href='editarPerfil.php?id=<?php echo $dados['id'];?>'>Editar</a></p>
                 </div>
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none col-7 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">groups_2</span>

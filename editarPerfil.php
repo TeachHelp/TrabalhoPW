@@ -56,6 +56,38 @@
 //inserindo o header  
 include_once 'headerLogin.php'; ?>
 
+
+<?php
+//Iniciar  Sessão
+session_start();
+
+//Conexão
+require_once 'conexao.php';
+
+if(isset($_POST['btnEdit'])):
+	$nome=mysqli_escape_string($connect,$_POST['inputName']);
+  $descricao=mysqli_escape_string($connect,$_POST['inputDesc'];)
+	$email=mysqli_escape_string($connect,$_POST['inputEmail']);
+	$endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
+  $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
+	$id=mysqli_escape_string($connect,$_POST['id']);
+	
+	$sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', 'endereco=$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
+	echo $sql;
+	if(mysqli_query($connect,$sql)):
+		$_SESSION['mensagem'] = "Atualizado com sucesso!";
+		header('Location: ../28crud_index.php');
+	else:
+		$_SESSION['mensagem'] = "Erro ao atualizar!";
+		header('Location: ../28crud_index.php');
+	endif;
+endif;	
+
+
+
+?>
+
+
 <!-- referenciando o css e js -->
 <link href="css/login.css" rel="stylesheet">
 <script type="text/javascript" src="js/cadastro.js" defer></script>
@@ -71,6 +103,9 @@ include_once 'headerLogin.php'; ?>
           <label for="nome">Nome:</label>
           <input type="text" name="inputName" class="form-control-sm form-control" id="nome">
 
+          <label for="nome">Descrição (opcional):</label>
+          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao">
+
           <label for="email">Email:</label>
           <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
 
@@ -84,7 +119,7 @@ include_once 'headerLogin.php'; ?>
           <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco">
 
           <br>
-          <button type="submit" name="btnEntrar" class="btn btn-info">Realizar Cadastro</button>
+          <button type="submit" name="btnEfit" class="btn btn-info">Realizar Cadastro</button>
           <button type="button" class="btn btn-info" onclick="telaLogin()">Já possuo cadastro</button>
 
           <?php
