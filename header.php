@@ -1,7 +1,6 @@
 <?php 
 session_start();
 include_once 'conexao.php'; 
-var_dump($_SESSION);
 $email=$_SESSION['email'];
 $sql="SELECT * FROM alunos WHERE email='$email'";
 $resultado = mysqli_query($connect,$sql);

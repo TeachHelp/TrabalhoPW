@@ -4,7 +4,7 @@
 
   $erros = array(); 
 
-  if (isset($_POST['btnEntrar'])){
+  if (isset($_POST['btnEdit'])){
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     $data = $_POST['inputData'];
@@ -15,7 +15,6 @@
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
 
-    
     $inputName = $_POST['inputName']; 
 
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
@@ -43,12 +42,12 @@
     }
       
     if (empty($erros)){
-      header('Location: ./menuBootstrap.php');
+      header('Location: ./perfilAlunoBootstrap.php');
     } 
   }
 //inserindo o header  
 include_once 'header.php'; 
-
+ 
 //Conexão
 include_once 'conexao.php';
 

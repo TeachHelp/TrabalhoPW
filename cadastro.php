@@ -16,7 +16,7 @@
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
 
     $_SESSION['id'] = "1";
-    $_SESSION['usuario'] = $nomeSanitizado;
+    $_SESSION['nome'] = $nomeSanitizado;
     $_SESSION['email'] = $email;
     $_SESSION['data'] = $data;
     $_SESSION['endereco'] = $endereco;
