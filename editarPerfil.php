@@ -1,6 +1,9 @@
 <?php
-	
-  session_start();
+	//inserindo o header  
+  include_once 'header.php'; 
+ 
+  //Conexão
+  include_once 'conexao.php';
 
   $erros = array(); 
 
@@ -9,8 +12,9 @@
     $senha = $_POST['inputSenha'];
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
-
     $nome = $_POST['inputName'];
+
+    $_SESSION['usuario'] = $nome;
     
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -42,14 +46,10 @@
     }
       
     if (empty($erros)){
-      header('Location: ./perfilAlunoBootstrap.php');
+      header('Location: ./editar.php');
     } 
   }
-//inserindo o header  
-include_once 'header.php'; 
- 
-//Conexão
-include_once 'conexao.php';
+
 
 //Select com o id que veio da URL
 if(isset($_GET['id'])):
@@ -74,7 +74,7 @@ endif;
       <!--Div com um formulário para cadastro-->
       <form action="editar.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
-          <p class="fw-bold fs-3">Cadastro</p>
+          <p class="fw-bold fs-3">Editar Perfil</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
           <label for="nome">Nome:</label>

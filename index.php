@@ -43,7 +43,6 @@
     } 
   }
 
-  
   // inserindo o header da pagina
   include_once 'headerLogin.php';
 ?>

@@ -51,17 +51,20 @@ $dados = mysqli_fetch_array($resultado);
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
              </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="sair()">Logout</a>
+             </li>
             </ul>
             <!-- Area onde vai ficar o nome do usuario da sessao-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li>
                 <a class="nav-link active" aria-current="page" id="navHome"> 
                   <?php 
-                    if(empty($_SESSION['usuario'])){
-                      header('Location: ./index.php');
+                    if(!(empty($_SESSION['usuario']))){
+                      echo "Olá " . $_SESSION['usuario'];
                     }
                     else{
-                      echo "Olá " . $_SESSION['usuario'];
+                      header('Location: ./index.php');
                     }
                 ?></a>
               </li>

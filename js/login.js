@@ -17,4 +17,8 @@ function telaCadastro(){
     window.location.assign("cadastro.php");
 }
 
+function sair(){
+    var f = "<?php session_destroy(); ?>";
+    f;
+}
  

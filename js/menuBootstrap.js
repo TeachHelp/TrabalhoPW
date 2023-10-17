@@ -9,3 +9,7 @@ function alerta(){
   function telaSubmateria(){
     window.location.assign("submaterias.php");
   }
+  function sair(){
+    var f = "<?php session_destroy(); ?>";
+    f;
+}

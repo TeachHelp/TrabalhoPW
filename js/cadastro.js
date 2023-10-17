@@ -15,3 +15,7 @@ function alerta(){
 function telaLogin(){
     window.location.assign("index.php");
 }
+function sair(){
+    var f = "<?php session_destroy(); ?>";
+    f;
+}
