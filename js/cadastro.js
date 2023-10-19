@@ -15,3 +15,7 @@ function alerta(){
 function telaLogin(){
     window.location.assign("index.php");
 }
+
+function trocarSenha(){
+    window.location.assign("trocar_senha.php");
+}

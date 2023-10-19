@@ -2,9 +2,13 @@
 session_start();
 include_once 'conexao.php'; 
 $email=$_SESSION['email'];
+if (empty($email)){
+  header("Location: index.html");
+}
 $sql="SELECT * FROM alunos WHERE email='$email'";
 $resultado = mysqli_query($connect,$sql);
 $dados = mysqli_fetch_array($resultado);
+
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +57,7 @@ $dados = mysqli_fetch_array($resultado);
                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="sair()">Logout</a>
+               <a class="nav-link active" aria-current="page" href="logout.php" id="navHome">Logout</a>
              </li>
             </ul>
             <!-- Area onde vai ficar o nome do usuario da sessao-->

@@ -7,25 +7,19 @@
   if (isset($_POST['btnEntrar'])){
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
+    $senha2 = $_POST['inputConfSenha'];
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
-
     $nome = $_POST['inputName'];
     
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
+ 
+    $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
 
     $_SESSION['id'] = "1";
-    $_SESSION['usuario'] = $nomeSanitizado;
-    $_SESSION['email'] = $email;
     $_SESSION['data'] = $data;
     $_SESSION['endereco'] = $endereco;
- 
-
-
-    $inputName = $_POST['inputName']; 
-
-    $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
       
     //validação de nome
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
@@ -43,14 +37,20 @@
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
       $erros[] = "Senha incorreta!";
     }
+
+    if($senha != $senha2) {		  
+      $erros[] = "Senhas precisam ser iguais!";
+    }
     
     //validação de endereco
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
+
       
     if (empty($erros)){
-      header('Location: ./menuBootstrap.php');
+      header('Location: ./index.php');
+
     } 
   }
 //inserindo o header  
@@ -90,6 +90,9 @@ include_once 'headerLogin.php'; ?>
 
           <label for="senha">Senha:</label>
           <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
+
+          <label for="conf_senha">Confirmar Senha *:</label>
+          <input type="password" name="inputConfSenha" class="form-control-sm form-control" id="conf_senha">
 
           <label for="dataNasc">Data de Nascimento:</label>
           <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc">

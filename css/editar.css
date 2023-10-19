@@ -1,0 +1,14 @@
+.bg-form{
+    background: linear-gradient(to top, #2175e2, #78e4f0);
+    border-radius: 30px;
+  }
+
+  body{
+    background-color: #000524;
+    background-image: url("Cover.png");
+    background-repeat: no-repeat;
+  }
+
+.botao{
+    float:right;
+}

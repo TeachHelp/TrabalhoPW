@@ -9,13 +9,10 @@
 
   if (isset($_POST['btnEdit'])){
     $email = $_POST['inputEmail'];
-    $senha = $_POST['inputSenha'];
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
 
-    $_SESSION['usuario'] = $nome;
-    
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
 
@@ -33,13 +30,7 @@
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido";
     }
-
-    //validação de senha
-    $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
-    if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
-      $erros[] = "Senha incorreta!";
-    }
-    
+  
     //validação de endereco
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
@@ -50,11 +41,9 @@
     } 
   }
 
-
 //Select com o id que veio da URL
 if(isset($_GET['id'])):
 	$id =mysqli_escape_string($connect, $_GET['id']);
-	
 	$sql="SELECT * FROM alunos WHERE id =  '$id'";
 	$resultado = mysqli_query($connect, $sql);
 	$dados = mysqli_fetch_array($resultado);
@@ -62,9 +51,8 @@ endif;
  
  ?>
 
-
 <!-- referenciando o css e js -->
-<link href="css/login.css" rel="stylesheet">
+<link href="css/editar.css" rel="stylesheet">
 <script type="text/javascript" src="js/cadastro.js" defer></script>
 
 
@@ -86,9 +74,6 @@ endif;
           <label for="email">Email:</label>
           <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
 
-          <label for="senha">Senha:</label>
-          <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
-
           <label for="dataNasc">Data de Nascimento:</label>
           <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>">
 
@@ -97,6 +82,8 @@ endif;
 
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
+
+          <button type="button" onclick="trocarSenha()" class="btn btn-info botao">Trocar Senha</button>
 
 
           <?php

@@ -1,5 +1,7 @@
 <?php
   session_start();
+  session_unset();
+
   $erros = array(); 
 
   if (isset($_POST['btnEntrar'])){
@@ -7,9 +9,11 @@
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
 
-
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
+
+    // Sanitização do Email
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
     $_SESSION['id'] = "1";
     $_SESSION['usuario'] = $nomeSanitizado;
@@ -21,9 +25,6 @@
       $erros[] = "Nome inválido!";
     }
 
-    // Sanitização do Email
-    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-	  
     //validação de email
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
       $erros[] = "Email inválido!";

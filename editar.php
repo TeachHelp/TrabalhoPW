@@ -13,10 +13,6 @@ if(isset($_POST['btnEdit'])):
 	$sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
 	echo $sql;
 	if(mysqli_query($connect,$sql)){
-		$_SESSION['mensagem'] = "Atualizado com sucesso!";
-		header('Location: ./perfilAlunoBootstrap.php');
-	}else{
-		$_SESSION['mensagem'] = "Erro ao atualizar!";
 		header('Location: ./perfilAlunoBootstrap.php');
 	}
 endif;	
