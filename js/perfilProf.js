@@ -15,7 +15,3 @@ function alertCadastro(){
 function alerta(){
     alert("Função Indisponível no momento");
 }
-function sair(){
-    var f = "<?php session_destroy(); ?>";
-    f;
-}
