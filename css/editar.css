@@ -10,5 +10,7 @@
   }
 
 .botao{
+    height: fit-content;
     float:right;
+    flex-wrap: wrap;
 }

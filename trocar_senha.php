@@ -15,12 +15,12 @@ if(isset($_GET['id'])):
 endif;
  
   $erros = array(); 
-  $senha_velha = $_POST['inputSenha'];
-  $senha_nova = $_POST['inputNovaSenha'];
-  $senha_nova_conf = $_POST['inputConfSenha'];
   
-
-  if (isset($_POST['btnEdit'])){
+  if (isset($_POST['btnTrocar'])){
+    $senha_velha = $_POST['inputSenha'];
+    $senha_nova = $_POST['inputNovaSenha'];
+    $senha_nova_conf = $_POST['inputConfSenha'];
+    
     //validação de senha
     $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
     if(! filter_var($senha_nova, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
@@ -68,9 +68,8 @@ endif;
           <input type="password" name="inputConfSenha" class="form-control-sm form-control" id="senha">
           
           <br>
-          <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
+          <button type="submit" name="btnTrocar" class="btn btn-info notao">Trocar Senha</button>
 
-          <button type="button" class="btn btn-info botao">Trocar Senha</button>
 
           <?php
           //exibindo os erros do formulario caso existam

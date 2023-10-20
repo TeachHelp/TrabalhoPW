@@ -83,7 +83,16 @@ endif;
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
 
-          <button type="button" onclick="trocarSenha()" class="btn btn-info botao">Trocar Senha</button>
+          <!--<button type="button" onclick="trocarSenha()" class="btn btn-info botao">Trocar Senha</button>
+        
+        editInformation d-flex border border-dark rounded text-white user-select-none me-2 col-4 justify-content-center text-center
+
+        <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit">
+        -->
+
+          <div class="btn btn-info botao" id="trocar_senha">
+            <a class="text-decoration-none text-reset" href='trocar_senha.php?id=<?php echo $dados['id'];?>'>Trocar Senha</a></p>
+          </div>
 
 
           <?php
