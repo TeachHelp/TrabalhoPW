@@ -8,7 +8,6 @@
   //Select com o id que veio da URL
 if(isset($_GET['id'])):
 	$id =mysqli_escape_string($connect, $_GET['id']);
-	
 	$sql="SELECT * FROM alunos WHERE id =  '$id'";
 	$resultado = mysqli_query($connect, $sql);
 	$dados = mysqli_fetch_array($resultado);
@@ -16,31 +15,31 @@ endif;
  
   $erros = array(); 
   
-  if (isset($_POST['btnTrocar'])){
+  if(isset($_POST['btnTrocar'])){
     $senha_velha = $_POST['inputSenha'];
     $senha_nova = $_POST['inputNovaSenha'];
     $senha_nova_conf = $_POST['inputConfSenha'];
     
     //validação de senha
     $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
-    if(! filter_var($senha_nova, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
+    if(!filter_var($senha_nova, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
       $erros[] = "Senha nova inválida!";
     }
 
-    if($senha == $dados['senha']){
+    if($senha_velha == $dados['senha']){
         if($senha_nova == $senha_nova_conf){
-            $senha = $senha_nova;
+            $senha_velha = $senha_nova;
         }else{
             $erros[] = "As novas senhas precisam ser iguais!";
         }
     }else{
         $erros[] = "Senha antiga errada!";
     }
-
+  }
+  
     if (empty($erros)){
-      header('Location: ./editar.php');
+      header('Location: ./senha.php');
     } 
-  }/*TA DANDO MERDA AQUIII*/
 ?>
 
 
@@ -69,8 +68,6 @@ endif;
           
           <br>
           <button type="submit" name="btnTrocar" class="btn btn-info notao">Trocar Senha</button>
-
-
           <?php
           //exibindo os erros do formulario caso existam
             if (!empty($erros)){    

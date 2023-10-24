@@ -3,11 +3,16 @@
   session_unset();
 
   $erros = array(); 
+  include_once 'conexao.php'; 
 
   if (isset($_POST['btnEntrar'])){
     $nome = $_POST['inputNome'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
+
+    $sql="SELECT * FROM alunos WHERE email='$email'";
+    $resultado = mysqli_query($connect,$sql);
+    $dados = mysqli_fetch_array($resultado);
 
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -15,7 +20,6 @@
     // Sanitização do Email
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-    $_SESSION['id'] = "1";
     $_SESSION['usuario'] = $nomeSanitizado;
     $_SESSION['email'] = $email;
 
@@ -33,12 +37,10 @@
     } 
 
     //validação de senha
-    $res = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
-    if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res)) {		  
+    if($senha != $dados['senha']) {		  
       $erros[] = "Senha incorreta!";
     }
-    
-    
+
     if (empty($erros)){
       header('Location: ./menuBootstrap.php');
     } 

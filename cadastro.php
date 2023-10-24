@@ -5,6 +5,7 @@
   $erros = array(); 
 
   if (isset($_POST['btnEntrar'])){
+    $id = $_POST['inputId'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     $senha2 = $_POST['inputConfSenha'];
@@ -18,6 +19,7 @@
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
 
     $_SESSION['id'] = "1";
+    $_SESSION['id'] = $id;
     $_SESSION['data'] = $data;
     $_SESSION['endereco'] = $endereco;
       
