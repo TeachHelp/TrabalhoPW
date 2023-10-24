@@ -21,7 +21,7 @@
       <div class="submatText p-2 bd-highlight" onclick="telaProf()">Álgebra</div>
     </div>  
     <div class="submateria d-flex flex-column bd-highlight mb-3">
-      <div class="submatText p-2 bd-highlight" onclick="telaProf()">Análise Combinatória</div>
+      <div class="submatText p-2 bd-highlight" onclick="telaNoProf()">Análise Combinatória</div>
     </div> 
     <div class="submateria d-flex flex-column bd-highlight mb-3">
       <div class="submatText p-2 bd-highlight" onclick="telaProf()">Aritmética</div>
