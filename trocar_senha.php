@@ -13,7 +13,7 @@ if(isset($_GET['id'])):
 	$dados = mysqli_fetch_array($resultado);
 endif;
  
-  $erros = array(); 
+  $erros = array(); /* dando errado */
   
   if(isset($_POST['btnTrocar'])){
     $senha_velha = $_POST['inputSenha'];
