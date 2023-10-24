@@ -53,7 +53,7 @@ endif;
   <div class="container my-3"> 
     <div class="d-flex justify-content-center flex-column flex-sm-row ">
       <!--Div com um formulário para cadastro-->
-      <form action="editar.php" method="POST" class="col-sm-6 col-12 bg-form">
+      <form action="senha.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Editar Perfil</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">

@@ -91,7 +91,7 @@ endif;
         -->
 
           <div class="btn btn-info botao" id="trocar_senha">
-            <a class="text-decoration-none text-reset" href='trocar_senha.php?id=<?php echo $dados['id'];?>'>Trocar Senha</a></p>
+            <a class="text-decoration-none text-reset" href='trocar_senha.php?id=<?php echo $dados['id'];?>'>Trocar Senha</a>
           </div>
 
 
