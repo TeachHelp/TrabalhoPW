@@ -8,9 +8,10 @@ if(isset($_POST['btnEdit'])):
 	$email=mysqli_escape_string($connect,$_POST['inputEmail']);
 	$endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
   	$dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
+	//$foto=mysqli_escape_string($connect,$_POST['inputFoto']);
 	$id=mysqli_escape_string($connect,$_POST['id']);
 	
-	$sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
+	$sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', endereco='$endereco', /*/foto='$foto',*/ dt_nasc='$dt_nasc' WHERE id=$id";
 	echo $sql;
 	if(mysqli_query($connect,$sql)){
 		header('Location: ./perfilAlunoBootstrap.php');

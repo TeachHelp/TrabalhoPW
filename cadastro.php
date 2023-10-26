@@ -4,7 +4,7 @@
 
   $erros = array(); 
 
-  if (isset($_POST['btnEntrar'])){
+  if (isset($_POST['btnCad'])){
     $id = $_POST['inputId'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
@@ -18,7 +18,6 @@
  
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
 
-    $_SESSION['id'] = "1";
     $_SESSION['id'] = $id;
     $_SESSION['data'] = $data;
     $_SESSION['endereco'] = $endereco;
@@ -81,7 +80,7 @@ include_once 'headerLogin.php'; ?>
       </div>
 
       <!--Div com um formulário para cadastro-->
-      <form action="cadastro.php" method="POST" class="col-sm-6 col-12 bg-form">
+      <form action="cadastrar.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro</p>
           <label for="nome">Nome:</label>
@@ -103,7 +102,7 @@ include_once 'headerLogin.php'; ?>
           <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco">
 
           <br>
-          <button type="submit" name="btnEntrar" class="btn btn-info">Realizar Cadastro</button>
+          <button type="submit" name="btnCad" class="btn btn-info">Realizar Cadastro</button>
           <button type="button" class="btn btn-info" onclick="telaLogin()">Já possuo cadastro</button>
 
           <?php
