@@ -34,9 +34,9 @@
     }
 
     //validação de senha
-    $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
+    $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/"));
     if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
-      $erros[] = "Senha incorreta!";
+      $erros[] = "Senha deve conter mínimo de  8 caracteres, letra";
     }
 
     if($senha != $senha2) {		  

@@ -6,7 +6,6 @@
   include_once 'conexao.php'; 
 
   if (isset($_POST['btnEntrar'])){
-    $nome = $_POST['inputNome'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
 
@@ -14,20 +13,10 @@
     $resultado = mysqli_query($connect,$sql);
     $dados = mysqli_fetch_array($resultado);
 
-    // Sanitização do nome
-    $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
-
     // Sanitização do Email
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-    $_SESSION['usuario'] = $nomeSanitizado;
     $_SESSION['email'] = $email;
-
-    //validação de nome
-    $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
-    if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
-      $erros[] = "Nome inválido!";
-    }
 
     //validação de email
     if(filter_var($email, FILTER_VALIDATE_EMAIL)===false){ 
@@ -36,8 +25,10 @@
       $email = preg_replace('/[^a-zA-Z0-9@.\-_]/', '', $email);
     } 
 
+    $senha_descrip = base64_decode($dados['senha']);
+
     //validação de senha
-    if($senha != $dados['senha']) {		  
+    if($senha != $senha_descrip) {		  
       $erros[] = "Senha incorreta!";
     }
 
@@ -77,9 +68,6 @@
         <form action="index.php" method="POST" class="col-sm-6 col-12 bg-form">
           <div class="form-group p-4">
             <p class="fw-bold fs-3">Login</p>
-
-            <label for="nome">Nome:</label>
-            <input type="text" name="inputNome" class="form-control-sm form-control" id="nome">
 
             <label for="email">Email:</label>
             <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">

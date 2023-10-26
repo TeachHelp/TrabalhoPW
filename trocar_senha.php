@@ -20,6 +20,8 @@ endif;
     $senha_nova = $_POST['inputNovaSenha'];
     $senha_nova_conf = $_POST['inputConfSenha'];
     $id = $_POST['id'];
+
+    $senha_banco = base64_decode($dados['senha']); 
     
     //validação de senha
     $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
@@ -27,7 +29,7 @@ endif;
       $erros[] = "Senha nova inválida!";
     }
     
-    if($senha_velha == $dados['senha']){
+    if($senha_velha == $senha_banco){
         if($senha_nova == $senha_nova_conf){
             $senha_velha = $senha_nova;
         }else{
