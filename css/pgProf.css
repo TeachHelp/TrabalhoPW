@@ -20,6 +20,11 @@ body {
 .logo-container img {
   height: 50px; /* Define a altura da imagem da logo */
 }
+/*
+#mensagem{
+  height: 80%;
+  width: 60%;
+}
 
 /* Estilos para desktop */
 @media (min-width: 768px) {
