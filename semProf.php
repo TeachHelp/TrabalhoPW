@@ -4,7 +4,7 @@
 
 
 <div id="mensagem">
-<img src="img/deserto.png" class="rounded" width="100%" height="600"alt="">
+<img src="img/deserto.png" class="rounded" width="100%" height="100%"alt="">
 </div>
 
 
