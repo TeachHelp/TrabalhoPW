@@ -12,6 +12,7 @@
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
+    //$foto = $FILES["$_POST['inputFoto']"];
 
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -35,7 +36,7 @@
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
-      
+
     if (empty($erros)){
       header('Location: ./editar.php');
     } 
@@ -80,15 +81,13 @@ endif;
           <label for="endereco">Endereço:</label>
           <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
 
+          <!--
+          <label for="foto">Foto:</label>
+          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto">
+          -->
+
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
-
-          <!--<button type="button" onclick="trocarSenha()" class="btn btn-info botao">Trocar Senha</button>
-        
-        editInformation d-flex border border-dark rounded text-white user-select-none me-2 col-4 justify-content-center text-center
-
-        <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit">
-        -->
 
           <div class="btn btn-info botao" id="trocar_senha">
             <a class="text-decoration-none text-reset" href='trocar_senha.php?id=<?php echo $dados['id'];?>'>Trocar Senha</a>
