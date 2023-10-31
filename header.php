@@ -77,6 +77,7 @@ $_SESSION['usuario'] = $nome;
                 ?></a>
               </li>
             </ul> 
+            
            <form class="d-flex" role="search">
              <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
              <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>

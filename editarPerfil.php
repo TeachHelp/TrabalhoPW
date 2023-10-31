@@ -12,7 +12,10 @@
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
-    //$foto = $FILES["$_POST['inputFoto']"];
+
+    
+
+
 
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -61,7 +64,7 @@ endif;
   <div class="container my-3"> 
     <div class="d-flex justify-content-center flex-column flex-sm-row ">
       <!--Div com um formulário para cadastro-->
-      <form action="editar.php" method="POST" class="col-sm-6 col-12 bg-form">
+      <form action="editar.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Editar Perfil</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
@@ -81,10 +84,10 @@ endif;
           <label for="endereco">Endereço:</label>
           <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
 
-          <!--
+          
           <label for="foto">Foto:</label>
           <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto">
-          -->
+          
 
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
