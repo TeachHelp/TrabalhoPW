@@ -48,7 +48,7 @@
 			</div>
 		</div>
 		<div class="card">
-		    <img class="card-image" src="https://yt3.googleusercontent.com/jr7LMmgA6ezb6vnDntrkyO-dh7wS1ftqGpiLH09S5nOpmIV4HRht4Kf5xIlyvC_5cWtr6RD5h6M=s900-c-k-c0x00ffffff-no-rj">
+		    <img class="card-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVQ7km6Rf05R54qlITOecXx49xRRlsYNNAA&usqp=CAU">
 			<div class="card-desc">
 				<h4>Daniel Ferretto<i class="fa fa-heart like-button"></i></h4>
 				<p>Professor formado em Matemática pela UFSC</p>
