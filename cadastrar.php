@@ -19,12 +19,5 @@ if(isset($_POST['btnCad'])):
 	if(mysqli_query($connect,$sql)):
 		header('Location: ./index.php');
 	endif;
-	else{
-		header('Location: .cadastro.php');
-	}
-	
 endif;	
-
-
-
 ?>
