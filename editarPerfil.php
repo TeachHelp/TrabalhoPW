@@ -13,10 +13,6 @@
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
 
-    
-
-
-
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
 
@@ -86,7 +82,7 @@ endif;
 
           
           <label for="foto">Foto:</label>
-          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto">
+          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $dados['foto']?>">
           
 
           <br>

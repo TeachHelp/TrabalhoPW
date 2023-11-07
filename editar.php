@@ -44,7 +44,6 @@ if(true){
 		header('Location: ./menuBootstrap.php');
 	}
 }
-error_log("entrou aqui 2",0);
 
 
 ?>
