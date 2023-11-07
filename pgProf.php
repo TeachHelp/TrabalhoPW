@@ -6,7 +6,6 @@
 	<div class="card-container">
 		<!-- Div card com as informações do professor individual -->
 		<div class="card">
-			<a href="perfilProfBootstrap.php">
 			<!-- Imagem do professor -->
 			<img src="img/ImgFidelis.jpg" alt="Fidelis" class="card-image">
 			<!-- Div que fica com o nome e fomação do professor -->
