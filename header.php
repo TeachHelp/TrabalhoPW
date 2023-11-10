@@ -3,7 +3,7 @@ session_start();
 include_once 'conexao.php'; 
 $email=$_SESSION['email'];
 if (empty($email)){
-  header("Location: index.html");
+  header("Location: index.php");
 }
 $sql="SELECT * FROM alunos WHERE email='$email'";
 $resultado = mysqli_query($connect,$sql);
