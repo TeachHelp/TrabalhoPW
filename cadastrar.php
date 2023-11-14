@@ -17,7 +17,7 @@ if(isset($_POST['btnCad'])):
 	$sql="INSERT INTO alunos(nome,email,senha,dt_nasc,endereco) VALUES ('$nome', '$email', '$senha_codificada', '$data', '$endereco')";
 	echo $sql;
 	if(mysqli_query($connect,$sql)):
-		header('Location: ./index.php');
+		header('Location: /index.php');
 	endif;
 endif;	
 ?>
