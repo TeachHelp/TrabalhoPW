@@ -17,7 +17,7 @@ include_once 'header.php';
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
         <div class="left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
-            <?php echo '<img src= " '.$dados['foto'].' "/>';?> 
+            <?php echo '<img class="imgPerfil" src= " '.$dados['foto'].' "/>';?> 
             <!--Texto h4 com padding horinzontal igual a 4-->
             <h4 class="px-4"><?php echo $dados['nome'];?></h4>
             <!--Paragrafo com padding horizontal igual a 4-->

@@ -34,6 +34,10 @@ body{
     background: linear-gradient(to bottom, #004AAD, #00abbe)!important;
 }
 
+.imgPerfil{
+    width: 50%;
+}
+
 /*Deixando página responsiva*/
 /*Smartphone*/
 @media screen and (max-width: 575px){
