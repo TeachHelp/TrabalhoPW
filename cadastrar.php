@@ -13,11 +13,14 @@ if(isset($_POST['btnCad'])):
     $endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
 
 	$senha_codificada = base64_encode($senha);
+
+	$url = "https://teachelp2-h4qm33ag.b4a.run/index.php";
+	
 	
 	$sql="INSERT INTO alunos(nome,email,senha,dt_nasc,endereco) VALUES ('$nome', '$email', '$senha_codificada', '$data', '$endereco')";
 	echo $sql;
 	if(mysqli_query($connect,$sql)):
-		header('Location: /index.php');
+		header("location: https://teachelp2-h4qm33ag.b4a.run/index.php");
 	endif;
 endif;	
 ?>
