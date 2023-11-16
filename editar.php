@@ -5,9 +5,7 @@ require_once 'conexao.php';
 var_dump($_POST);
 var_dump($_FILES);
 
-//if(isset($_POST(['btnEdit']) $_POST['inputName']) && isset($_POST['id']) && isset($_POST['inputDesc']) && isset($_POST['inputEmail']) && isset($_POST['inputEnd']) && isset($_POST['inputData']) && isset($_FILES['inputFoto'])) {
-if(true){
-	error_log("entrou aqui",0);
+if(isset($_POST(['btnEdit']) $_POST['inputName']) && isset($_POST['id']) && isset($_POST['inputDesc']) && isset($_POST['inputEmail']) && isset($_POST['inputEnd']) && isset($_POST['inputData']) && isset($_FILES['inputFoto'])) {
 	$nome=mysqli_escape_string($connect,$_POST['inputName']);
  	$descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
 	$email=mysqli_escape_string($connect,$_POST['inputEmail']);

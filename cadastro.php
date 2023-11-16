@@ -12,9 +12,11 @@
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
+    $sobrenome = $_POST['inputSurname'];
     
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
+    $sobrenomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $sobrenome);
  
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
 
@@ -26,6 +28,10 @@
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
     if(! filter_var($nome, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Nome inválido!";
+    }
+
+    if(! filter_var($sobrenome, FILTER_VALIDATE_REGEXP, $res_nome)){
+      $erros[] = "Sobrenome inválido!";
     }
 
     //validação de email
@@ -85,6 +91,9 @@ include_once 'headerLogin.php'; ?>
           <p class="fw-bold fs-3">Cadastro</p>
           <label for="nome">Nome:</label>
           <input type="text" name="inputName" class="form-control-sm form-control" id="nome">
+
+          <label for="nome">Sobrenome:</label>
+          <input type="text" name="inputSurname" class="form-control-sm form-control" id="sobrenome">
 
           <label for="email">Email:</label>
           <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
