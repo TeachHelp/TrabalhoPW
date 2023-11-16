@@ -29,6 +29,9 @@ include_once 'header.php';
                     }
                 ?>
             </p>
+        <div class="btn btn-danger position-absolute bottom-0 end-0 " id="trocar_senha">
+            <a class="text-decoration-none text-reset" href='excluir_conta.php?id=<?php echo $dados['id'];?>'>Excluir Conta</a>
+        </div>
         </div>
         <!--Criação da classe right ocupando colunas variadas da div container de acordo com o dispositivo utilizado e com background branco-->
         <div class="right col-11 col-sm-11 col-md-11 col-lg-7 bg-white shadow-lg">

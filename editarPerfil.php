@@ -35,7 +35,7 @@
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
-
+   
     if (empty($erros)){
       header('Location: ./editar.php');
     } 
