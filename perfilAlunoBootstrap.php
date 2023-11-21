@@ -97,14 +97,15 @@ include_once 'header.php';
                             <div class="row mx-2">
                                 <!--Inserção de fotos com classe img-fluid para responsividade e col-sm-4 para alinhamento vertical ocupando 4 colunas da linha-->
                                 <div class="col-sm-4"><img src="img/Wilsiman.jpg" class="img-fluid" alt="..."><div class="col-sm-10">Wilsiman Evangelista</div></div>
-                                <div class="col-sm-4"><img src="img/Nathan.jpg" class="img-fluid" alt="..."><div class="col-sm-10">Nathan Titonelli</div></div>
-                                <div class="col-sm-4"><img src="img/Douglas.jpg" class="img-fluid" alt="..."><div class="col-sm-10">Douglas Alkimin</div></div>
+                                <div class="col-sm-4"><img src="img/Moises.jpeg" class="img-fluid" alt="..."><div class="col-sm-10">Moises Omena</div></div>
+                                <div class="col-sm-4"><img src="img/Douglas.jpg" class="img-fluid" alt="..."><div class="col-sm-10",
+                                >Douglas Alkimin</div></div>
                             </div>                            
                         </div>
                         <!--Criação de segundo slide e repetição do processo-->
                         <div class="carousel-item">
                             <div class="row mx-2">
-                                <div class="col-sm-4"><img src="img/CarlosLins.jpeg" class="img-fluid" alt="..."><div class="col-sm-10">Carlos Lins</div></div>
+                                <div class="col-sm-4"><img src="img/Felipe.jpeg" class="img-fluid" alt="..."><div class="col-sm-10">Felipe Frechiani</div></div>
                                 <div class="col-sm-4"><img src="img/Fabiano.jpeg" class="img-fluid" alt="..."><div class="col-sm-10">Fabiano Ruy</div></div>
                                 <div class="col-sm-4"><img src="img/Bermudes.jpg" class="img-fluid" alt="..."><div class="col-sm-10">Alessandro Bermudes</div></div>
                             </div>  
