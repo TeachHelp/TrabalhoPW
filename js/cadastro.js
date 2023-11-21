@@ -16,6 +16,10 @@ function telaLogin(){
     window.location.assign("index.php");
 }
 
+function telaPerfil(){
+    window.location.assign("perfilAlunoBootstrap.php");
+}
+
 function trocarSenha(){
     window.location.assign("trocar_senha.php");
 }

@@ -29,7 +29,7 @@ include_once 'header.php';
                     }
                 ?>
             </p>
-        <div class="btn btn-danger position-absolute bottom-0 end-0 " id="trocar_senha">
+        <div class="btn btn-danger position-absolute bottom-0 start-0 " id="trocar_senha">
             <a class="text-decoration-none text-reset" href='excluir_conta.php?id=<?php echo $dados['id'];?>'>Excluir Conta</a>
         </div>
         </div>
