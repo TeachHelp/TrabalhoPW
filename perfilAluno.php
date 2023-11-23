@@ -139,7 +139,7 @@ include_once 'header.php';
                 </div>
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none col-7 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">groups_2</span>
-                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="cadastroProf.php">Quero me tornar um instrutor</a></p>
+                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="perfilProf.php">Quero me tornar um instrutor</a></p>
                 </div>
             </div>
         </div>

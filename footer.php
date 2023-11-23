@@ -31,9 +31,9 @@
         <li>
           <h3>Ajuda</h3>
         </li>
-        <li>
+        <!-- <li>
           <a href="#" class="footer-link" onclick="alerta()">Como me torno um instrutor?</a>
-        </li>
+        </li> -->
         <li>
           <a href="mailto:piteachhelp@gmail.com" class="footer-link">Entre em contato através do Email</a>
         </li>

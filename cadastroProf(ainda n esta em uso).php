@@ -1,3 +1,5 @@
+
+
 <?php
 	//inserindo o header  
   include_once 'header.php'; 
@@ -69,7 +71,6 @@
         if(move_uploaded_file($temporario,$pasta.$novoNome)){
           $foto = $pasta . $novoNome;
           $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
-          $sql="INSERT INTO instrutores(nome,email,senha,dt_nasc,endereco) VALUES ('$nomecompleto', '$email', '$senha_codificada', '$data', '$endereco')";
           echo $sql;
           if(mysqli_query($connect,$sql)){
             header('Location: ./perfilAluno.php');
