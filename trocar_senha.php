@@ -41,7 +41,14 @@ endif;
    
 
     if (empty($erros)){
-      header('Location: ./senha.php?id='. $id . '&inputConfSenha=' . $senha_nova_conf );
+      $senhanova=mysqli_escape_string($connect,$_GET['inputConfSenha']);
+      $id=mysqli_escape_string($connect,$_GET['id']);
+      $senha_nova_crip = base64_encode($senhanova);
+	    $sql="UPDATE alunos SET senha='$senha_nova_crip' WHERE id='$id'";
+	    echo $sql;
+      if(mysqli_query($connect,$sql)){
+        header('Location: ./perfilAlunoBootstrap.php');
+      }
     } 
   }
   

@@ -2,6 +2,9 @@
 	
   session_start();
 
+  //Conexão
+  require_once 'conexao.php';
+
   $erros = array(); 
 
   if (isset($_POST['btnCad'])){
@@ -56,8 +59,23 @@
 
       
     if (empty($erros)){
-      header('Location: ./index.php');
 
+      $nomeSanitizado=mysqli_escape_string($connect,$_POST['inputName']);
+      $sobrenomeSanitizado=mysqli_escape_string($connect,$_POST['inputSurname']);
+      $email=mysqli_escape_string($connect,$_POST['inputEmail']);
+      $senha=mysqli_escape_string($connect,$_POST['inputConfSenha']);
+      $data=mysqli_escape_string($connect,$_POST['inputData']);
+      $endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
+
+	    $nomecompleto = $nomeSanitizado . " " .  $sobrenomeSanitizado;
+
+	    $senha_codificada = base64_encode($senha);
+	
+	    $sql="INSERT INTO alunos(nome,email,senha,dt_nasc,endereco) VALUES ('$nomecompleto', '$email', '$senha_codificada', '$data', '$endereco')";
+	    echo $sql;
+	    if(mysqli_query($connect,$sql)):
+		    header("location: ./index.php");
+	    endif;
     } 
   }
 //inserindo o header  
@@ -86,7 +104,7 @@ include_once 'headerLogin.php'; ?>
       </div>
 
       <!--Div com um formulário para cadastro-->
-      <form action="cadastrar.php" method="POST" class="col-sm-6 col-12 bg-form">
+      <form action="cadastro.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro</p>
           <label for="nome">Nome:</label>

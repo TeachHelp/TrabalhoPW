@@ -15,7 +15,7 @@ include_once 'header.php';
     <!--Criação da classe container com display flex para que as próximas divs fiquem lado a lado e justify-content-center para que as divs fiquem centralizadas-->
     <div class="container mt-5 d-flex justify-content-center">
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
-        <div class="left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
+        <div class="position-relative left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
             <?php echo '<img class="imgPerfil" src= " '.$dados['foto'].' "/>';?> 
             <!--Texto h4 com padding horinzontal igual a 4-->
@@ -29,9 +29,11 @@ include_once 'header.php';
                     }
                 ?>
             </p>
-        <div class="btn btn-danger position-absolute bottom-0 start-0 " id="trocar_senha">
-            <a class="text-decoration-none text-reset" href='excluir_conta.php?id=<?php echo $dados['id'];?>'>Excluir Conta</a>
-        </div>
+
+            <div class="btn btn-danger excluir" id="trocar_senha">
+                <a class="text-decoration-none text-reset" href='excluir_conta.php?id=<?php echo $dados['id'];?>'>Excluir Conta</a>
+            </div>
+            
         </div>
         <!--Criação da classe right ocupando colunas variadas da div container de acordo com o dispositivo utilizado e com background branco-->
         <div class="right col-11 col-sm-11 col-md-11 col-lg-7 bg-white shadow-lg">

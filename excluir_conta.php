@@ -28,9 +28,14 @@ if (isset($_POST['btnExcluir'])):
         $erros[] = "Senha incorreta!";
     endif;
 
-    // If there are no errors, redirect to excluirPHP.php
     if (empty($erros)):
-        header('Location: ./excluirPHP.php');
+        $id=mysqli_escape_string($connect,$_POST['id']);
+	
+        $sql="DELETE FROM alunos WHERE id = '$id'";
+        echo $sql;
+        if(mysqli_query($connect,$sql)){
+            header('Location: ./index.php');
+        }
     endif;
 endif;
 

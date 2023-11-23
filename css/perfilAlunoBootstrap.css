@@ -38,6 +38,13 @@ body{
     width: 80%;
 }
 
+.excluir{
+    position: absolute;
+    bottom: 0px;
+    margin: 10px;
+    left: 0px;
+}
+
 
 /*Deixando página responsiva*/
 /*Smartphone*/
