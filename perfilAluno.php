@@ -10,7 +10,7 @@ include_once 'header.php';
 <!-- Importações necessarias exclusivas da pagina-->
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link href="css/perfilAlunoBootstrap.css" rel="stylesheet">
+<link href="css/perfilAluno.css" rel="stylesheet">
 
     <!--Criação da classe container com display flex para que as próximas divs fiquem lado a lado e justify-content-center para que as divs fiquem centralizadas-->
     <div class="container mt-5 d-flex justify-content-center">
@@ -139,7 +139,7 @@ include_once 'header.php';
                 </div>
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none col-7 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">groups_2</span>
-                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="perfilProfBootstrap.php">Quero me tornar um instrutor</a></p>
+                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="cadastroProf.php">Quero me tornar um instrutor</a></p>
                 </div>
             </div>
         </div>

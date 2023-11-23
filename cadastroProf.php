@@ -12,6 +12,8 @@
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
+    $descricao = $_POST['inputDesc'];
+    $curriculo = $_POST['inputCurriculo'];
 
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -35,6 +37,14 @@
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
+
+    if(empty($descricao)){
+      $erros[] = "Descrição deve ser preenchida!";
+    }
+
+    if(empty($curriculo)){
+      $erros[] = "Link do currículo deve ser informado!";
+    }
    
     if (empty($erros)){
 
@@ -44,6 +54,8 @@
       $endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
   	  $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
 	    $id=mysqli_escape_string($connect,$_POST['id']);
+      $descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
+      $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);
 	
 	    $formatosPermitidos= array("png","jpeg","jpg");
       $extensao=pathinfo($_FILES['inputFoto']['name'],PATHINFO_EXTENSION);
@@ -57,6 +69,7 @@
         if(move_uploaded_file($temporario,$pasta.$novoNome)){
           $foto = $pasta . $novoNome;
           $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
+          $sql="INSERT INTO instrutores(nome,email,senha,dt_nasc,endereco) VALUES ('$nomecompleto', '$email', '$senha_codificada', '$data', '$endereco')";
           echo $sql;
           if(mysqli_query($connect,$sql)){
             header('Location: ./perfilAluno.php');
@@ -93,13 +106,13 @@ endif;
       <!--Div com um formulário para cadastro-->
       <form action="editarPerfil.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
         <div class="form-group p-4">
-          <p class="fw-bold fs-3">Editar Perfil</p>
+          <p class="fw-bold fs-3">Cadastro de Professor</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
           <label for="nome">Nome:</label>
           <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>">
 
-          <label for="nome">Descrição (opcional):</label>
+          <label for="nome">Descrição:</label>
           <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" value="<?php echo $dados['descricao']; ?>">
 
           <label for="email">Email:</label>
@@ -111,19 +124,15 @@ endif;
           <label for="endereco">Endereço:</label>
           <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
 
-          
-          <label for="foto">Foto:</label>
-          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $dados['foto']?>">
-          
+          <label for="curriculo">Link do currículo Lattes:</label>
+          <input type="text" name="inputCurriculo" class="form-control-sm form-control" id="curriculo">
 
+          <label for="foto">Foto:</label>
+          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $foto?>">
+        
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
-
-          <div class="btn btn-info botao" id="trocar_senha">
-            <a class="text-decoration-none text-reset" href='trocar_senha.php?id=<?php echo $dados['id'];?>'>Trocar Senha</a>
-          </div>
-
-
+          
           <?php
           //exibindo os erros do formulario caso existam
             if (!empty($erros)){    

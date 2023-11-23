@@ -47,7 +47,7 @@ endif;
 	    $sql="UPDATE alunos SET senha='$senha_nova_crip' WHERE id='$id'";
 	    echo $sql;
       if(mysqli_query($connect,$sql)){
-        header('Location: ./perfilAlunoBootstrap.php');
+        header('Location: ./perfilAluno.php');
       }
     } 
   }

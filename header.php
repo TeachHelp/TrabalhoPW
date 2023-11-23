@@ -47,7 +47,7 @@ $_SESSION['usuario'] = $nome;
                <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Home</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="perfilAlunoBootstrap.php" id="navHome">Perfil</a>
+               <a class="nav-link active" aria-current="page" href="perfilAluno.php" id="navHome">Perfil</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Matérias</a>

@@ -6,8 +6,9 @@
 	<div class="card-container">
 		<!-- Div card com as informações do professor individual -->
 		<div class="card">
+			<a href="perfilProf.php">
 			<!-- Imagem do professor -->
-			<img src="img/ImgFidelis.jpg" alt="Fidelis" class="card-image">
+			<img src="img/ImgFidelis.jpg" alt="Fidelis"  class="card-image">
 			<!-- Div que fica com o nome e fomação do professor -->
 			<div class="card-desc">
 				<h4>Fidelis Zanetti<i class="fa fa-heart like-button"></i></h4>

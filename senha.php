@@ -13,7 +13,7 @@ if(isset($_GET['id'])):
 	echo $sql;
 
 	if(mysqli_query($connect,$sql)){
-		header('Location: ./perfilAlunoBootstrap.php');
+		header('Location: ./perfilAluno.php');
 	}
 endif;	
 
