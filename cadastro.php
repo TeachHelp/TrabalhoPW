@@ -8,7 +8,6 @@
   $erros = array(); 
 
   if (isset($_POST['btnCad'])){
-    $id = $_POST['inputId'];
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     $senha2 = $_POST['inputConfSenha'];
@@ -23,7 +22,6 @@
  
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
 
-    $_SESSION['id'] = $id;
     $_SESSION['data'] = $data;
     $_SESSION['endereco'] = $endereco;
       
@@ -44,8 +42,8 @@
 
     //validação de senha
     $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/"));
-    if(! filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
-      $erros[] = "Senha deve conter mínimo de  8 caracteres, letra";
+    if( filter_var($senha, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
+      $erros[] = "Senha deve conter mínimo de  8 caracteres, letra maiuscula e minuscula e um caracter especial";
     }
 
     if($senha != $senha2) {		  
