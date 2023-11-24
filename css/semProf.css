@@ -1,0 +1,11 @@
+ body{
+    background-image: url("deserto.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
+    
+  }
+
+
+#mensagem{
+    height:800px;
+}

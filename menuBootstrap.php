@@ -72,7 +72,7 @@
           <h3 class="">Informática</h3>
         </div>
       </div>
-
+  </div>
 
       
       <div class="row-1">.</div>
@@ -107,7 +107,6 @@
           </div>
         </div>
       </div>
-      <div class="row-1">.</div>
   </div>
 </div>
   
