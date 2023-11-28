@@ -114,7 +114,7 @@ endif;
           <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>">
 
           <label for="nome">Descrição:</label>
-          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" value="<?php echo $dados['descricao']; ?>">
+          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" placeholder="Exemplo: Olá me chamo Davi, sou formado em Letras pela Ufes, comecei a dar aulas enquanto estudava e sou professor a mais de 5 anos...">
 
           <label for="email">Email:</label>
           <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
@@ -130,6 +130,21 @@ endif;
 
           <label for="foto">Foto:</label>
           <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $foto?>">
+
+          <label for="materias">Matéria:</label>
+          <select id="selectMateria" name="selectMateria" class="form-control-sm form-control">
+            <option value="math">Matemática</option>
+            <option value="port">Português</option>
+            <option value="music">Música</option>
+            <option value="sport">Esportes</option>
+            <option value="history">História</option>
+            <option value="english">Inglês</option>
+            <option value="idiom">Idiomas</option>
+            <option value="geo">Geografia</option>
+            <option value="chemical">Química</option>
+            <option value="biology">Biologia</option>
+            <option value="physics">Física</option>
+          </select>
         
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>

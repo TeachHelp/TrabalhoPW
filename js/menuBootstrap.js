@@ -6,6 +6,6 @@ function alerta(){
     document.getElementById("perfil_principal").classList.toggle("show");
   }
   
-  function telaSubmateria(){
-    window.location.assign("submaterias.php");
+  function telaProfs(){
+    window.location.assign("pgProf.php");
   }

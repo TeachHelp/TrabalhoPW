@@ -19,7 +19,7 @@
         </div>
       </div>
       <!--div de matemática, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
-      <div class="card" id="card-custom-matematica" style="width: 15rem;" onclick="telaSubmateria()" type="button">
+      <div class="card" id="card-custom-matematica" style="width: 15rem;" onclick="telaProfs()" type="button">
         <img src="img/mat.jpg" class="img card-img-top" alt="Matematica foto">
         <div class="card-title titulo fs-5">
           <h3 class="">Matemática</h3>

@@ -63,28 +63,7 @@ include_once 'header.php';
                         <p><?php echo $dados['endereco']?></p>
                     </div>
                 </div>
-            </div>
-            <!--Criação do local onde serão adicionadas as matérias de interesse do aluno-->
-            <div class="available">
-                <!--Criação de Título Áreas escolhidas com borda apenas em baixo, margin igual a 3 e texto sempre em maiúsculo-->
-                <h3 class="border border-top-0 border-end-0 border-start-0 m-3 text-uppercase">Áreas escolhidas</h3>
-                <!--Criação de div para inserir matérias escolhidas pelo usuário com texto centralizado na horizontal, margin igual a 3, itens alinhadas verticalmente e margin botton igual a 4-->
-                <div class="available_data row text-center m-3 align-items-center mb-4">
-                    <!--Criação de div com cada matéria com borda dark, cantos arredondados e margin igual a 1-->
-                    <div class="data col-sm border border-dark rounded m-1">
-                        <div class="area">Matemática</div>
-                    </div>
-                    <div class="data col-sm border border-dark rounded m-1">
-                        <div class="area">Machine Learning</div>
-                    </div>
-                    <div class="data col-sm border border-dark rounded m-1">
-                        <div class="area">Música</div>
-                    </div>
-                    <span class="material-symbols-outlined col-sm m-1" id="addArea">
-                        add_circle
-                    </span>
-                </div>
-            </div>
+            </div>        
             <!--Criação de div para inserir instrutores favoritados-->
             <div class="projects" id="project">
                 <!--Criação de título h3 Instrutores favoritos com borda apenas abaixo, margin igual a 3 e texto sempre em maiúsculo-->
@@ -100,8 +79,7 @@ include_once 'header.php';
                                 <!--Inserção de fotos com classe img-fluid para responsividade e col-sm-4 para alinhamento vertical ocupando 4 colunas da linha-->
                                 <div class="col-sm-4"><img src="img/Wilsiman.jpg" class="img-fluid" alt="..."><div class="col-sm-10">Wilsiman Evangelista</div></div>
                                 <div class="col-sm-4"><img src="img/Moises.jpeg" class="img-fluid" alt="..."><div class="col-sm-10">Moises Omena</div></div>
-                                <div class="col-sm-4"><img src="img/Douglas.jpg" class="img-fluid" alt="..."><div class="col-sm-10",
-                                >Douglas Alkimin</div></div>
+                                <div class="col-sm-4"><img src="img/Douglas.jpg" class="img-fluid" alt="..."><div class="col-sm-10">Douglas Alkimin</div></div>
                             </div>                            
                         </div>
                         <!--Criação de segundo slide e repetição do processo-->
@@ -139,7 +117,7 @@ include_once 'header.php';
                 </div>
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none col-7 justify-content-center text-center" id="editInformation">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2">groups_2</span>
-                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="perfilProf.php">Quero me tornar um instrutor</a></p>
+                    <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href="cadastroProf.php">Quero me tornar um instrutor</a></p>
                 </div>
             </div>
         </div>

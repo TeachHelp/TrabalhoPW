@@ -25,6 +25,7 @@ $_SESSION['usuario'] = $nome;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
     <link rel="icon" type="image/png" href="img/logo.png">
+    <script srt=js/header.js></script>
     <link href="css/header.css" rel="stylesheet">
 </head>
 <body>
@@ -35,7 +36,7 @@ $_SESSION['usuario'] = $nome;
        <div class="container-fluid">
          <!--Logo do site-->
          <a class="navbar-brand" href="menuBootstrap.php">
-           <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
+           <img src="img/logoBranca.png" width="65" height="30" class="d-inline-block align-top" alt="">
          </a>
          <!--Itens da Navbar-->
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,16 +48,10 @@ $_SESSION['usuario'] = $nome;
                <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Home</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="perfilAluno.php" id="navHome">Perfil</a>
-             </li>
-             <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Matérias</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="sobre.php" id="navHome">Sobre</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="logout.php" id="navHome">Logout</a>
@@ -76,11 +71,9 @@ $_SESSION['usuario'] = $nome;
                 ?></a>
               </li>
             </ul> 
-            
-           <form class="d-flex" role="search">
-             <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-             <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
-           </form>
+            <a class="navbar-brand" href="perfilAluno.php">
+              <img src="img/perfil_icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            </a>
          </div>
        </div>
      </nav>

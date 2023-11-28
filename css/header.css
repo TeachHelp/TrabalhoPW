@@ -5,19 +5,15 @@
   
   /*tamanho da lupa*/
   .lupa{
-    width: 25px;
+    height: 100px;
   }
   
   #navMenu, #navHome{
     color: #fff;
   }
   
-  .btn-outline-light{
-    background-color: #fff;
-    color: black;
-  }
-  
-  .form-control-ss{
+    
+  /* .form-control-ss{
     width: 500px;
   }
   
@@ -37,4 +33,4 @@
   .form-control-ss{
     width:700px
   }
-}
+} */
