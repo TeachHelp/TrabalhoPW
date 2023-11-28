@@ -19,7 +19,7 @@
         <div class="container-fluid">
           <!--Logo do site-->
           <a class="navbar-brand" href="cadastro.php">
-            <img src="img/logoBranca.png" width="50" height="20" class="d-inline-block align-top" alt="">
+            <img src="img/logoBranca.png" width="65" height="30" class="d-inline-block align-top" alt="">
           </a>
           <!--Itens da Navbar-->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +37,6 @@
                 <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control-ss form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit" onclick="alerta()"><img src="img/lupa.png" class="lupa"></button>
-            </form>
           </div>
         </div>
       </nav>

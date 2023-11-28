@@ -47,6 +47,18 @@
     if(empty($curriculo)){
       $erros[] = "Link do currículo deve ser informado!";
     }
+
+    $formatosPermitidos= array("png","jpeg","jpg");
+    $extensao=pathinfo($_FILES['inputFoto']['name'],PATHINFO_EXTENSION);
+
+    if (in_array($extensao,$formatosPermitidos)){
+      $pasta="arquivos/";
+      //O nome temporário com o qual o arquivo enviado foi armazenado no servidor.
+      $temporario = $_FILES['inputFoto']['tmp_name'];
+      $novoNome= uniqid().".$extensao"; //uniqid() retorna um identificador unico prefixado baseado no tempo atual em milionésimos de segundo
+    }else{
+      $erros[] = "Imagem inválida"
+    }  
    
     if (empty($erros)){
 
@@ -57,28 +69,21 @@
   	  $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
 	    $id=mysqli_escape_string($connect,$_POST['id']);
       $descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
-      $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);
-	
-	    $formatosPermitidos= array("png","jpeg","jpg");
-      $extensao=pathinfo($_FILES['inputFoto']['name'],PATHINFO_EXTENSION);
+      $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);      
 
-      if (in_array($extensao,$formatosPermitidos)){
-        $pasta="arquivos/";
-        //O nome temporário com o qual o arquivo enviado foi armazenado no servidor.
-        $temporario = $_FILES['inputFoto']['tmp_name'];
-        $novoNome= uniqid().".$extensao"; //uniqid() retorna um identificador unico prefixado baseado no tempo atual em milionésimos de segundo
-        
         if(move_uploaded_file($temporario,$pasta.$novoNome)){
           $foto = $pasta . $novoNome;
           $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
+          $sql2="INSERT INTO instrutores (fk_id_aluno,curriculo) VALUES ('$id','$curriculo')";
           echo $sql;
+          echo $sql2;
           if(mysqli_query($connect,$sql)){
             header('Location: ./perfilAluno.php');
           }			
-		    }
-	    } else {
+		    } else {
         $sqlnophoto="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
         echo $sqlnophoto;
+        
         if(mysqli_query($connect,$sqlnophoto)){
           header('Location: ./perfilAluno.php');
         }
@@ -114,7 +119,7 @@ endif;
           <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>">
 
           <label for="nome">Descrição:</label>
-          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" placeholder="Exemplo: Olá me chamo Davi, sou formado em Letras pela Ufes, comecei a dar aulas enquanto estudava e sou professor a mais de 5 anos...">
+          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" placeholder="Exemplo: Olá me chamo Davi, sou formado em Letras pela Ufes, comecei a dar aulas...">
 
           <label for="email">Email:</label>
           <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
