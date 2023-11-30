@@ -16,6 +16,7 @@
     $nome = $_POST['inputName'];
     $descricao = $_POST['inputDesc'];
     $curriculo = $_POST['inputCurriculo'];
+    $materia = $_POST[''];
 
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -48,6 +49,7 @@
       $erros[] = "Link do currículo deve ser informado!";
     }
 
+
     $formatosPermitidos= array("png","jpeg","jpg");
     $extensao=pathinfo($_FILES['inputFoto']['name'],PATHINFO_EXTENSION);
 
@@ -57,11 +59,11 @@
       $temporario = $_FILES['inputFoto']['tmp_name'];
       $novoNome= uniqid().".$extensao"; //uniqid() retorna um identificador unico prefixado baseado no tempo atual em milionésimos de segundo
     }else{
-      $erros[] = "Imagem inválida"
+      $erros[] = "Imagem inválida";
     }  
    
     if (empty($erros)){
-
+      
       $nome=mysqli_escape_string($connect,$_POST['inputName']);
       $descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
       $email=mysqli_escape_string($connect,$_POST['inputEmail']);
@@ -74,19 +76,13 @@
         if(move_uploaded_file($temporario,$pasta.$novoNome)){
           $foto = $pasta . $novoNome;
           $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
-          $sql2="INSERT INTO instrutores (fk_id_aluno,curriculo) VALUES ('$id','$curriculo')";
+          $sql2="INSERT INTO instrutores (fk_id_aluno,curriculo) VALUES ('$id','$curriculo','$materia')";
           echo $sql;
           echo $sql2;
           if(mysqli_query($connect,$sql)){
-            header('Location: ./perfilAluno.php');
-          }			
-		    } else {
-        $sqlnophoto="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
-        echo $sqlnophoto;
-        
-        if(mysqli_query($connect,$sqlnophoto)){
-          header('Location: ./perfilAluno.php');
-        }
+            //header('Location: ./perfilAluno.php');
+            echo "<script>console.log('deu ruim');</script>";
+          }			       
 	    }
     } 
   }
@@ -152,7 +148,7 @@ endif;
           </select>
         
           <br>
-          <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>
+          <button type="submit" name="btnEdit" class="btn btn-info">Cadastrar</button>
           
           <?php
           //exibindo os erros do formulario caso existam
