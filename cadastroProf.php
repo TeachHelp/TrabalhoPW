@@ -9,14 +9,14 @@
 
   $erros = array(); 
 
-  if (isset($_POST['btnEdit'])){
+  if (isset($_POST['btnCadProf'])){
     $email = $_POST['inputEmail'];
     $data = $_POST['inputData'];
     $endereco = $_POST['inputEnd'];
     $nome = $_POST['inputName'];
     $descricao = $_POST['inputDesc'];
     $curriculo = $_POST['inputCurriculo'];
-    $materia = $_POST[''];
+    $materia = $_POST['selectMateria'];
 
     // Sanitização do nome
     $nomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $nome);
@@ -37,7 +37,7 @@
     }
   
     //validação de endereco
-    if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
+    if(!filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
     }
 
@@ -47,6 +47,10 @@
 
     if(empty($curriculo)){
       $erros[] = "Link do currículo deve ser informado!";
+    }
+
+    if(empty($materia)){
+      $erros[] = "Matéria não selecionada!";
     }
 
 
@@ -71,17 +75,20 @@
   	  $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
 	    $id=mysqli_escape_string($connect,$_POST['id']);
       $descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
-      $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);      
+      $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);     
+      $materia=mysqli_escape_string($connect,$_POST['selectMateria']);    
 
         if(move_uploaded_file($temporario,$pasta.$novoNome)){
           $foto = $pasta . $novoNome;
-          $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
-          $sql2="INSERT INTO instrutores (fk_id_aluno,curriculo) VALUES ('$id','$curriculo','$materia')";
+          $prof = "sim";
+          $sql="UPDATE alunos SET professor='$prof', nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
+          $sql2="INSERT INTO instrutores (fk_id_aluno,curriculo,materia) VALUES ('$id','$curriculo','$materia')";
           echo $sql;
           echo $sql2;
           if(mysqli_query($connect,$sql)){
-            //header('Location: ./perfilAluno.php');
-            echo "<script>console.log('deu ruim');</script>";
+            if(mysqli_query($connect,$sql2)){
+              header('Location: ./perfilAlunoProf.php');
+            }
           }			       
 	    }
     } 
@@ -106,7 +113,7 @@ endif;
   <div class="container my-3"> 
     <div class="d-flex justify-content-center flex-column flex-sm-row ">
       <!--Div com um formulário para cadastro-->
-      <form action="editarPerfil.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
+      <form action="cadastroProf.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro de Professor</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
@@ -134,21 +141,21 @@ endif;
 
           <label for="materias">Matéria:</label>
           <select id="selectMateria" name="selectMateria" class="form-control-sm form-control">
-            <option value="math">Matemática</option>
-            <option value="port">Português</option>
-            <option value="music">Música</option>
-            <option value="sport">Esportes</option>
-            <option value="history">História</option>
-            <option value="english">Inglês</option>
-            <option value="idiom">Idiomas</option>
-            <option value="geo">Geografia</option>
-            <option value="chemical">Química</option>
-            <option value="biology">Biologia</option>
-            <option value="physics">Física</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Português">Português</option>
+            <option value="Música">Música</option>
+            <option value="Esportes">Esportes</option>
+            <option value="História">História</option>
+            <option value="Inglês">Inglês</option>
+            <option value="Idiomas">Idiomas</option>
+            <option value="Geografia">Geografia</option>
+            <option value="Química">Química</option>
+            <option value="Biologia">Biologia</option>
+            <option value="Física">Física</option>
           </select>
         
           <br>
-          <button type="submit" name="btnEdit" class="btn btn-info">Cadastrar</button>
+          <button type="submit" name="btnCadProf" class="btn btn-info">Cadastrar</button>
           
           <?php
           //exibindo os erros do formulario caso existam

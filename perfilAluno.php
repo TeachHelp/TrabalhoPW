@@ -21,14 +21,7 @@ include_once 'header.php';
             <!--Texto h4 com padding horinzontal igual a 4-->
             <h4 class="px-4"><?php echo $dados['nome'];?></h4>
             <!--Paragrafo com padding horizontal igual a 4-->
-            <p class="px-4"> 
-                <?php 
-                    if (empty($dados['descricao'])){}
-                    else {
-                        echo $dados['descricao'];
-                    }
-                ?>
-            </p>
+            <p class="px-4"> <?php echo $dados['descricao'];?></p>
 
             <div class="btn btn-danger excluir" id="trocar_senha">
                 <a class="text-decoration-none text-reset" href='excluir_conta.php?id=<?php echo $dados['id'];?>'>Excluir Conta</a>

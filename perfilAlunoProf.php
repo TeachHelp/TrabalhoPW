@@ -7,11 +7,10 @@
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
         <div class="left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
-            <img src="img/ImgFidelis.jpg" alt="Fidelis" class="img-fluid col-9 rounded mx-auto d-block mt-4 mb-4">
+            
+            <?php echo '<img class="imgPerfil" src= " '.$dados['foto'].' "/>';?>
             <!--Criação de espaço h4 para inserção de nome-->
-            <h4 class="px-4">Fidelis Zanetti de Castro</h4>
-            <!--Criação de paragrafo para inserção de infromações sobre o instrutor-->
-            <p class="px-4">Professor doutor em Matemática Aplicada formado pela Unicamp</p>
+            <h4 class="px-4"><?php echo $dados['nome'];?></h4>
         </div>
         <!--Criação da classe right ocupando colunas variadas da div container de acordo com o dispositivo utilizado e com background branco-->
         <div class="right col-11 col-sm-11 col-md-11 col-lg-7 bg-white shadow-lg">
@@ -29,7 +28,7 @@
                             </span>
                             <span class="text">Email</span>
                         </h4>
-                        <p>fidelis.ifes@gmail.com</p>
+                        <p><?php echo $dados['email'];?></p>
                     </div>
                     <div class="data col-sm m-1">
                         <h4>
@@ -38,7 +37,7 @@
                             </span>
                             <span class="text">Endereço</span>
                         </h4>
-                        <p>R. Palmeira - Colina de Laranjeiras, Serra - ES</p>
+                        <p><?php echo $dados['endereco'];?></p>
                     </div>
                 </div>
             </div>
@@ -52,7 +51,7 @@
                         <!--Criação de título h4 Formação-->
                         <h4>Formação</h4>
                         <!--Criação de parágrafo com informações sobre o instrutor-->
-                        <p>Professor formado pela Unicamp, mestre em matematica.</p>
+                        <p><?php echo $dados['descricao'];?></p>
                     </div>
                 </div>
             </div>
@@ -84,6 +83,10 @@
             </div>
             <!--Criação de botões de edição e para Baixar currículo do instrutor-->
             <div class="buttonsDownloadEdit m-3 mb-4 d-flex" id="buttonsDownloadEdit">
+                <div class="editInformation d-flex border border-dark rounded text-white user-select-none me-2 col-4 justify-content-center text-center" id="editInformation">
+                        <span class="material-symbols-outlined mt-2 mb-2 mx-2">edit</span>
+                        <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href='editarPerfil.php?id=<?php echo $dados['id'];?>'>Editar</a></p>
+                </div>
                 <div class="downloadResume d-flex border border-dark rounded text-white user-select-none col-6 justify-content-center text-center" id="downloadResume">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2" id="uploadButton">upload</span>
                     <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="https://drive.google.com/file/d/12RHMIeh_IGiFW2hHXc89ZWoeEs_Rch-9/view?usp=sharing">Baixar Currículo</a></p>

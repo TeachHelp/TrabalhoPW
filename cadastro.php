@@ -55,7 +55,6 @@
       $erros[] = "Endereço inválido!";
     }
 
-      
     if (empty($erros)){
 
       $nomeSanitizado=mysqli_escape_string($connect,$_POST['inputName']);
