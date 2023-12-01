@@ -35,8 +35,9 @@
           <a href="#" class="footer-link" onclick="alerta()">Como me torno um instrutor?</a>
         </li> -->
         <li>
-          <a href="mailto:piteachhelp@gmail.com" class="footer-link">Entre em contato através do Email</a>
+          <a href="email.php" class="footer-link">Entre em contato através do Email</a>
         </li>
+
 
       </ul>
       
