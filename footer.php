@@ -35,7 +35,7 @@
           <a href="#" class="footer-link" onclick="alerta()">Como me torno um instrutor?</a>
         </li> -->
         <li>
-          <a href="email.php" class="footer-link">Entre em contato através do Email</a>
+          <a class="footer-link">Entre em contato através do Email</a>
         </li>
 
 
