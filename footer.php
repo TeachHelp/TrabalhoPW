@@ -25,7 +25,7 @@
         <li>
           <a href="sobreEquipe.php" class="footer-link">Sobre a Equipe TeachHelp</a>
         </li>
-
+ 
       </ul>
       <ul class="footer-list">
         <li>
