@@ -1,7 +1,7 @@
 <?php include_once 'header.php'; ?>
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link href="css/perfilProf.css" rel="stylesheet">
+<link href="css/perfilAluno.css" rel="stylesheet">
     <!--Criação da classe container com display flex para que as próximas divs fiquem lado a lado e justify-content-center para que as divs fiquem centralizadas-->
     <div class="container mt-5 d-flex justify-content-center">
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
