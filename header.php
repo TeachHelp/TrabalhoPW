@@ -71,9 +71,9 @@ $_SESSION['usuario'] = $nome;
                 ?></a>
               </li>
             </ul> 
-            <a class="navbar-brand" href="perfilAluno.php">
+            <a class="navbar-brand" href="<?php if ($dados['professor'] != "sim"){ echo "perfilAluno.php"; } else { echo "perfilAlunoProf.php"; }; ?>">
               <img src="img/perfil_icon.png" width="40" height="40" class="d-inline-block align-top" alt="">
-            </a>
+            </a> 
          </div>
        </div>
      </nav>

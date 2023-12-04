@@ -67,7 +67,7 @@
 	    $nomecompleto = $nomeSanitizado . " " .  $sobrenomeSanitizado;
 
 	    $senha_codificada = base64_encode($senha);
-	
+
 	    $sql="INSERT INTO alunos(nome,email,senha,dt_nasc,endereco) VALUES ('$nomecompleto', '$email', '$senha_codificada', '$data', '$endereco')";
 	    echo $sql;
 	    if(mysqli_query($connect,$sql)):
