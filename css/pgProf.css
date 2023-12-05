@@ -110,8 +110,7 @@ body {
 .like-button.red {
   color: red; /* define a cor do texto do elemento quando a classe 'red' é adicionada */
 }
-
-div a  {
+.cartaoProf  {
   color: black ;
   text-decoration: none;
 }

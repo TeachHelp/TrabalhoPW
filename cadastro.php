@@ -22,8 +22,8 @@
  
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
 
-    $_SESSION['data'] = $data;
-    $_SESSION['endereco'] = $endereco;
+    // $_SESSION['data'] = $data;
+    // $_SESSION['endereco'] = $endereco;
       
     //validação de nome
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));

@@ -92,8 +92,8 @@
                         <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href='editarPerfil.php?id=<?php echo $dados['id'];?>'>Editar</a></p>
                 </div>
                 <div class="downloadResume d-flex border border-dark rounded text-white user-select-none col-6 justify-content-center text-center" id="downloadResume">
-                    <span class="material-symbols-outlined mt-2 mb-2 mx-2" id="uploadButton">upload</span>
-                    <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="https://drive.google.com/file/d/12RHMIeh_IGiFW2hHXc89ZWoeEs_Rch-9/view?usp=sharing">Baixar Currículo</a></p>
+                    <span class="material-symbols-outlined mt-2 mb-2 mx-2" id="uploadButton"></span>
+                    <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="<?php echo $dadosProf['curriculo'];?>">Visualizar Currículo</a></p>
                 </div>
             </div>
         </div>

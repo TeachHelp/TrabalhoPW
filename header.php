@@ -12,6 +12,15 @@ $dados = mysqli_fetch_array($resultado);
 $nome = strstr($dados['nome'], ' ', true);
 $_SESSION['usuario'] = $nome;
 
+$_SESSION['id'] = $dados['id'];
+$id = $_SESSION['id'];
+$sqlConsulta = "SELECT * FROM alunos WHERE id = '$id'";
+$sqlConsulta2 = "SELECT * FROM instrutores WHERE fk_id_aluno = '$id'";
+$resultado1 = mysqli_query($connect, $sqlConsulta);
+$resultado2 = mysqli_query($connect, $sqlConsulta2);
+$dadosAluno = mysqli_fetch_array($resultado1);
+$dadosProf = mysqli_fetch_array($resultado2);
+
 ?>
 
 <!DOCTYPE html>
@@ -47,9 +56,9 @@ $_SESSION['usuario'] = $nome;
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Home</a>
              </li>
-             <li class="nav-item">
+             <!-- <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="menuBootstrap.php" id="navHome">Matérias</a>
-             </li>
+             </li> -->
              <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="sobre.php" id="navHome">Sobre</a>
              </li>
