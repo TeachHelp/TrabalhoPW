@@ -1,4 +1,10 @@
-<?php include_once 'header.php';?>
+<?php include_once 'header.php';
+$consultaProfs = "select * from"
+
+
+
+
+?>
 <link href="css/pgProf.css" rel="stylesheet">
 <script type="text/javascript" src="js/pgProf.js" defer></script>
 
