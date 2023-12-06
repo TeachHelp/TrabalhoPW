@@ -1,10 +1,4 @@
-<?php include_once 'header.php';
-$consultaProfs = "SELECT * FROM alunos WHERE professores = 'sim';";
-
-
-
-
-?>
+<?php include_once 'header.php';?>
 <link href="css/pgProf.css" rel="stylesheet">
 <script type="text/javascript" src="js/pgProf.js" defer></script>
 
