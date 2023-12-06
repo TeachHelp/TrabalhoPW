@@ -1,5 +1,5 @@
 <?php include_once 'header.php';
-$consultaProfs = "select * from"
+$consultaProfs = "SELECT * FROM alunos WHERE professores = 'sim';";
 
 
 
