@@ -11,4 +11,5 @@ if (isset($_POST['btnFav'])){
 		echo "Deu RUIM";
 	}
 }
+
 ?>
