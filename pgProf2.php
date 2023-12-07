@@ -1,8 +1,6 @@
 <?php include_once 'header.php';
-//$consultaProfs = "SELECT * FROM alunos WHERE professor = 'sim';";
 
 $materia = $_GET['materia'];
-//$consultaProfs = "SELECT instrutores.* FROM instrutores INNER JOIN alunos ON instrutores.fk_id_aluno = alunos.id WHERE instrutores.materia = $materia AND alunos.professor = 'sim';";
 $consultaProfs = "SELECT alunos.*, instrutores.* FROM alunos INNER JOIN instrutores ON alunos.id = instrutores.fk_id_aluno WHERE instrutores.materia = $materia AND alunos.professor = 'sim' ";
 
 echo $consultaProfs;
