@@ -1,16 +1,6 @@
 /* CSS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 
-
-.submatText{
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1px;
-    
-}
-
 /* criando cor do body, com a imagem de fundo, e a cor mais escura*/ 
 
 body{
@@ -30,6 +20,10 @@ body{
 
 .titulo{
     color: #ffffff;
+}
+
+.materia{
+    text-decoration: none;
 }
 
 /*inserindo as cores de cada card, e inserido a opção sem borda para os cards*/
@@ -103,22 +97,11 @@ body{
     height: 10rem;
 }
 
-/*submaterias*/
 
-.submateria{
-    background: #8b8b8b;
-    cursor: pointer;
-}
 
 @font-face {
     font-family: fontCourier;
     src: url(sansation_light.woff);
-}
-
-
-.submatText{
-    font-family: fontCourier;
-    font-size: 20px;
 }
 
 /*Alterando as configurações dos cards para o tamanho de tela até 600px*/
