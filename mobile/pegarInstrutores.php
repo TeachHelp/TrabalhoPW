@@ -31,7 +31,7 @@ if(autenticar($db_con)) {
 
         $consulta = null;
 
-        if ($materia === "todas") {
+        if ($materia === "Todas") {
             $consulta = $db_con->prepare("SELECT * FROM instrutores LIMIT " . $limit . " OFFSET " . $offset);
         }
         else{
@@ -74,6 +74,7 @@ if(autenticar($db_con)) {
                             $instrutor["endereco"] = $linha1["endereco"];
                             $instrutor["foto"] = $linha1["foto"];
                             $instrutor["professor"] = $linha1["professor"];
+                        }
 
                     }
 			 
