@@ -35,7 +35,7 @@ if(autenticar($db_con)) {
 				// e entregue agora pois ha um php exclusivo para obter 
 				// a imagem do produto.
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-				$id = $linha["id"]
+				$id = $linha["id"];
 	 
 				$resposta["id"] = $id;
 				$resposta["nome"] = $linha["nome"];
@@ -43,13 +43,13 @@ if(autenticar($db_con)) {
 				$resposta["dt_nasc"] = $linha["dt_nasc"];
 				$resposta["descricao"] = $linha["descricao"];
 				$resposta["endereco"] = $linha["endereco"];
-                $resposta["foto"] = $linha["foto"];
+                		$resposta["foto"] = $linha["foto"];
 				$resposta["professor"] = $linha["professor"];
 				
 				
 
 				if($linha["professor"] === "sim"){
-					$consultando = $db_con->prepare("SELECT * FROM instrutores WHERE fk_id_aluno = '$id'")
+					$consultando = $db_con->prepare("SELECT * FROM instrutores WHERE fk_id_aluno = '$id'");
 					if ($consultando->execute()) {
 						if ($consultando->rowCount() > 0){
 							$linha1 = $consultando->fetch(PDO::FETCH_ASSOC);
