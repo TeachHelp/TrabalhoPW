@@ -11,7 +11,7 @@ $dados = mysqli_fetch_array($resultado);
 
 $nome = strstr($dados['nome'], ' ', true);
 $_SESSION['usuario'] = $nome;
-
+$_SESSION['email'] = $email;
 $_SESSION['id'] = $dados['id'];
 $id = $_SESSION['id'];
 $sqlConsulta = "SELECT * FROM alunos WHERE id = '$id'";
