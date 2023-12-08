@@ -35,7 +35,7 @@ if(autenticar($db_con)) {
             $consulta = $db_con->prepare("SELECT * FROM instrutores LIMIT " . $limit . " OFFSET " . $offset);
         }
         else{
-            $consulta = $db_con->prepare("SELECT * FROM instrutores LIMIT " . $limit . " OFFSET " . $offset . " WHERE materia = '$materia'");
+            $consulta = $db_con->prepare("SELECT * FROM instrutores WHERE materia='$materia' LIMIT " . $limit . " OFFSET " . $offset);
         }
  
 		if($consulta->execute()) {
