@@ -11,7 +11,7 @@ require_once('conexaodb.php');
 $resposta = array();
  
 // verifica se todos os campos necessários foram enviados ao servidor
-if ((isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['novo_curriculo']) && isset($_POST['nova_descricao'])) {
+if (isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['novo_curriculo']) && isset($_POST['nova_descricao'])) {
  
     // o método trim elimina caracteres especiais/ocultos da string
 	$nova_materia = trim($_POST['nova_materia']);
@@ -24,14 +24,14 @@ if ((isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['no
 	$consulta_usuario_existe = $db_con->prepare("SELECT id FROM alunos WHERE email='$email'");
 	$consulta_usuario_existe->execute();
 	if ($consulta_usuario_existe->rowCount() > 0) {
-        $linha_usuario_existe = $consulta->fetch(PDO::FETCH_ASSOC);
+        $linha_usuario_existe = $consulta_usuario_existe->fetch(PDO::FETCH_ASSOC);
         $id = $linha_usuario_existe["id"];
 
         $prof = "sim";
 
         // se o usuário ainda não existe, inserimos ele no bd.
-		$consulta_aluno_update = $db_con->prepare("UPDATE alunos SET professor='$prof', descricao='$nova_descricao' WHERE email='$email'";
-        $consulta_insert_instrutor = $db_con->prepare("INSERT INTO instrutores (fk_id_aluno, materia, curriculo) VALUES ('$id','$nova_materia','$novo_curriculo')";
+		$consulta_aluno_update = $db_con->prepare("UPDATE alunos SET professor='$prof', descricao='$nova_descricao' WHERE email='$email'");
+        $consulta_insert_instrutor = $db_con->prepare("INSERT INTO instrutores (fk_id_aluno, materia, curriculo) VALUES ('$id','$nova_materia','$novo_curriculo'");
 	 
 		if ($consulta_aluno_update->execute()) {
             if ($consulta_insert_instrutor->execute()) {
