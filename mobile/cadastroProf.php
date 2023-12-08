@@ -24,7 +24,7 @@ if (isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['nov
 	$consulta_usuario_existe = $db_con->prepare("SELECT id FROM alunos WHERE email='$email'");
 	$consulta_usuario_existe->execute();
 	if ($consulta_usuario_existe->rowCount() > 0) {
-        $linha_usuario_existe = $consulta->fetch(PDO::FETCH_ASSOC);
+        $linha_usuario_existe = $consulta_usuario_existe->fetch(PDO::FETCH_ASSOC);
         $id = $linha_usuario_existe["id"];
 
         $prof = "sim";
