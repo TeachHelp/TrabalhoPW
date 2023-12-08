@@ -11,7 +11,7 @@ require_once('conexaodb.php');
 $resposta = array();
  
 // verifica se todos os campos necessários foram enviados ao servidor
-if ((isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['novo_curriculo']) && isset($_POST['nova_descricao'])) {
+if (isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['novo_curriculo']) && isset($_POST['nova_descricao'])) {
  
     // o método trim elimina caracteres especiais/ocultos da string
 	$nova_materia = trim($_POST['nova_materia']);
