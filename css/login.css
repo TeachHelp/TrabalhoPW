@@ -56,4 +56,69 @@ body{
     
   }
 
+.field{
+  position: relative;
+}
 
+.field input{
+  color: #565656;
+  background: none;
+  padding: 0.5rem;
+  border: 2px solid #030104;
+}
+
+.field label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 0.4rem 0.625rem;
+  color: #030104;
+  border-radius: 5px;
+  padding-inline: 0.25rem;
+  border: 2px solid transparent;
+  pointer-events: none;
+  transition: translate 250ms,
+              background-color 250ms;
+              border-color: 250ms;
+}
+
+.field:focus-within label,
+.field:not(:has(:placeholder-shown)) label{
+  translate: 0.625rem -1rem;
+  border-color: #030104;
+}
+.field ::placeholder {
+  color: transparent;
+}
+
+#nomeLabel{
+  background-color:#64cbec;
+}
+
+#sobrenomeLabel{
+  background-color:#5ec4ec;
+}
+
+#emailLabel{
+  background-color:#55b9eb;
+}
+#senhaLabel{
+  background-color:#4cace9;
+}
+#confirmSenhaLabel{
+  background-color:#44a1e7;
+}
+#dtNascLabel{
+  background-color:#3a95e6;
+}
+#enderecoLabel{
+  background-color:#3188e5;
+}
+
+#emailLoginLabel{
+  background-color:#5fc5ed ;
+}
+
+#senhaLoginLabel{
+  background-color: #54b5ea;
+}

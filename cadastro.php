@@ -104,26 +104,41 @@ include_once 'headerLogin.php'; ?>
       <form action="cadastro.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro</p>
-          <label for="nome">Nome:</label>
-          <input type="text" name="inputName" class="form-control-sm form-control" id="nome">
 
-          <label for="nome">Sobrenome:</label>
-          <input type="text" name="inputSurname" class="form-control-sm form-control" id="sobrenome">
+          <div class="field">
+            <label for="nome" id="nomeLabel">Nome:</label>
+            <input type="text" name="inputName" class="form-control-sm form-control" id="nome" placeholder="..."/>
+          </div><br>
 
-          <label for="email">Email:</label>
-          <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
+          <div class="field">
+            <label for="nome" id="sobrenomeLabel">Sobrenome:</label>
+            <input type="text" name="inputSurname" class="form-control-sm form-control" id="sobrenome" placeholder="..."/>
+          </div><br>
 
-          <label for="senha">Senha:</label>
-          <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
+          <div class="field">
+            <label for="email" id="emailLabel">Email:</label>
+            <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" placeholder="..."/>
+          </div><br>
 
-          <label for="conf_senha">Confirmar Senha *:</label>
-          <input type="password" name="inputConfSenha" class="form-control-sm form-control" id="conf_senha">
+          <div class="field">
+            <label for="senha" id="senhaLabel">Senha:</label>
+            <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha" placeholder="..."/>
+          </div><br>
 
-          <label for="dataNasc">Data de Nascimento:</label>
-          <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc">
+          <div class="field">
+            <label for="conf_senha" id="confirmSenhaLabel">Confirmar Senha *:</label>
+            <input type="password" name="inputConfSenha" class="form-control-sm form-control" id="conf_senha" placeholder="..."/>
+          </div><br>
 
-          <label for="endereco">Endereço:</label>
-          <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco">
+          <div class="field">
+            <label for="dataNasc" id="dtNascLabel">Data de Nascimento:</label>
+            <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" placeholder="..."/>
+          </div><br>
+
+          <div class="field">
+            <label for="endereco" id="enderecoLabel">Endereço:</label>
+            <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" placeholder="..."/>
+          </div>
 
           <br>
           <button type="submit" name="btnCad" class="btn btn-info">Realizar Cadastro</button>

@@ -67,13 +67,18 @@
       <!--Div com um formulário para login-->
         <form action="index.php" method="POST" class="col-sm-6 col-12 bg-form">
           <div class="form-group p-4">
-            <p class="fw-bold fs-3">Login</p>
+            
+            <p class="fw-bold fs-3">Login</p><br>
 
-            <label for="email">Email:</label>
-            <input type="email" name="inputEmail" class="form-control-sm form-control" id="email">
+            <div class="field">
+              <label for="email" id="emailLoginLabel">Email:</label>
+              <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" placeholder="..."/>
+            </div><br>
 
-            <label for="senha">Senha:</label>
-            <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha">
+            <div class="field">
+              <label for="senha" id="senhaLoginLabel">Senha:</label>
+              <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha" placeholder="..."/>
+            </div>
 
             <br>
             <button type="submit" name="btnEntrar" class="btn btn-info" >Entrar</button>
