@@ -31,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['nov
 
         // se o usuário ainda não existe, inserimos ele no bd.
 		$consulta_aluno_update = $db_con->prepare("UPDATE alunos SET professor='$prof', descricao='$nova_descricao' WHERE email='$email'");
-        $consulta_insert_instrutor = $db_con->prepare("INSERT INTO instrutores (fk_id_aluno, materia, curriculo) VALUES ('$id','$nova_materia','$novo_curriculo'");
+        $consulta_insert_instrutor = $db_con->prepare("INSERT INTO instrutores (fk_id_aluno, materia, curriculo) VALUES ('$id','$nova_materia','$novo_curriculo')");
 	 
 		if ($consulta_aluno_update->execute()) {
             if ($consulta_insert_instrutor->execute()) {
