@@ -53,11 +53,11 @@ if (isset($_POST['email']) && isset($_POST['nova_materia']) && isset($_POST['nov
 		// se já existe um usuario para login
 		// indicamos que a operação não teve sucesso e o motivo
 		// no campo de erro.
-		$resposta["sucesso"] = 0;
-		$resposta["erro"] = "aluno não cadastrado";
+		
 	}
 	else {
-		
+		$resposta["sucesso"] = 0;
+		$resposta["erro"] = "aluno não cadastrado";
 	}
 }
 else {
