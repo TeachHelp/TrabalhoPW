@@ -32,6 +32,8 @@ $resultado = mysqli_query($connect,$consultaProfs);
 						echo '</a>';
 					echo '</div>';
 				}
+			} else {
+				header("location: ./semProf.php");
 			}
 		?>
 	</div> 

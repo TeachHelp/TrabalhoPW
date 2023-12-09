@@ -4,7 +4,6 @@
 //inserindo o header
 include_once 'header.php'; 
 
-//include_once 'mensagem.php';
 ?>
 
 <!-- Importações necessarias exclusivas da pagina-->

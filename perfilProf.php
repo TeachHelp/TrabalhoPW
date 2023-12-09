@@ -1,4 +1,13 @@
-<?php include_once 'header.php'; ?>
+<?php include_once 'header.php'; 
+
+if(isset($_GET['id'])):
+	$id_prof =mysqli_escape_string($connect, $_GET['id']);
+	$sql="SELECT * FROM alunos WHERE id =  '$id_prof'";
+	$resultado = mysqli_query($connect, $sql);
+	$dados_prof = mysqli_fetch_array($resultado);
+endif;
+
+?>
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link href="css/perfilProf.css" rel="stylesheet">
@@ -7,11 +16,9 @@
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
         <div class="left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
-            <img src="img/ImgFidelis.jpg" alt="Fidelis" class="img-fluid col-9 rounded mx-auto d-block mt-4 mb-4">
+            <?php echo '<img class="imgPerfil" src= " '.$dados_prof['foto'].' "/>';?> 
             <!--Criação de espaço h4 para inserção de nome-->
-            <h4 class="px-4">Fidelis Zanetti de Castro</h4>
-            <!--Criação de paragrafo para inserção de infromações sobre o instrutor-->
-            <p class="px-4">Professor doutor em Matemática Aplicada formado pela Unicamp</p>
+            <h4 class="px-4"><?php echo $dados_prof['nome'];?></h4>
         </div>
         <!--Criação da classe right ocupando colunas variadas da div container de acordo com o dispositivo utilizado e com background branco-->
         <div class="right col-11 col-sm-11 col-md-11 col-lg-7 bg-white shadow-lg">
@@ -29,7 +36,7 @@
                             </span>
                             <span class="text">Email</span>
                         </h4>
-                        <p>fidelis.ifes@gmail.com</p>
+                        <p><?php echo $dados_prof['email'];?></p>
                     </div>
                     <div class="data col-sm m-1">
                         <h4>
@@ -38,7 +45,7 @@
                             </span>
                             <span class="text">Endereço</span>
                         </h4>
-                        <p>R. Palmeira - Colina de Laranjeiras, Serra - ES</p>
+                        <p><?php echo $dados_prof['endereco'];?></p>
                     </div>
                 </div>
             </div>
@@ -52,7 +59,7 @@
                         <!--Criação de título h4 Formação-->
                         <h4>Formação</h4>
                         <!--Criação de parágrafo com informações sobre o instrutor-->
-                        <p>Professor formado pela Unicamp, mestre em matematica.</p>
+                        <p><?php echo $dados_prof['descricao'];?></p>
                     </div>
                 </div>
             </div>
@@ -86,7 +93,7 @@
             <div class="buttonsDownloadEdit m-3 mb-4 d-flex" id="buttonsDownloadEdit">
                 <div class="downloadResume d-flex border border-dark rounded text-white user-select-none col-6 justify-content-center text-center" id="downloadResume">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2" id="uploadButton">upload</span>
-                    <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="https://drive.google.com/file/d/12RHMIeh_IGiFW2hHXc89ZWoeEs_Rch-9/view?usp=sharing">Baixar Currículo</a></p>
+                    <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="<?php echo $dadosProf['curriculo'];?>">Visualizar Currículo</a></p>
                 </div>
             </div>
         </div>
