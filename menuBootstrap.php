@@ -13,7 +13,7 @@
   <div class="row justify-content-between">
       
       <div class="card" id="card-custom-portugues" style="width: 15rem;" type="button">
-        <a class ="materia" href="pgProf2.php?materia='Português'">
+        <a class ="materia" href="pgProf.php?materia='Português'">
         <img src="img/port.jpg" class=" img card-img-top" alt="portugues foto">
         <div class="card-title titulo fs-5">
           <h3 class="">Português</h3>
@@ -23,7 +23,7 @@
 
       <!--div de matemática, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-matematica" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Matemática'">
+          <a class ="materia" href="pgProf.php?materia='Matemática'">
           <img src="img/mat.jpg" class="img card-img-top" alt="Matematica foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Matemática</h3>
@@ -32,7 +32,7 @@
         </div>
       <!--div de música, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-musica" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Música'">
+          <a class ="materia" href="pgProf.php?materia='Música'">
           <img src="img/music.jpg" class=" img card-img-top " alt="musica foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Música</h3>
@@ -41,7 +41,7 @@
         </div>
       <!--div de esportes, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-esportes" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Esportes'">
+          <a class ="materia" href="pgProf.php?materia='Esportes'">
           <img src="img/esport.jpg" class="img card-img-top" alt="Esportes foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Esportes</h3>
@@ -55,7 +55,7 @@
   <div class="row justify-content-between">
       <!--div de história, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
       <div class="card" id="card-custom-historia" style="width: 15rem;" type="button">
-      <a class ="materia" href="pgProf2.php?materia='História'">
+      <a class ="materia" href="pgProf.php?materia='História'">
         <img src="img/hist.jpg" class="img card-img-top" alt="Historia foto">
         <div class="card-title titulo fs-5">
           <h3 class="">História</h3>
@@ -64,7 +64,7 @@
       </div>
       <!--div de inglês, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
       <div class="card" id="card-custom-ingles" style="width: 15rem;" type="button">
-        <a class ="materia" href="pgProf2.php?materia='Inglês'">
+        <a class ="materia" href="pgProf.php?materia='Inglês'">
         <img src="img/ing.jpg" class="img card-img-top" alt="Ingles foto">
         <div class="card-title titulo fs-5">
           <h3 class="">Inglês</h3>
@@ -73,7 +73,7 @@
       </div>
       <!--div de idiomas, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
       <div class="card" id="card-custom-idiomas" style="width: 15rem;" type="button">
-        <a class ="materia" href="pgProf2.php?materia='Idiomas'">
+        <a class ="materia" href="pgProf.php?materia='Idiomas'">
         <img src="img/idiom.jpg" class="img card-img-top" alt="Idiomas foto">
         <div class="card-title titulo fs-5">
           <h3 class="">Idiomas</h3>
@@ -82,7 +82,7 @@
       </div>
       <!--div de informática, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
       <div class="card" id="card-custom-informatica" style="width: 15rem;" type="button">
-        <a class ="materia" href="pgProf2.php?materia='Informática'">
+        <a class ="materia" href="pgProf.php?materia='Informática'">
         <img src="img/info.jpeg" class="img card-img-top" alt="Informatica foto">
         <div class="card-title titulo fs-5">
           <h3 class="">Informática</h3>
@@ -97,7 +97,7 @@
       <div class="row justify-content-between">
         <!--div de geografia, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-geografia" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Geografia'">
+          <a class ="materia" href="pgProf.php?materia='Geografia'">
           <img src="img/geo.jpg" class="img card-img-top" alt="Geografia foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Geografia</h3>
@@ -106,7 +106,7 @@
         </div>
         <!--div de química, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-quimica" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Química'">
+          <a class ="materia" href="pgProf.php?materia='Química'">
           <img src="img/Quim.jpg" class="img card-img-top" alt="Quimica foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Química</h3>
@@ -115,7 +115,7 @@
         </div>
         <!--div de biologia, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-biologia" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Biologia'">
+          <a class ="materia" href="pgProf.php?materia='Biologia'">
           <img src="img/bio.jpg" class="img card-img-top" alt="Biologia foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Biologia</h3>
@@ -124,7 +124,7 @@
         </div>
         <!--div de física, que contém um card estilizado, uma imagem e uma escrita em h3 do nome da matéria-->
         <div class="card" id="card-custom-fisica" style="width: 15rem;" type="button">
-          <a class ="materia" href="pgProf2.php?materia='Física'">
+          <a class ="materia" href="pgProf.php?materia='Física'">
           <img src="img/fisica.jpg" class="img card-img-top" alt="Fisica foto">
           <div class="card-title titulo fs-5">
             <h3 class="">Física</h3>
