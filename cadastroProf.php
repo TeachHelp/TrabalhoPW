@@ -83,8 +83,8 @@
           $prof = "sim";
           $sql="UPDATE alunos SET professor='$prof', nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
           $sql2="INSERT INTO instrutores (fk_id_aluno,curriculo,materia) VALUES ('$id','$curriculo','$materia')";
-          echo $sql;
-          echo $sql2;
+          // echo $sql;
+          // echo $sql2;
           if(mysqli_query($connect,$sql)){
             if(mysqli_query($connect,$sql2)){
               header('Location: ./perfilAlunoProf.php');

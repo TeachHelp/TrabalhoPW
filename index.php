@@ -25,12 +25,17 @@
       $email = preg_replace('/[^a-zA-Z0-9@.\-_]/', '', $email);
     } 
 
-    $senha_descrip = base64_decode($dados['senha']);
-
     //validação de senha
-    if($senha != $senha_descrip) {		  
+    if(!(password_verify($senha, $dados['senha']))){
       $erros[] = "Senha incorreta!";
     }
+
+    //$senha_descrip = base64_decode($dados['senha']);
+
+    //validação de senha
+    // if($senha != $senha_descrip) {		  
+    //   $erros[] = "Senha incorreta!";
+    // }
 
     if (empty($erros)){
       header('Location: ./menuBootstrap.php');

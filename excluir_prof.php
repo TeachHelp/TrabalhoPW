@@ -24,16 +24,15 @@ endif;
 if (isset($_POST['btnExcluir'])):
     $senha = $_POST['inputSenha'];
     $id = $_POST['id'];
-    $senha_banco = base64_decode($dados['senha']);
 
-    // Check if password is correct
-    if ($senha != $senha_banco):
+    $senha_hash_banco = $dados['senha']; 
+
+    if(!(password_verify($senha, $senha_hash_banco))){
         $erros[] = "Senha incorreta!";
-    endif;
+    }
 
     if (empty($erros)):
         $id=mysqli_escape_string($connect,$_POST['id']);
-	
         $sql="DELETE FROM instrutores WHERE fk_id_aluno = '$id'";
         echo $sql;
         if(mysqli_query($connect,$sql)){

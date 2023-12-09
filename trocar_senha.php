@@ -21,30 +21,28 @@ endif;
     $senha_nova_conf = $_POST['inputConfSenha'];
     $id = $_POST['id'];
 
-    $senha_banco = base64_decode($dados['senha']); 
+    $senha_hash_banco = $dados['senha']; 
     
     //validação de senha
     $res_senha = array("options"=>array("regexp"=>"/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"));
     if(!filter_var($senha_nova, FILTER_VALIDATE_REGEXP, $res_senha)) {		  
       $erros[] = "Senha nova inválida!";
     }
-    
-    if($senha_velha == $senha_banco){
-        if($senha_nova == $senha_nova_conf){
-            $senha_velha = $senha_nova;
-        }else{
-            $erros[] = "As novas senhas precisam ser iguais!";
-        }
-    }else{
-        $erros[] = "Senha atual errada!";
-    }
-   
 
+    //validação de senha
+    if((password_verify($senha_velha, $senha_hash_banco))){
+      if($senha_nova == $senha_nova_conf){
+        $senha_nova_codificada = password_hash($senha_nova, PASSWORD_DEFAULT);
+      }else{
+        $erros[] = "As novas senhas precisam ser iguais!";
+      }
+    }else{
+      $erros[] = "Senha atual errada!";
+    }
+    
     if (empty($erros)){
-      $senhanova=mysqli_escape_string($connect,$_GET['inputConfSenha']);
       $id=mysqli_escape_string($connect,$_GET['id']);
-      $senha_nova_crip = base64_encode($senhanova);
-	    $sql="UPDATE alunos SET senha='$senha_nova_crip' WHERE id='$id'";
+	    $sql="UPDATE alunos SET senha='$senha_nova_codificada' WHERE id='$id'";
 	    echo $sql;
       if(mysqli_query($connect,$sql)){
         header('Location: ./perfilAluno.php');
@@ -70,7 +68,6 @@ endif;
           <p class="fw-bold fs-3">Editar Perfil</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
-          <?php echo $dados['senha']; ?>
           <label for="senha">Senha:</label>
           <input type="password" name="inputSenha" class="form-control-sm form-control" id="senha_atual">
 
