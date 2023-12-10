@@ -7,6 +7,13 @@
 
   $erros = array(); 
 
+  $consultaEmail = "SELECT email FROM alunos;";
+  $resultadoEmail = mysqli_query($connect, $consultaEmail);
+  $row = mysqli_fetch_array($resultadoEmail);
+  foreach($row as $em){
+    echo $em . ' mais ';
+  }
+
   if (isset($_POST['btnCad'])){
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
@@ -21,9 +28,6 @@
     $sobrenomeSanitizado = preg_replace("/[^a-zA-ZÀ-ÿ\s\-]/u", '', $sobrenome);
  
     $email = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
-
-    // $_SESSION['data'] = $data;
-    // $_SESSION['endereco'] = $endereco;
       
     //validação de nome
     $res_nome = array("options"=>array("regexp"=>"/^[a-zA-Z]/"));
@@ -46,6 +50,8 @@
       $erros[] = "Senha deve conter mínimo de  8 caracteres, letra maiuscula e minuscula e um caracter especial";
     }
 
+
+
     if($senha != $senha2) {		  
       $erros[] = "Senhas precisam ser iguais!";
     }
@@ -53,6 +59,10 @@
     //validação de endereco
     if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
       $erros[] = "Endereço inválido!";
+    }
+
+    if($email == $resultadoEmail){
+      $erros[] = "Este email já está cadastrado!";
     }
 
     if (empty($erros)){
@@ -69,7 +79,6 @@
 	    $senha_codificada = password_hash($senha, PASSWORD_DEFAULT);
 
 	    $sql="INSERT INTO alunos(nome,email,senha,dt_nasc,endereco) VALUES ('$nomecompleto', '$email', '$senha_codificada', '$data', '$endereco')";
-	    echo $sql;
 	    if(mysqli_query($connect,$sql)):
 		    header("location: ./index.php");
 	    endif;
