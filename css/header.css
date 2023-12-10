@@ -6,15 +6,20 @@
   
 #navMenu, #navHome{
   color: #fff;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 700;
-
 }
-  
-#list{
-  list-style: none;
-  display: flex;
-  gap: 40px;
+
+li::after{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  height: 4px;
+  width: 4%;
+  background-color: #1b487a;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+
+li:hover::after{
+  transform: scaleX(1);
 }
