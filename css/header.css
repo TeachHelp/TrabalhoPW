@@ -1,14 +1,20 @@
 /*criando cor do header*/
 .bg-corHeader{
-    background: linear-gradient(to right, #1b487a, #86d7dd)
-  }
+  background: linear-gradient(to right, #1b487a, #86d7dd)
+}
+
   
-  /*tamanho da lupa*/
-  .lupa{
-    height: 100px;
-  }
+#navMenu, #navHome{
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+
+}
   
-  #navMenu, #navHome{
-    color: #fff;
-  }
-  
+#list{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
