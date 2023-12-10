@@ -4,6 +4,7 @@
 
   $erros = array(); 
   include_once 'conexao.php'; 
+  $aux = true;
 
   if (isset($_POST['btnEntrar'])){
     $email = $_POST['inputEmail'];
@@ -12,6 +13,11 @@
     $sql="SELECT * FROM alunos WHERE email='$email'";
     $resultado = mysqli_query($connect,$sql);
     $dados = mysqli_fetch_array($resultado);
+
+    if(empty($dados)){
+      $erros[] = "Email não cadastrado!";
+      $aux = false;
+    }
 
     // Sanitização do Email
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -26,16 +32,12 @@
     } 
 
     //validação de senha
-    if(!(password_verify($senha, $dados['senha']))){
-      $erros[] = "Senha incorreta!";
+    if($aux){
+      if(!(password_verify($senha, $dados['senha']))){
+        $erros[] = "Senha incorreta!";
+      }
     }
-
-    //$senha_descrip = base64_decode($dados['senha']);
-
-    //validação de senha
-    // if($senha != $senha_descrip) {		  
-    //   $erros[] = "Senha incorreta!";
-    // }
+    
 
     if (empty($erros)){
       header('Location: ./menuBootstrap.php');
