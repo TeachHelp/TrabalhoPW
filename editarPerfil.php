@@ -99,30 +99,30 @@ endif;
           <div class="field">
             <label for="nome" id="nomeLabel">Nome:</label>
             <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>" placeholder="..."/>
-          </div>
+          </div><br>
 
           <div class="field">
-            <label for="nome">Descrição (opcional):</label>
+            <label for="nome" id="descricaoLabel">Descrição (opcional):</label>
             <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" value="<?php echo $dados['descricao']; ?>">
-          </div>
+          </div><br>
 
           <div class="field">
-            <label for="email">Email:</label>
+            <label for="email" id="emailLabel" >Email:</label>
             <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
-          </div>
+          </div><br>
 
           <div class="field">
-            <label for="dataNasc">Data de Nascimento:</label>
+            <label for="dataNasc" id="dtNascLabel">Data de Nascimento:</label>
             <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>">
-          </div>
+          </div><br>
 
           <div class="field">
-            <label for="endereco">Endereço:</label>
+            <label for="endereco" id="enderecoLabel">Endereço:</label>
             <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
-          </div>
+          </div><br>
 
           <div class="field">
-            <label for="foto">Foto:</label>
+            <label for="foto" id="fotoLabel">Foto:</label>
             <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $dados['foto']?>">
           </div>
 
