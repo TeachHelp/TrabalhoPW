@@ -96,25 +96,35 @@ endif;
           <p class="fw-bold fs-3">Editar Perfil</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
-          <label for="nome">Nome:</label>
-          <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>">
+          <div class="field">
+            <label for="nome" id="nomeLabel">Nome:</label>
+            <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>" placeholder="..."/>
+          </div>
 
-          <label for="nome">Descrição (opcional):</label>
-          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" value="<?php echo $dados['descricao']; ?>">
+          <div class="field">
+            <label for="nome">Descrição (opcional):</label>
+            <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" value="<?php echo $dados['descricao']; ?>">
+          </div>
 
-          <label for="email">Email:</label>
-          <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
+          </div>
 
-          <label for="dataNasc">Data de Nascimento:</label>
-          <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>">
+          <div class="field">
+            <label for="dataNasc">Data de Nascimento:</label>
+            <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>">
+          </div>
 
-          <label for="endereco">Endereço:</label>
-          <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
+          <div class="field">
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
+          </div>
 
-          
-          <label for="foto">Foto:</label>
-          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $dados['foto']?>">
-          
+          <div class="field">
+            <label for="foto">Foto:</label>
+            <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $dados['foto']?>">
+          </div>
 
           <br>
           <button type="submit" name="btnEdit" class="btn btn-info">Atualizar</button>

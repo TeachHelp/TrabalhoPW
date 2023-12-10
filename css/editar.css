@@ -14,3 +14,72 @@
     float:right;
     flex-wrap: wrap;
 }
+
+.field{
+  position: relative;
+}
+
+.field input{
+  color: #565656;
+  background: none;
+  padding: 0.5rem;
+  border: 2px solid #030104;
+}
+
+
+.field label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 0.4rem 0.625rem;
+  color: #030104;
+  border-radius: 5px;
+  padding-inline: 0.25rem;
+  border: 2px solid transparent;
+  pointer-events: none;
+  transition: translate 250ms,
+              background-color 250ms;
+              border-color: 250ms;
+}
+
+.field:focus-within label,
+.field:not(:has(:placeholder-shown)) label{
+  translate: 0.625rem -1rem;
+  border-color: #030104;
+}
+.field ::placeholder {
+  color: transparent;
+}
+
+
+#nomeLabel{
+  background-color: #6BD5ED;
+}
+
+#descricaoLabel{
+  background-color: #65C9E8;
+}
+
+#emailLabel{
+  background-color: #59beec;
+}
+
+#dtNascLabel{
+  background-color: #51b4e9;
+}
+
+#enderecoLabel{
+  background-color: #47a9e3;
+}
+
+#curriculoLabel{
+  background-color: #3f9ee9;
+}
+
+#fotoLabel{
+  background-color: #3893e6;
+}
+
+#materiaLabel{
+  background-color: #2e87e5;
+}

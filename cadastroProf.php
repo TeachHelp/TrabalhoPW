@@ -116,43 +116,59 @@ endif;
       <form action="cadastroProf.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Cadastro de Professor</p>
-          <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+          <input type="hidden" name="id" value="<?php echo $dados['id']; ?>"placeholder="..."/>
 
-          <label for="nome">Nome:</label>
-          <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>">
+          <div class="field">
+            <label for="nome" id="nomeLabel">Nome:</label>
+            <input type="text" name="inputName" class="form-control-sm form-control" id="nome" value="<?php echo $dados['nome']; ?>"placeholder="..."/>
+          </div><br>
 
-          <label for="nome">Descrição:</label>
-          <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" placeholder="Exemplo: Olá me chamo Davi, sou formado em Letras pela Ufes, comecei a dar aulas...">
+          <div class="field">
+            <label for="nome"id="descricaoLabel">Descrição:</label>
+            <input type="text" name="inputDesc" class="form-control-sm form-control" id="descricao" placeholder="Exemplo: Olá me chamo Davi, sou formado em Letras pela Ufes, comecei a dar aulas...">
+          </div><br>
 
-          <label for="email">Email:</label>
-          <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>">
+          <div class="field">
+            <label for="email"id="emailLabel">Email:</label>
+            <input type="email" name="inputEmail" class="form-control-sm form-control" id="email" value="<?php echo $dados['email']; ?>"placeholder="..."/>
+          </div><br>
 
-          <label for="dataNasc">Data de Nascimento:</label>
-          <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>">
+          <div class="field">
+            <label for="dataNasc"id="dtNascLabel">Data de Nascimento:</label>
+            <input type="date" name="inputData" class="form-control-sm form-control" id="dataNasc" value="<?php echo $dados['dt_nasc']; ?>"placeholder="..."/>
+          </div><br>
 
-          <label for="endereco">Endereço:</label>
-          <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>">
+          <div class="field">
+            <label for="endereco"id="enderecoLabel">Endereço:</label>
+            <input type="text" name="inputEnd" class="form-control-sm form-control" id="endereco" value="<?php echo $dados['endereco']; ?>"placeholder="..."/>
+          </div><br>
 
-          <label for="curriculo">Link do currículo Lattes:</label>
-          <input type="text" name="inputCurriculo" class="form-control-sm form-control" id="curriculo">
+          <div class="field">
+            <label for="curriculo"id="curriculoLabel">Link do currículo Lattes:</label>
+            <input type="text" name="inputCurriculo" class="form-control-sm form-control" id="curriculo"placeholder="..."/>
+          </div><br>
 
-          <label for="foto">Foto:</label>
-          <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $foto?>">
+          <div class="field">
+            <label for="foto"id="fotoLabel">Foto:</label>
+            <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $foto?>"placeholder="...">
+          </div><br>
 
-          <label for="materias">Matéria:</label>
-          <select id="selectMateria" name="selectMateria" class="form-control-sm form-control">
-            <option value="Matemática">Matemática</option>
-            <option value="Português">Português</option>
-            <option value="Música">Música</option>
-            <option value="Esportes">Esportes</option>
-            <option value="História">História</option>
-            <option value="Inglês">Inglês</option>
-            <option value="Idiomas">Idiomas</option>
-            <option value="Geografia">Geografia</option>
-            <option value="Química">Química</option>
-            <option value="Biologia">Biologia</option>
-            <option value="Física">Física</option>
-          </select>
+          <div class="field">
+            <label for="materias"id="materiaLabel">Matéria:</label>
+            <select id="selectMateria" name="selectMateria" class="form-control-sm form-control"placeholder="...">
+              <option value="Matemática">Matemática</option>
+              <option value="Português">Português</option>
+              <option value="Música">Música</option>
+              <option value="Esportes">Esportes</option>
+              <option value="História">História</option>
+              <option value="Inglês">Inglês</option>
+              <option value="Idiomas">Idiomas</option>
+              <option value="Geografia">Geografia</option>
+              <option value="Química">Química</option>
+              <option value="Biologia">Biologia</option>
+              <option value="Física">Física</option>
+            </select>
+          <div>
         
           <br>
           <button type="submit" name="btnCadProf" class="btn btn-info">Cadastrar</button>
