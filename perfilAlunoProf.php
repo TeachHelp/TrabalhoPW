@@ -89,7 +89,7 @@
             <div class="buttonsDownloadEdit m-3 mb-4 d-flex" id="buttonsDownloadEdit">
                 <div class="editInformation d-flex border border-dark rounded text-white user-select-none me-2 col-4 justify-content-center text-center" id="editInformation">
                         <span class="material-symbols-outlined mt-2 mb-2 mx-2">edit</span>
-                        <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href='editarPerfil.php?id=<?php echo $dados['id'];?>'>Editar</a></p>
+                        <p class="textButtonEdit mt-2 mb-2 me-2" id="textButtonEdit"><a class="text-decoration-none text-reset" href='editarPerfilProf.php?id=<?php echo $dados['id'];?>'>Editar</a></p>
                 </div>
                 <div class="downloadResume d-flex border border-dark rounded text-white user-select-none col-6 justify-content-center text-center" id="downloadResume">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2" id="uploadButton"></span>

@@ -40,7 +40,7 @@ if (isset($_POST['btnFav'])){
 		<!-- Div card com as informações do professor individual -->
 		<?php 			
 			if (mysqli_num_rows($resultado)>0){           
-				echo '<div class="card-container col-6 ">';                                    
+				echo '<div class="card-container col-8">';                                    
 				while($linha =mysqli_fetch_array($resultado)){
 					
 						echo '<div class="position-relative card cartaoProf">';

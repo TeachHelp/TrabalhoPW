@@ -3,8 +3,11 @@
 if(isset($_GET['id'])):
 	$id_prof =mysqli_escape_string($connect, $_GET['id']);
 	$sql="SELECT * FROM alunos WHERE id =  '$id_prof'";
+    $sqlProf="SELECT * FROM instrutores WHERE fk_id_aluno =  '$id_prof'";
 	$resultado = mysqli_query($connect, $sql);
+    $resultadoProf = mysqli_query($connect, $sqlProf);
 	$dados_prof = mysqli_fetch_array($resultado);
+    $dados_do_Prof = mysqli_fetch_array($resultadoProf);    
 endif;
 
 ?>
@@ -93,7 +96,7 @@ endif;
             <div class="buttonsDownloadEdit m-3 mb-4 d-flex" id="buttonsDownloadEdit">
                 <div class="downloadResume d-flex border border-dark rounded text-white user-select-none col-6 justify-content-center text-center" id="downloadResume">
                     <span class="material-symbols-outlined mt-2 mb-2 mx-2" id="uploadButton">upload</span>
-                    <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="<?php echo $dadosProf['curriculo'];?>">Visualizar Currículo</a></p>
+                    <p class="uploadText mt-2 mb-2 me-2" id="uploadText"><a class="text-decoration-none text-reset" href="<?php echo $dados_do_Prof['curriculo'];?>">Visualizar Currículo</a></p>
                 </div>
             </div>
         </div>

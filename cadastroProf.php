@@ -90,7 +90,7 @@
               header('Location: ./perfilAlunoProf.php');
             }
           }			       
-	    }
+	      }
     } 
   }
 
@@ -150,7 +150,7 @@ endif;
 
           <div class="field">
             <label for="foto"id="fotoLabel">Foto:</label>
-            <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" value="<?php echo $foto?>"placeholder="...">
+            <input type="file" name="inputFoto" class="form-control-sm form-control" id="foto" placeholder="...">
           </div><br>
 
           <div class="field">
