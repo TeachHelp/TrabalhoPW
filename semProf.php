@@ -3,8 +3,8 @@
 <link href="css/semProf.css" rel="stylesheet">
 <script type="text/javascript" src="js/pgProf.js" defer></script>
 
-<div id="mensagem">
-<p>teste teste teste</p>
+<div class="container" id="mensagem">
+<p class="fw-bold fs-3">Parece que não tem nenhum professor nessa área, que tal se tornar um?</p>
 </div>
 
 <!-- Puxando pagina js -->

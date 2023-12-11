@@ -33,9 +33,6 @@
               <li class="nav-item">
                <a class="nav-link active" aria-current="page" href="sobreEquipe.php" id="navHome">Sobre</a>
              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" id="navHome" onclick="alerta()">Configurações</a>
-              </li>
             </ul>
           </div>
         </div>

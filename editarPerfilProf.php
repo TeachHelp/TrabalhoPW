@@ -35,39 +35,40 @@
         if(! filter_var($endereco, FILTER_VALIDATE_REGEXP, $res_nome)){
         $erros[] = "Endereço inválido!";
         }
+
+        $formatosPermitidos= array("png","jpeg","jpg");
+        $extensao=pathinfo($_FILES['inputFoto']['name'],PATHINFO_EXTENSION);
+
+        if (in_array($extensao,$formatosPermitidos)){
+          $pasta="arquivos/";
+          //O nome temporário com o qual o arquivo enviado foi armazenado no servidor.
+          $temporario = $_FILES['inputFoto']['tmp_name'];
+          $novoNome= uniqid().".$extensao"; //uniqid() retorna um identificador unico prefixado baseado no tempo atual em milionésimos de segundo
+        }else{
+          $erros[] = "Imagem inválida";
+        }  
     
         if (empty($erros)){
-            $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);     
-            $materia=mysqli_escape_string($connect,$_POST['selectMateria']);  
-
-            $nome=mysqli_escape_string($connect,$_POST['inputName']);
-            $descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
-            $email=mysqli_escape_string($connect,$_POST['inputEmail']);
-            $endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
-            $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
-            $id=mysqli_escape_string($connect,$_POST['id']);
-            
-            $formatosPermitidos= array("png","jpeg","jpg");
-            $extensao=pathinfo($_FILES['inputFoto']['name'],PATHINFO_EXTENSION);
-
-            if (in_array($extensao,$formatosPermitidos)){
-                $pasta="arquivos/";
-                //O nome temporário com o qual o arquivo enviado foi armazenado no servidor.
-                $temporario = $_FILES['inputFoto']['tmp_name'];
-                $novoNome= uniqid().".$extensao"; //uniqid() retorna um identificador unico prefixado baseado no tempo atual em milionésimos de segundo
-
-                if(move_uploaded_file($temporario,$pasta.$novoNome)){
-                    $foto = $pasta . $novoNome;
-                    $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id=$id";
-                    $sql2="UPDATE instrutores SET curriculo='$curriculo', materia='$materia'";
-                    if(mysqli_query($connect,$sql)){
-                      if(mysqli_query($connect,$sql2)){
-                        header('Location: ./perfilAlunoProf.php');
-                      }
-                    }			       
+          $nome=mysqli_escape_string($connect,$_POST['inputName']);
+          $descricao=mysqli_escape_string($connect,$_POST['inputDesc']);
+          $email=mysqli_escape_string($connect,$_POST['inputEmail']);
+          $endereco=mysqli_escape_string($connect,$_POST['inputEnd']);
+          $dt_nasc=mysqli_escape_string($connect,$_POST['inputData']);
+          $id=mysqli_escape_string($connect,$_POST['id']);
+          $curriculo=mysqli_escape_string($connect,$_POST['inputCurriculo']);     
+          $materia=mysqli_escape_string($connect,$_POST['selectMateria']);  
+          
+          if(move_uploaded_file($temporario,$pasta.$novoNome)){
+              $foto = $pasta . $novoNome;
+              $sql="UPDATE alunos SET nome='$nome', descricao='$descricao', email='$email', foto='$foto', endereco='$endereco', dt_nasc='$dt_nasc' WHERE id='$id'";
+              $sql2="UPDATE instrutores SET curriculo='$curriculo', materia='$materia' WHERE fk_id_aluno='$id'";
+              if(mysqli_query($connect,$sql)){
+                if(mysqli_query($connect,$sql2)){
+                  header('Location: ./perfilAlunoProf.php');
                 }
-            }
-        } 
+              }			       
+          }      
+        }
     }
 
 //Select com o id que veio da URL
@@ -92,7 +93,7 @@ endif;
   <div class="container my-3"> 
     <div class="d-flex justify-content-center flex-column flex-sm-row ">
       <!--Div com um formulário para cadastro-->
-      <form action="editarPerfil.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
+      <form action="editarPerfilProf.php" method="POST" class="col-sm-6 col-12 bg-form" enctype="multipart/form-data">
         <div class="form-group p-4">
           <p class="fw-bold fs-3">Editar Perfil</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">

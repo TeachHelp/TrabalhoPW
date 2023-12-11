@@ -70,18 +70,13 @@
                             <!--Criação de Div com título do dia-->
                             <div class="aulaDia bg-secondary p-1 mb-2 px-3 rounded text-white">Segunda-feira</div>
                             <!--Criação de div com horários disponíveis-->
-                            <div class="aulaHora">08:00/09:00</div>
-                            <div class="aulaHora">14:00/15:30</div>
+                        
                         </div>
                         <div class="data border border-dark rounded m-1 text-center">
                             <div class="aulaDia bg-secondary p-1 mb-2 px-3 rounded text-white">Quarta-feira</div>
-                            <div class="aulaHora">10:00/12:00</div>
-                            <div class="aulaHora">17:00/19:00</div>
-                            <div class="aulaHora">20:00/22:00</div>
+                            
                         </div>
-                        <span class="material-symbols-outlined m-1" id="addDayClass">
-                            library_add
-                        </span>
+                        
                     </div>
                 </div>
             </div>

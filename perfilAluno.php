@@ -1,11 +1,37 @@
 <?php 
-
-
 //inserindo o header
 include_once 'header.php'; 
 
-?>
+$sqlFav="SELECT * FROM favoritos WHERE fk_id_aluno = '$id';";
+$resultadoFav = mysqli_query($connect,$sqlFav);
+$idsFav = mysqli_fetch_array($resultadoFav);
+$idsInstrutores = $idsFav['fk_id_instrutor'];
 
+$selectProfsFavs = "SELECT * FROM instrutores WHERE id_instrutor = '$idsInstrutores';";
+$resultadoProfsFavs = mysqli_query($connect,$selectProfsFavs);
+$idsProfsFavs = mysqli_fetch_array($resultadoProfsFavs);
+$idsAlunosIntrutores = $idsProfsFavs['fk_id_aluno'];
+
+$selectAlunoProfsFavs = "SELECT * FROM alunos WHERE id = '$idsAlunosIntrutores';";
+$resultadoAlunoProfsFavs = mysqli_query($connect,$selectAlunoProfsFavs);
+
+// <?php 
+//                 if (mysqli_num_rows($resultadoAlunoProfsFavs)>0){                                             
+//                         echo '<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">' . 
+//                         '<div class="carousel-inner">' . '<div class="carousel-item active">';
+                        
+//                         while($dadosProfsFavs = mysqli_fetch_array($resultadoAlunoProfsFavs)){
+//                             echo '<div class="row mx-2">' . 
+//                             '<div class="col-sm-4"><img src="' . $dadosProfsFavs['foto'] . '" class="img-fluid" alt="..."><div class="col-sm-10">' . $dadosProfsFavs['nome'] . '</div></div>' . 
+//                             '</div>';
+//                         }
+//                         echo '</div>' . '</div>' . '</div>' ;
+//                 } else{ 
+//                     header("location: ./index.php");
+//                 }
+//                 
+
+?>
 <!-- Importações necessarias exclusivas da pagina-->
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -16,7 +42,7 @@ include_once 'header.php';
         <!--Criação da div left ocupando colunas variadas da div container de acordo com o dispositivo utilizado, texto centralizado e branco-->
         <div class="position-relative left col-11 col-sm-11 col-md-11 col-lg-3 text-center text-white shadow-lg">
             <!--Criação de imagem com classe img-fluid para responsividade, bordas arredondadas, margin automático, display block, margin top 4 e margin botton 4-->
-            <?php echo '<img class="imgPerfil" src= " '.$dados['foto'].' "/>';?> 
+            <?php echo '<img class="imgPerfil" src= " ' . $dados['foto'] . ' "/>';?> 
             <!--Texto h4 com padding horinzontal igual a 4-->
             <h4 class="px-4"><?php echo $dados['nome'];?></h4>
             <!--Paragrafo com padding horizontal igual a 4-->

@@ -9,10 +9,7 @@
 
   $consultaEmail = "SELECT email FROM alunos;";
   $resultadoEmail = mysqli_query($connect, $consultaEmail);
-  $row = mysqli_fetch_array($resultadoEmail);
-  foreach($row as $em){
-    echo $em . ' mais ';
-  }
+  
 
   if (isset($_POST['btnCad'])){
     $email = $_POST['inputEmail'];

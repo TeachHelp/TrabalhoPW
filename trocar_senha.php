@@ -65,7 +65,7 @@ endif;
       <!--Div com um formulário para cadastro-->
       <form action="trocar_senha.php" method="POST" class="col-sm-6 col-12 bg-form">
         <div class="form-group p-4">
-          <p class="fw-bold fs-3">Editar Perfil</p>
+          <p class="fw-bold fs-3">Trocar Senha</p>
           <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
           <label for="senha">Senha:</label>
